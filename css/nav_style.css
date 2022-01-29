@@ -3,16 +3,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Roboto:wght@100;400&display=swap');
 
 /*-------------------Top_nav-----------------------*/
-nav{
-    display: inline-block;
-    text-align: center;
-    background-color:#FFF4EA ;
-    position: fixed;
+header{
+    position: sticky;
     top: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
     z-index: 3;
+}
+
+nav{
+    /* display: inline-block;
+    text-align: center; */
+    background-color:#FFF4EA ;
 }
 
 .top_nav{
@@ -26,9 +26,9 @@ nav{
 .top_nav ul{
     float: right;
     width: 750px;
-    height: 150px;
     display: flex;
     margin-left: auto;
+    margin-right: 15px;
    }
 
 .top_nav li{
@@ -48,17 +48,11 @@ nav{
 
 
 .top_nav img{
-    min-height: 30px;
-    max-height: 100px;
-    margin: 20px ;
-    
+    height: 100px;
+    margin: 25px ;
+    text-align: left;
 }
 
-@media screen and (max-width:1300px){
-    .top_nav img{
-        display: none;
-    }
-}
 
 .fa-shopping-cart {
     font-size: 40px;
@@ -85,10 +79,11 @@ nav{
 .top_nav_thispage:after{
     content: '';
     position: absolute;
+    left:  50%;
+    transform: translateX(-50%);
     display: block;
     width: 0;
     height: 0;
-    margin-left:43%;
     border: 7px solid #567C92;
     border-color: transparent transparent #567C92 transparent;
 }
@@ -110,7 +105,6 @@ footer .f_main{
     padding: 40px 0;
     display: flex;
     align-content: space-between;
-    background-color: #567C92;
 }
 
 .f_text{
@@ -170,7 +164,6 @@ footer .sub_nav a:hover{
 
 
 .copyright{
-    background-color: #567C92;
     width: 1200px;
     margin: 0 auto;
     line-height: 2;
