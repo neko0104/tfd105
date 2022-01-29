@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+
+.footprint{
+    
+    width: 300px;
+    height: 150px;
+    background-image: url(./img/footprint.png);
+
+    animation: footprint 5s steps(6) infinite;
+}
+
+@keyframes footprint{
+    0%{background-position: 0 0;}
+
+    100%{background-position: 0 -900px;}
+}
+
+.cat{
+    width: 250px;
+    height: 200px;
+    background-image: url(./img/cat.png);
+
+    animation: cat 3s steps(3) infinite;
+}
+
+@keyframes cat {
+    0% {background-position: 0 0;}
+    50%{background-position: 0 -600px;}
+    100% {background-position: 0 0;}
+    
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="footprint">
+    
+    </div>
+    <br>
+    <br>
+    <div class="cat">
+    
+    </div>
+
+
+    
+</body>
+</html>

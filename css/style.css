@@ -1,0 +1,379 @@
+@import url(reset.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Roboto:wght@100;400&display=swap');
+
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family:Roboto,Arial ;
+    font-weight: 400;
+    color:#333;
+    font-size: 15px;
+    line-height: 18px;
+    background-color: #FFF4EA;
+    text-decoration: none;
+}
+
+/* .main{
+    padding-top: 150px;
+    width: 1200px;
+    margin: 0 auto;
+} */
+
+h1{
+    display: block;
+    width: 40vw;
+    padding-top:8vw ;
+    padding-left: 13vw;
+    z-index: 0  ;
+}
+
+h2{
+   /* styleName: H2大標; */
+   color: #567C92;
+font-family: Roboto;
+font-size: 64px;
+font-style: normal;
+font-weight: 400;
+line-height: 75px;
+}
+
+h3{
+    /* styleName: H3中標; */
+    color: #567C92;
+font-family: Roboto;
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: 42px;
+}
+
+p{    /* //styleName: P內文; */
+font-family: Roboto;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+}
+
+.big_price{
+    /* //styleName: card價錢; */
+font-family: Amiri;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+
+}
+
+.big_prices{
+    /* //styleName: 小$; */
+font-family: Amiri;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+}
+
+
+.a_btn{
+    font-family: Roboto;
+    color:#567C92;
+    background-color: #F0D08E;
+    font-weight: 400;
+    line-height: 43px;
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+    width: 186px;
+    height: 43px;
+
+}
+
+/*--------------預設結束------------------*/
+
+/*--------------index----------------*/
+
+.concept, .about, .product, .custum, .footer{
+    /* border: 1px solid red; */
+    margin: 0 auto;
+}
+
+.top_banner{
+    /* border: 1px solid red; */
+    padding-top: 150px;
+    margin-top: 150px;
+    max-width: 100%;
+    height: 500px;
+    background-position: left bottom;
+    background-image: url(../img/top_banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.top_banner img{
+    width: 30%;
+    position: absolute;
+    top:40%;
+    left:10%;
+}
+
+.concept{
+    max-width: 100%;
+    height: 650px;
+    background-image: url(../img/concept_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: left ;
+    background-color: #fff;
+    position: relative;
+}
+
+.concept .right{
+    width: 50%;
+    margin-left: auto;
+    padding-top: 150px;
+    padding-left: 100px;
+    box-sizing: border-box;
+}
+
+.concept h3{
+    padding: 10px 0;
+}
+
+.concept img{
+    width: 300px;
+    position: absolute;
+    right: 90px;
+    bottom: 50px;
+    margin: auto;
+}
+
+.about{
+    height: 400px;
+    width: 1200px;
+    text-align: center;
+    position: relative;
+}
+
+.about img{
+    width: 347px;
+}
+
+
+
+.about .ab_title{
+    display: inline-flex;
+    align-items: center;
+    transform: rotate(90deg);
+    position: absolute;
+    top:  73px;
+    left: -8%;
+}
+
+.about .ab_title span{
+    display: block;
+    width: 100px;
+    height: 1px;
+    margin: 10px 0;
+    background-color: #567C92;
+    
+}
+
+.about .ab_title h2{
+    margin-left: 2px;
+}
+
+/* EROS */
+.about .ab_text span{
+    font-family: 'Baskerville Old Face';
+    font-size: 72px;
+    color: black;
+    letter-spacing: 3px;
+}
+
+.about .ab_text h2{
+    margin: 0 20px;
+    text-align: center;
+}
+
+.about .ab_text{
+    /* border: 5px solid #000; */
+    margin: 50px auto 40px;
+    width: 800px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.about p{
+    margin: 0 auto;
+    width: 800px;
+    display: block;
+}
+
+.product {
+    background-color: #fff;
+    /* border: 1px solid #333; */
+    height: 600px;
+}
+
+.product .pd_title{
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product .pd_title h2{
+    margin: 0 2px;
+}
+
+.product span{
+    display: block;
+    background-color: #567C92;
+    width: 100px;
+    height: 1px;
+    margin: 0;
+}
+
+.product .pd_area{
+    width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.product ul{
+    display: inline-flex;
+    text-align: center;
+}
+
+.product ul li{
+    width: 288px;
+    height: 260px;
+    background-color: #FFF4EA;
+    outline: 1px solid #b5b5b5;
+    margin: 8px;
+    box-shadow: -6px 8px 0px #FFF,
+                -6px 8px 0px 1px #567C92;
+
+}
+
+.product li img{
+    max-width: 100%;
+}
+
+.product li a{
+    margin-top: 20px;
+}
+
+.product .pd_area .btn ,.product .pd_area .a_btn{
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+button{
+    height: 8px;
+    width: 8px;
+    padding: 0;
+    margin: 5px;
+    border: 0;
+    border-radius: 50%;
+}
+
+.dot_btn_b{
+    background-color: #567C92;
+}
+
+.dot_btn_y{
+    background-color: #F0D08E;
+}
+
+.custum{
+    margin: 0 auto;
+    background-color: #fff;
+    max-width: 100%;
+    position: relative;
+}
+
+.custum span{
+    display: block;
+    width: 130px;
+    height: 1px;
+    background-color: #567C92;
+}
+
+.custum .cus_title{
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+}
+
+.custum .cus_area{
+    border: 1px solid blue;
+    width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+    
+}
+
+.custum img:first-child{
+    float: right;
+    z-index: 1;
+}
+
+.custum img:last-child{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -80px;
+    z-index: -1;
+}
+
+.product .pd_title h2{
+    margin: 0 2px;
+}
+
+.sercle{
+    width: 1200px;
+    display: flex;
+    margin: 100px auto 0;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.sercle .service{
+    padding-top: 100px;
+    width: 600px;
+    height: 600px;
+    background-image: url(../img/index_ser_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sercle .clear{
+    padding-top: 100px;
+    width: 600px;
+    height: 600px;
+    background-image: url(../img/index_cle_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sercle h3{
+    margin: 20px;
+}
+
+.sercle p{
+    margin: 20px;
+}
