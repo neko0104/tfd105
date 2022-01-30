@@ -434,3 +434,312 @@ button{
 .sercle p{
     margin: 20px;
 }
+
+/* --------------index end--------------- */
+
+/* --------------- shop ------------------ */
+.shop_title{
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop_title h2{
+    margin: 0 2px;
+}
+
+.shop_title span{
+    display: block;
+    background-color: #567C92;
+    width: 100px;
+    height: 1px;
+    margin: 0;
+}
+
+/* =====item bar===== */
+
+.shop_bar{
+    width: 800px;
+    margin: 10px auto;
+    display: flex;
+    position: sticky;
+    top:150px;
+}
+
+.tag{
+    width: 500px;
+    height: 50px;
+    outline: 1px solid #b5b5b5;
+    /* border: 1px solid #b5b5b5; */
+    background-color: #fff;
+    z-index: 1;
+}
+
+.item_tag{
+    display: flex;
+    
+}
+
+.tag span{
+    color: #b5b5b5;
+    line-height: 50px;
+    margin: 0 5px;
+}
+
+.tagoff{
+    border: 1px dotted #b5b5b5;
+    border-radius: 3px;
+    line-height: 40px;
+    margin: 4px 3px 4px;
+    padding: 0 3px;
+}
+
+.tagon{
+    border: 1px solid #b5b5b5;
+    background-color: #F5E4BF;
+    border-radius: 3px;
+    line-height: 40px;
+    margin: 4px 3px 4px;
+    padding: 0 3px;
+}
+
+.tag_kind{}
+
+.tag_ear{}
+
+.tag_comp{}
+
+.tag_color{}
+
+.item_kind{
+    display: flex;
+    width: 500px;
+    height: 50px;
+    /* border: 1px solid #b5b5b5; */
+    outline: 1px solid #b5b5b5;
+    background-color: #fff;
+}
+
+.tag .item_btn:hover{
+    background-color: #F5E4BF;
+}
+
+.item_ear{
+    display: flex;
+    width: 500px;
+    height: 50px;
+    outline: 1px solid #b5b5b5;
+    background-color: #fff;
+}
+
+
+
+.item_comp{
+    display: flex;
+    width: 500px;
+    height: 50px;
+    outline: 1px solid #b5b5b5;
+    background-color: #fff;
+}
+
+
+
+.item_color{
+    display: flex;
+    width: 500px;
+    height: 50px;
+    outline: 1px solid #b5b5b5;
+    background-color: #fff;
+}
+
+
+
+/* =====排序===== */
+
+.item_sort{
+    display: flex;
+    width: 350px;
+}
+
+.item_sort p{
+    display: block;
+    width: 80px;
+    line-height: 50px;
+    margin-left: 50px;
+}
+
+.item_sort>select{
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+    text-indent: 5px;
+    border: 1px solid #b5b5b5;
+}
+
+option{
+    line-height: 50px;
+}
+
+/* =====商品清單===== */
+
+.item_list{
+    width: 1200px;
+    margin: 20px auto;
+
+    /* display: none; */
+}
+
+.item_list ul{
+    display: flex;
+    width: 1200px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.item_list ul li{
+    width: 288px;
+    height: 370px;
+    background-color: #fff;
+    outline: 1px solid #b5b5b5;
+    margin: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.item_list ul li:hover{
+    box-shadow: 0 0 10px #b5b5b5;
+}
+
+.item_card{}
+
+.item_img{
+    display: block;
+    width: 248px;
+    height: 160px;
+    margin: 20px;
+    outline: 1px solid #b5b5b5;
+}
+
+.item_info{
+    margin: 0 20px;
+}
+
+.item_info p{
+    color: #333;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+
+
+.item_info .card_price{
+    /* //styleName: card價錢; */
+    font-family: Amiri;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.item_info .card_ps{
+/* //styleName: 小$; */
+    font-family: Amiri;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.item_info span{
+/* //styleName: P內文; */
+    font-family: Roboto;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #333;
+}
+
+.item_info span:last-child{
+    margin-bottom: 20px;
+}
+
+.add_like,.add_cart{
+    width: 144px;
+    height: 60px;
+    background-color: #567C92;
+    opacity: .7;
+    margin: 0;
+    position: absolute;
+    transition: .5s;
+}
+
+.add_like:hover,.add_cart:hover{
+    transition: .5s;
+    opacity: .9;
+}
+
+.add_like{
+    left: 0;
+    bottom: 0;
+}
+
+.add_cart{
+    right: 0;
+    bottom: 0;
+}
+
+.add_like i,main .item_list .add_cart i{
+    color:#F0D08E;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    width: 144px;
+    line-height: 60px;
+}
+
+
+/* =====shop 頁籤===== */
+.page{
+    margin: 0 auto;
+}
+
+.page ul{
+    text-align: center;
+    margin: 50px auto;
+}
+
+.page ul li{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #567C92;
+    margin: 0 5px;
+    transition: .5s;
+}
+
+.page ul li:hover{
+    transition: .5s;
+    background-color: #F0D08E;
+}
+
+.page p{
+    font-family: Amiri;
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFF;
+    line-height: 35px;
+}
+
+.page .page_hear{
+    background-color: #F0D08E;
+}
+
+.page .page_hear p{
+    color: #567C92;
+}
+
+.page ul li:first-child p{}
+
+.page ul li:last-child p{}
+
+/* --------------- shop end ---------------- */
