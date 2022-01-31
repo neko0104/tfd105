@@ -75,13 +75,13 @@
     padding: 0 3px;
 }
 
-.tag_kind{}
+/* .tag_kind{}
 
 .tag_ear{}
 
 .tag_comp{}
 
-.tag_color{}
+.tag_color{} */
 
 .item_kind{
     display: flex;
@@ -193,7 +193,7 @@ option{
     box-shadow: 0 0 10px #b5b5b5;
 }
 
-.item_card{}
+/* .item_card{} */
 
 .item_img{
     display: block;
@@ -320,9 +320,9 @@ option{
     color: #567C92;
 }
 
-.page ul li:first-child p{}
+/* .page ul li:first-child p{}
 
-.page ul li:last-child p{}
+.page ul li:last-child p{} */
 
 /* --------------- shop end ---------------- */
 
