@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Roboto:wght@100;400&display=swap');
 
-*{
+/* *{
     box-sizing: border-box;
     text-decoration: none;
 }
@@ -101,7 +101,7 @@ letter-spacing: 0em;
     transition: 1s;
     background-color: #567C92;
     color: #F0D08E;
-}
+} */
 
 
 
@@ -460,11 +460,13 @@ button{
 /* =====item bar===== */
 
 .shop_bar{
+    background-color: #FFF4EA;
     width: 800px;
     margin: 10px auto;
     display: flex;
     position: sticky;
     top:150px;
+    z-index: 1; 
 }
 
 .tag{
@@ -473,7 +475,7 @@ button{
     outline: 1px solid #b5b5b5;
     /* border: 1px solid #b5b5b5; */
     background-color: #fff;
-    z-index: 1;
+    
 }
 
 .item_tag{
@@ -519,6 +521,7 @@ button{
     /* border: 1px solid #b5b5b5; */
     outline: 1px solid #b5b5b5;
     background-color: #fff;
+    display: none;
 }
 
 .tag .item_btn:hover{
@@ -531,6 +534,7 @@ button{
     height: 50px;
     outline: 1px solid #b5b5b5;
     background-color: #fff;
+    display: none;
 }
 
 
@@ -541,6 +545,7 @@ button{
     height: 50px;
     outline: 1px solid #b5b5b5;
     background-color: #fff;
+    display: none;
 }
 
 
@@ -551,6 +556,7 @@ button{
     height: 50px;
     outline: 1px solid #b5b5b5;
     background-color: #fff;
+    display: none;
 }
 
 
