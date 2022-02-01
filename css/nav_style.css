@@ -54,6 +54,21 @@ nav{
     text-align: left;
 }
 
+/* 車車數字 */
+.top_nav .fa-shopping-cart::after{
+    content: '2';
+    position: absolute;
+    right: -5px;
+    bottom: -3px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #F0D08E;
+    color: #333;
+    font-size: 15px;
+    line-height: 18px;
+} 
 
 .fa-shopping-cart {
     font-size: 40px;

@@ -437,3 +437,59 @@ button{
 }
 
 /* --------------index end--------------- */
+
+
+
+
+
+/* --------------copyright--------------- */
+.this_site{
+    width: 800px;
+    margin: 0 auto;
+}
+
+.this_site .main{
+    margin-bottom: 100px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.title span{
+    display: block;
+    background-color: #567C92;
+    width: 100px;
+    height: 1px;
+    margin: 0 2px;
+}
+
+.site1{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.site_l{
+    width: 400px;
+    }
+
+.site_r{
+    display: block;
+    width: 800px;
+    margin: 10px 0;
+}
+
+.site1 iframe{
+    width: 340px;
+}
+
+.site{
+    margin: 20px;
+}
+
+/* --------------copyright end--------------- */
