@@ -2,106 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Roboto:wght@100;400&display=swap');
 
-/* ----------------------預設----------------------- */
-*{
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
-body{
-    font-family:Roboto,Arial,'微軟正黑體';
-    font-weight: 400;
-    color:#333;
-    font-size: 15px;
-    line-height: 18px;
-    background-color: #FFF4EA;
-    text-decoration: none;
-    min-width: 1200px;
-}
-
-/* main{
-} */
-
-h1{
-    display: block;
-    width: 40vw;
-    padding-top:8vw ;
-    padding-left: 13vw;
-    z-index: 0  ;
-}
-
-h2{
-   /* styleName: H2大標; */
-   color: #567C92;
-font-family: Roboto;
-font-size: 64px;
-font-style: normal;
-font-weight: 400;
-line-height: 75px;
-}
-
-h3{
-    /* styleName: H3中標; */
-    color: #567C92;
-font-family: Roboto;
-font-size: 36px;
-font-style: normal;
-font-weight: 400;
-line-height: 42px;
-}
-
-p{    /* //styleName: P內文; */
-font-family: Roboto;
-font-size: 15px;
-line-height: 1.2;
-font-style: normal;
-font-weight: 400;
-line-height: 18px;
-letter-spacing: 0em;
-}
-
-.big_price{
-    /* //styleName: card價錢; */
-font-family: Amiri;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: 18px;
-letter-spacing: 0em;
-
-}
-
-.big_prices{
-    /* //styleName: 小$; */
-font-family: Amiri;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: 18px;
-letter-spacing: 0em;
-}
-
-
-.a_btn{
-    font-family: Roboto;
-    color:#567C92;
-    background-color: #F0D08E;
-    font-weight: 400;
-    line-height: 43px;
-    font-size: 18px;
-    display: inline-block;
-    text-align: center;
-    width: 186px;
-    height: 43px;
-    margin: 10px 0;
-    transition: 1s;
-}
-
-.a_btn:hover{
-    transition: 1s;
-    background-color: #567C92;
-    color: #F0D08E;
-}
 
 /*-------------------Top_nav-----------------------*/
 header{
@@ -164,7 +64,7 @@ nav{
 
 
 .top_nav a{
-    font-family: Roboto;
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
     font-size: 18px;
     line-height: 1.2;
     text-decoration: none;

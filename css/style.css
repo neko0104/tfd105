@@ -2,13 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Roboto:wght@100;400&display=swap');
 
-/* *{
+ *{
     box-sizing: border-box;
     text-decoration: none;
 }
 
 body{
-    font-family:Roboto,Arial ;
+    font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
     font-weight: 400;
     color:#333;
     font-size: 15px;
@@ -33,7 +33,7 @@ h1{
 h2{
    /* styleName: H2大標; */
    color: #567C92;
-font-family: Roboto;
+font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
 font-size: 64px;
 font-style: normal;
 font-weight: 400;
@@ -43,7 +43,7 @@ line-height: 75px;
 h3{
     /* styleName: H3中標; */
     color: #567C92;
-font-family: Roboto;
+font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
 font-size: 36px;
 font-style: normal;
 font-weight: 400;
@@ -51,7 +51,7 @@ line-height: 42px;
 }
 
 p{    /* //styleName: P內文; */
-font-family: Roboto;
+font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
 font-size: 15px;
 line-height: 1.2;
 font-style: normal;
@@ -83,7 +83,7 @@ letter-spacing: 0em;
 
 
 .a_btn{
-    font-family: Roboto;
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
     color:#567C92;
     background-color: #F0D08E;
     font-weight: 400;
@@ -169,6 +169,7 @@ letter-spacing: 0em;
     width: 1200px;
     text-align: center;
     position: relative;
+    margin: 0 auto;
 }
 
 .about img{
