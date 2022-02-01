@@ -78,6 +78,10 @@ nav{
     display: none;
     }
 
+    .top_nav ol li a{
+        display: none;
+    }
+
 .top_nav ol::before{
     content: '';
     background-image: url(../img/membertri.svg);
@@ -99,6 +103,10 @@ nav{
 .top_nav ul li:last-child:hover ol{
     display: block;
 }   
+
+.top_nav ul li:last-child:hover ol li a{
+    display: inline;
+} 
 
 
 /* =====會員選單 END===== */
