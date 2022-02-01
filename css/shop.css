@@ -167,7 +167,7 @@ letter-spacing: 0em;
 }
 
 .tagoff{
-    border: 1px dotted #b5b5b5;
+    border: 1px dotted #567C92;
     border-radius: 3px;
     line-height: 40px;
     margin: 4px 3px 4px;
@@ -175,7 +175,7 @@ letter-spacing: 0em;
 }
 
 .tagon{
-    border: 1px solid #b5b5b5;
+    border: 1px solid #567C92;
     background-color: #F5E4BF;
     border-radius: 3px;
     line-height: 40px;
@@ -772,3 +772,89 @@ section a:nth-of-type(2){
 
 
 /* --------------product end--------------- */
+
+/* ----------------custom------------------ */
+
+.result-p{
+    font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-weight: 400;
+    color: #567C92;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.result-pp{
+    font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-weight: 400;
+    color: #567C92;
+    line-height: 22px;
+    margin: 10px;
+}
+
+.hat-icon{
+    background-image: url(../img/custom/hat_icon.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;
+    width: 18px;
+    height: 14px;
+    
+}
+
+.fa-sync-alt{
+    color: #567C92;
+    font-size: 50px;
+}
+
+.result-p i{
+    margin-left: 10px;
+}
+
+.fa-gift{
+    color: #567C92;
+    font-size: 18px;
+}
+
+.hat_cus-btn,.box_cus-btn{
+    display: inline-block;
+    margin: 3px;
+    border: 1px solid #567C92;
+    border-radius: 3px;
+    line-height: 40px;
+    padding: 0 10px;
+}
+
+.hat_cus-btn:hover,.box_cus-btn:hover{
+    background-color: #F5E4BF;
+}
+
+.cus-on{
+    background-color: #F5E4BF;
+}
+
+.cus-off{
+    background-color: #fff;
+}
+
+.cus-dis{
+    background-color: #b5b5b5;
+}
+
+.hat_pic,.box_pic{
+    position: relative;
+    width: 600px;
+}
+
+.hat_pic i,.box_pic i{
+    position: absolute;
+    bottom: 8px;
+    right: 4px;
+}
+
+.hat_pic i:hover,.box_pic i:hover{
+    color: #F0D08E;
+}
+
+.result-pic{
+    width: 200px;
+}
