@@ -9,7 +9,7 @@
 }
 
 body{
-    font-family:Roboto,Arial,'微軟正黑體';
+    font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
     font-weight: 400;
     color:#333;
     font-size: 15px;
@@ -43,7 +43,7 @@ line-height: 75px;
 h3{
     /* styleName: H3中標; */
     color: #567C92;
-font-family: Roboto;
+font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
 font-size: 36px;
 font-style: normal;
 font-weight: 400;
@@ -51,7 +51,7 @@ line-height: 42px;
 }
 
 p{    /* //styleName: P內文; */
-font-family: Roboto;
+font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
 font-size: 15px;
 line-height: 1.2;
 font-style: normal;
@@ -83,7 +83,7 @@ letter-spacing: 0em;
 
 
 .a_btn{
-    font-family: Roboto;
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
     color:#567C92;
     background-color: #F0D08E;
     font-weight: 400;
@@ -137,6 +137,7 @@ letter-spacing: 0em;
 .shop_bar{
     background-color: #FFF4EA;
     width: 1200px;
+    height: 52px;
     margin: 10px auto;
     display: flex;
     justify-content: center;
@@ -151,6 +152,7 @@ letter-spacing: 0em;
     outline: 1px solid #b5b5b5;
     /* border: 1px solid #b5b5b5; */
     background-color: #fff;
+    margin-top:1px ;
 }
 
 .item_tag{
@@ -258,10 +260,12 @@ letter-spacing: 0em;
 }
 
 .item_sort>select{
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
     width: 200px;
     height: 50px;
     font-size: 15px;
     text-indent: 5px;
+    background-color: #fff;
     border: 1px solid #b5b5b5;
 }
 
@@ -315,7 +319,7 @@ option{
 
 .item_info p{
     color: #333;
-    font-family: Roboto;
+    font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
     font-weight: 400;
     font-size: 15px;
     line-height: 20px;
@@ -330,25 +334,34 @@ option{
     font-weight: 400;
 }
 
-.item_info .card_ps{
-/* //styleName: card小$; */
+.item_info .card_price::before{
+    content: '$';
     font-family: Amiri;
     font-size: 15px;
     font-weight: 400;
 }
 
+
 .item_info span{
 /* //styleName: card P內文; */
-    font-family: Roboto;
-    font-size: 15px;
-    line-height: 20px;
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
     font-weight: 400;
+    line-height: 20px;
     color: #333;
+    
 }
 
 .item_info span:last-child{
+    display: block;
     margin-bottom: 20px;
 }
+
+.item_info span:nth-of-type(1),.item_info span:nth-of-type(2){
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+
 
 .add_like,.add_cart{
     width: 144px;
@@ -415,7 +428,7 @@ option{
     font-size: 18px;
     font-weight: 400;
     color: #FFF;
-    line-height: 35px;
+    line-height: 36px;
 }
 
 .page .page_hear{
@@ -426,9 +439,19 @@ option{
     color: #567C92;
 }
 
-/* .page ul li:first-child p{}
+.page p:hover i{
+    color: #567C92;
+}
 
-.page ul li:last-child p{} */
+.page ul li:first-child p i{
+    line-height: 1px;
+    transform:  translateX(-10%) translateY(150%);
+}
+
+.page ul li:last-child p i{
+    line-height: 1px;
+    transform:  translateX(10%) translateY(150%);
+}
 
 /* --------------- shop end ---------------- */
 
@@ -489,7 +512,7 @@ option{
 }
 
 h4{
-    font-family: Roboto;
+    font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
     font-size: 36px;
     font-weight: 400;
     line-height: 42px;
@@ -709,7 +732,7 @@ section a:nth-of-type(2){
 .you_like i{
     display: block;
     width: 70px;
-    line-height: 70px;
+    line-height: 72px;
     font-size: 36px;
     color: #567C92;
     text-align: center;
