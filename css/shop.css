@@ -519,13 +519,6 @@ h4{
     margin-bottom: 20px;
 }
 
-.prd_ps{
-    font-family: Amiri;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 30px;
-}
-
 .prd_price{
 /* //styleName: 商品頁價錢1234 */
 font-family: Amiri;
@@ -533,6 +526,16 @@ font-size: 36px;
 font-weight: 400;
 line-height: 30px;
 }
+
+.prd_price::before{
+    content: '$';
+    font-family: Amiri;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+
 
 .prd_del{
     opacity: .5;
@@ -1017,3 +1020,159 @@ hr{
 .btn_none{
     display: none;
 }
+
+/* -----------------------custom end--------------------------- */
+
+/* ------------------------ cart ------------------------- */
+
+h5{
+    font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    margin-bottom: 20px;
+
+}
+
+/* =====svg===== */
+.cart_process svg{
+    width: 30px;
+
+}
+
+.point-on circle{
+    fill:#F0D08E;
+    stroke: #333;
+}
+
+.point-off circle{
+    fill:#b5b5b5;
+    stroke: #333;
+}
+/* =====svg====== */
+
+.cart_process{
+    margin: 0 auto; 
+}
+
+.cart_process ul{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.cart_process ul:after{
+        content: '';
+        position: absolute;
+        top:35%;
+        display: block;
+        background-color:#333 ;
+        width:360px;
+        height: 4px;
+        z-index: -1;
+    }
+
+.cart_process-point{
+    width: 80px;
+    margin: 20px;
+    text-align: center;
+}
+
+/* =====商品清單===== */
+
+.cart{
+    display: flex;
+    justify-content: center;
+}
+
+.cart_list{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.cart_prd{
+    background-color: #fff;
+    display: flex;
+    width: 650px;
+    margin-bottom:10px; 
+}
+
+.cart_prd_pic{
+    width: 210px;
+    height: 210px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #b5b5b5;
+    flex-basis: 210px;
+}
+
+.cart_prd_pic img{
+    width: 100%;
+}
+
+.cart_prd_info{
+    /* border: 1px solid #000; */
+    margin: 20px 20px 20px 0;
+    width: calc(100% - 250px );
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.cart_prd_info .fa-times{
+    position: absolute;
+    font-size: 40px;
+    color: #333;
+    right: 0;
+    top:-4px;
+}
+
+.fa-times:hover{
+    color: #567C92;
+}
+
+.cart_prd_info h5{
+    width: calc( 100% - 50px );
+}
+
+.cart_prd_count{
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    
+}
+
+/* =====結算===== */
+
+.cart_total{
+    width: 350px;
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    position: sticky;
+    top:150px
+}
+
+.cart_total p{
+    margin-bottom: 20px;
+}
+
+.cart_total i{
+    margin-right: 10px;
+}
+
+.cart_total .a_btn{
+    width: 100%;
+}
+
+.cart_clear{
+    color: #b5b5b5;
+    text-align: center;
+    font-size: 12px;
+    display: none;
+}
+
+
+/* ---------------------- cart end ----------------------- */
