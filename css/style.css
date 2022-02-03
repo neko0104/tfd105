@@ -140,6 +140,7 @@ letter-spacing: 0em;
     background-repeat: no-repeat;
     background-position: left ;
     background-color: #fff;
+    background-attachment:fixed;
     position: relative;
 }
 
