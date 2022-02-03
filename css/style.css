@@ -138,7 +138,7 @@ letter-spacing: 0em;
     height: 650px;
     background-image: url(../img/concept_bg.jpg),url(../img/concept_bg.jpg);
     background-repeat: no-repeat;
-    background-position: left ;
+    background-position: top 150px left ;
     background-color: #fff;
     background-attachment:fixed,scroll;
     position: relative;
