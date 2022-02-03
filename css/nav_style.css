@@ -37,6 +37,7 @@ nav{
     padding-top: 55px;
     text-align: center;
     position: relative;
+    flex-basis: 80px;
     /* border: 1px solid #333; */
 }
 
@@ -67,11 +68,13 @@ nav{
     background-color: #F0D08E;
     color: #333;
     font-size: 15px;
-    line-height: 18px;
+    font-weight: 400;
+    line-height: 20px;
 } 
 
 .fa-shopping-cart {
     font-size: 40px;
+    position: relative;
 }
 .fa-user-circle{
     font-size: 40px;
@@ -93,9 +96,9 @@ nav{
     display: none;
     }
 
-    .top_nav ol li a{
-        display: none;
-    }
+.top_nav ol li a{
+    display: none;
+}
 
 .top_nav ol::before{
     content: '';
@@ -111,8 +114,22 @@ nav{
     
 }
 
+.top_nav ol::after{
+    content: '';
+    display: block;
+    width: 150px;
+    height: 230px;
+    /* background-color: #567C92;
+    opacity: .3; */
+    position: absolute;
+    top:-30px;
+    right: -30px;
+    z-index: 2;
+}
+
 .top_nav ol li{
    padding: 15px 0;
+   z-index: 3;
 }
 
 .top_nav ul li:last-child:hover ol{

@@ -316,7 +316,7 @@ letter-spacing: 0em;
     
 }
 
-button{
+.dot_btn{
     height: 8px;
     width: 8px;
     padding: 0;
@@ -409,7 +409,7 @@ button{
     padding-bottom: 20px;
 }
 
-.sercle .service{
+.sercle .sercle_service{
     padding-top: 100px;
     width: 600px;
     height: 600px;
@@ -418,7 +418,7 @@ button{
     background-position: center;
 }
 
-.sercle .clear{
+.sercle .sercle_clear{
     padding-top: 100px;
     width: 600px;
     height: 600px;
@@ -500,17 +500,34 @@ button{
     justify-content: center;
 }
 
+.con_form{
+    width: 50%;
+    /* border:1px solid #567C92; */
+}
+
 .con_form_title{
     display: flex;
     align-items: center;
     margin: 30px 0;
 }
-.contact span{
-    display: block;
+
+.con_form_title>div{
+    flex-grow: 2;
+    text-align: right;
+}
+
+.con_form_title span{
+    display: inline-block;
     background-color: #567C92;
     height: 1px;
-    width: 40%;
+    min-width: 100px;
+    width: 75%;
     margin-right: 2px;
+}
+
+.con_form_title h3{
+    flex-grow: 0;
+    flex-basis: 450px;
 }
 
 .con_form p{
@@ -518,18 +535,16 @@ button{
 }
 
 /* =====表單===== */
+
 form{
     float: right;
     margin-right: 50px;
     margin-bottom: 50px;
 }
 
-.con_form{
-    width: 50%;
-    /* border:1px solid #567C92; */
-}
-
 .name,.email,.phone_number,.issue{
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-weight: 400;
     height: 40px;
     width: 500px;
     border: 1px solid #567C92;
@@ -586,8 +601,21 @@ form{
     margin: 30px 0 30px 0;
 }
 
+.map h3{
+    text-align: right;
+    flex-basis: 285px;
+}
+
+.map_title>div{
+    flex-grow: 1;
+}
+
 .map_title span{
-    width: 15%;
+    display: inline-block;
+    background-color: #567C92;
+    height: 1px;
+    min-width: 100px;
+    width: 80%;
 }
 
 .map iframe{
@@ -691,11 +719,12 @@ form{
 }
 
 .abo_area02 img{
-    float: left;
+    width: 50%;
     order: -1;
 }
 
 .abo_area03 img{
+    width: 50%;
     float: right;
 }
 

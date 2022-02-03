@@ -149,7 +149,6 @@ p{    /* //styleName: P內文; */
     width: 500px;
     height: 50px;
     outline: 1px solid #b5b5b5;
-    /* border: 1px solid #b5b5b5; */
     background-color: #fff;
     margin-top:1px ;
 }
@@ -864,12 +863,13 @@ section a:nth-of-type(2){
     margin: 0 5px;
     line-height: 0;
     font-size: 0;
+    
 }
 
 .hat_cus-fabric img{
     border-radius: 50%;
     border:2px solid #567C92;
-    /* background-color: #567C92; */
+    background-color: #567C92;
     line-height: 0;
 }
 
@@ -877,9 +877,20 @@ section a:nth-of-type(2){
     border: 2px solid #F0D08E;
 }
 
-.fabric-sle{
+.fabric-sel{
     border-radius: 50%;
     box-shadow: 0 0 0px 4px #F0D08E;
+}
+
+.fabric-dis{
+    border-radius: 50%;
+    background-color: #b5b5b5;
+    opacity: .5;
+}
+
+.fabric-dis img{
+    border:2px solid #b5b5b5;
+    background-color: #b5b5b5;
 }
 
 .fabric-dis:hover img{
@@ -912,6 +923,8 @@ section a:nth-of-type(2){
     color: #F0D08E;
 }
 
+.result_pic{}
+
 .result-pic{
     width: 200px;
     margin: 0 10px;
@@ -922,8 +935,6 @@ section a:nth-of-type(2){
     margin-left: 30px; 
     padding: 10px;
     background-color: #fff;
-    
-   
 }
 
 .hat_area ul,.box_area ul{
@@ -968,8 +979,7 @@ hr{
     margin: 0;
 }
 
-.re_price{
-}
+.re_price{}
 
 .re_count{
     display: flex;
@@ -1032,7 +1042,6 @@ h5{
     line-height: 30px;
     text-align: left;
     margin-bottom: 20px;
-
 }
 
 /* =====svg===== */
@@ -1137,6 +1146,10 @@ h5{
     width: calc( 100% - 50px );
 }
 
+.cart_prd_text{
+    flex-grow: 1;
+}
+
 .cart_prd_count{
     align-self: flex-end;
     display: flex;
@@ -1159,6 +1172,10 @@ h5{
     margin-bottom: 20px;
 }
 
+.cart_total .prd_price,.cart_total .prd_nub{
+    word-wrap: break-word;
+}
+
 .cart_total i{
     margin-right: 10px;
 }
@@ -1169,8 +1186,8 @@ h5{
 
 .cart_clear{
     color: #b5b5b5;
-    text-align: center;
     font-size: 12px;
+    text-align: center;
     display: none;
 }
 
