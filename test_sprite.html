@@ -1,75 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/nav_style.css">
     <link rel="stylesheet" href="./css/shop.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>test</title>
     <style>
+        .footprint {
 
-.footprint{
-    
-    width: 300px;
-    height: 150px;
-    background-image: url(./img/footprint.png);
+            width: 300px;
+            height: 150px;
+            background-image: url(./img/footprint.png);
 
-    animation: footprint 5s steps(6) infinite;
-}
+            animation: footprint 5s steps(6) infinite;
+        }
 
-@keyframes footprint{
-    0%{background-position: 0 0;}
+        @keyframes footprint {
+            0% {
+                background-position: 0 0;
+            }
 
-    100%{background-position: 0 -900px;}
-}
+            100% {
+                background-position: 0 -900px;
+            }
+        }
 
-.cat{
-    width: 250px;
-    height: 200px;
-    background-image: url(./img/cat.png);
+        .cat {
+            width: 250px;
+            height: 200px;
+            background-image: url(./img/cat.png);
 
-    animation: cat 3s steps(3) infinite;
-}
+            animation: cat 3s steps(3) infinite;
+        }
 
-@keyframes cat {
-    0% {background-position: 0 0;}
-    50%{background-position: 0 -600px;}
-    100% {background-position: 0 0;}
-    
-}
+        @keyframes cat {
+            0% {
+                background-position: 0 0;
+            }
 
-.a_btn{
+            50% {
+                background-position: 0 -600px;
+            }
 
-}
+            100% {
+                background-position: 0 0;
+            }
 
-.test_dis{
-    cursor: not-allowed;
-}
+        }
 
-.box_cus-btn:active{
-    transform: translateY(4px);
-}
+        .a_btn {}
 
+        .test_dis {
+            cursor: not-allowed;
+        }
+
+        .box_cus-btn:active {
+            transform: translateY(4px);
+        }
+
+
+        .aaa {
+            display: flex;
+            height: 2000px;
+            width: 800px;
+            font-size: 30px;
+            font-family: serif;
+            flex-direction: column;
+        }
+
+        .concept-aa:before {
+            content: ' ';
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url(./img/concept_bg650.jpg);
+            background-position: center left;
+            background-repeat: no-repeat;
+        }
+
+        .concept-aa {
+            max-width: 100%;
+            height: 650px;
+            background-image: url(./img/concept_bg.jpg);
+            background-repeat: no-repeat;
+            background-position: left 0px;
+            background-color: #fff;
+            background-attachment: fixed;
+            position: relative;
+        }
     </style>
 </head>
+
 <body>
-    <div class="footprint">
-    
-    </div>
-    <br>
-    <br>
-    <div class="cat">
-    
-    </div>
+    <header>
 
-    <a href="" class="a_btn test_dis">AAAA</a>
+        <nav>
+            <div class="top_nav">
+                <a href="./index.html"><img src="./img/LOGO-4.svg" alt=""></a>
+                <ul>
+                    <li><a href="./index.html" class="top_nav_thispage">首頁<br>Index</a></li>
+                    <li><a href="./about.html">關於我們<br>About us</a></li>
+                    <li><a href="./shop.html">商城<br>Shop</a></li>
+                    <li><a href="./custom.html">客製商品<br>Custom</a></li>
+                    <li><a href="./service.html">售後服務<br>Service</a></li>
+                    <li><a href="./contact.html">聯絡我們<br>Contact</a></li>
+                    <li><a href="./cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="#"><i class="fas fa-user-circle"></i></a>
+                        <ol>
+                            <li><a href="#">登入/註冊</a></li>
+                            <li><a href="#">購買紀錄</a></li>
+                            <li><a href="#">會員資料</a></li>
+                            <li><a href="#">登出</a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!---------------------header結束--------------------------->
 
-    <ul>
-    <li class="box_cus-btn prd_nub">AAA</li>
-    </ul>
 
 
-    
+    <main>
+        <div class="top_banner">
+            <p class="slogan">我的天呀，你知道嗎？上一個偷襲美國的傢伙變成二次元起源地。<br>
+                那座土地上的居民們很可憐，受基因突變所苦<br>
+                小男孩長出了貓耳，小女孩長出了JJ，光聽就可怕<br>
+            </p>
+        </div>
+        <div class="concept-aa concept">
+            <div class="right">
+                <h3>設計概念Conpet</h3>
+                <p>沖杯熱可可，窩在溫暖的房間裡<br>看著在暖爐中搖曳的光影<br>昏昏欲睡...<br>夢見自己是一隻毛茸茸的生物，在雪地中盡情玩耍</p>
+                <img src="./img/cap.png" alt="">
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="ab_title">
+                <span></span>
+                <h2>關於</h2>
+                <h3>about</h3>
+            </div>
+            <div class="ab_text">
+                <img src="./img/LOGO-4.svg" alt="">
+                <h2>X</h2>
+                <span>ErosStudio</span>
+            </div>
+            <p>我們與腦洞大開的小精靈們密切合作中<br>在小精靈巧手與愉快的歌聲編織下<br>難道帽子就只能適用於保暖，千編一律又毫無變化的存在嗎？<br>不！我們要打破這個現況！<br>帽子不僅僅是一頂帽子，那是讓你成為全場矚目焦點的魔法！
+            </p>
+
+        </div>
+        <div class="aaa">
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+        </div>
+
 </body>
+
 </html>
