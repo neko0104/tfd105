@@ -134,6 +134,7 @@ letter-spacing: 0em;
 } */
 
 .slogan{
+    display:inline-block;
     color: #333;
     font-family:  Roboto,Arial,'微軟正黑體','Heiti TC';
     font-weight: 400;
