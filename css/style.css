@@ -136,9 +136,9 @@ letter-spacing: 0em;
 .concept{
     max-width: 100%;
     height: 650px;
-    background-image: url(../img/concept_bg.jpg),url(../img/concept_bg.jpg);
+    background-image: url(../img/concept_bg.jpg),url(../img/concept_bg650.jpg);
     background-repeat: no-repeat;
-    background-position: top -100px left 0,top 650px left 0;
+    background-position: top -150px left 0,top 0px left 0px;
     background-color: #fff;
     background-attachment:fixed,scroll;
     position: relative;
