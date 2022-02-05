@@ -336,7 +336,7 @@ letter-spacing: 0em;
     position: absolute;
     bottom: -100px;
     right: 50px;
-    z-index: 1;
+    z-index: 2;
     
 }
 
@@ -408,6 +408,7 @@ letter-spacing: 0em;
     background-image: url(../img/custom_img.jpg);
     height: 690px;
     width: 880px;
+    z-index: 1;
 }
 
 .custum>img:last-child{
