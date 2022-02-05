@@ -109,14 +109,11 @@ letter-spacing: 0em;
 /*--------------index----------------*/
 
 .concept, .about, .product, .custum, .footer{
-    /* border: 1px solid red; */
     margin: 0 auto;
 }
 
 .top_banner{
-    /* border: 1px solid red; */
-    padding-top: 150px;
-    /* margin-top: 150px; */
+    padding-top: 100px;
     max-width: 100%;
     height: 500px;
     background-position: left bottom;
@@ -124,6 +121,7 @@ letter-spacing: 0em;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    text-align: center;
 }
 
 /* .top_banner img{
@@ -134,23 +132,24 @@ letter-spacing: 0em;
 } */
 
 .slogan{
-    color: #333;
+    color: #ccc;
     font-family:  Roboto,Arial,'微軟正黑體','Heiti TC';
     font-weight: 400;
     line-height: 1.8;
-    font-size: 20px;
-    text-shadow: 0 2px 10px #FFF;
-    margin-left: 10%;
+    font-size: 1.5em;
+    text-shadow: 0 0 3px rgb(20, 20, 20);
+    margin-left: 15%;
+    width: 20%;
+    min-width: 300px;
+    height: 300px;
+    overflow: hidden;
+    float: left;
+
 }
 
 .concept{
     max-width: 100%;
     height: 650px;
-    /* background-image: url(../img/concept_bg.jpg),url(../img/concept_bg650.jpg);
-    background-repeat: no-repeat;
-    background-position: top -150px left 0,top 0px left 0px; */
-    /* background-color: #fff; */
-    /* background-attachment:fixed,local; */
     position: relative;
 }
 
@@ -158,14 +157,15 @@ letter-spacing: 0em;
             content: ' ';
             position: fixed;
             z-index: -5;
-            top: 0px;
+            
+            top: 0;
+            left: 0;
             right: 0;
             bottom: 0;
-            left: 0;
-            background-image: url(../img/concept_bg.jpg);
-            background-position: top 0 left ;
+            background-image: url(../img/concept_bg.jpg),linear-gradient(#fff 0%,#FFF 100%);
+            background-position: top 0 left 0;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: auto;
 }
 
 .concept .right{
@@ -239,13 +239,12 @@ letter-spacing: 0em;
 }
 
 .about .ab_text{
-    /* border: 5px solid #000; */
     margin: 50px auto 40px;
     padding-top: 100px;
     width: 800px;
     text-align: center;
-    justify-content: center;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -257,7 +256,6 @@ letter-spacing: 0em;
 
 .product {
     background-color: #fff;
-    /* border: 1px solid #333; */
     height: 600px;
     position: relative;
    }
@@ -324,7 +322,7 @@ letter-spacing: 0em;
 }
 
 .product li img{
-    max-width: 100%;
+    width: 100%;
 }
 
 .product .pd_area .btn ,.product .pd_area .a_btn{
@@ -381,7 +379,6 @@ letter-spacing: 0em;
 }
 
 .custum .cus_area{
-    /* border: 1px solid blue; */
     width: 1200px;
     height: 700px;
     margin: 0 auto;
@@ -420,7 +417,6 @@ letter-spacing: 0em;
     position: absolute;
     left: 0;
     bottom: -80px;
-    z-index: -1;
 }
 
 .product .pd_title h2{
@@ -428,12 +424,15 @@ letter-spacing: 0em;
 }
 
 .sercle{
-    width: 1200px;
+    width: 100%;
     display: flex;
-    margin: 100px auto 0;
+    margin: 0 auto;
     justify-content: center;
     text-align: center;
+    padding-top: 100px;
     padding-bottom: 20px;
+    background-color: #FFF4EA;
+
 }
 
 .sercle .sercle_service{
