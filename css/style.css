@@ -24,8 +24,6 @@ main{
 h1{
     display: block;
     width: 40vw;
-    padding-top:8vw ;
-    padding-left: 13vw;
     z-index: 0  ;
 }
 
@@ -130,6 +128,14 @@ letter-spacing: 0em;
     top:40%;
     left:10%;
 } */
+
+.top_banner h1{
+    display: block;
+    width: 40vw;
+    padding-top:8vw ;
+    padding-left: 13vw;
+    z-index: 0  ;
+}
 
 .slogan{
     color: #ccc;
