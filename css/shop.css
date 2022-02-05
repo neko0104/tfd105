@@ -189,46 +189,17 @@ p{    /* //styleName: P內文; */
 
 .tag_color{} */
 
-.item_kind{
+.item_kind,.item_ear,.item_comp,.item_color{
     display: flex;
     width: 500px;
     height: 50px;
-    /* border: 1px solid #b5b5b5; */
     outline: 1px solid #b5b5b5;
     background-color: #fff;
-
+    z-index: 1;
 }
 
 .tag .item_btn:hover{
     background-color: #F5E4BF;
-}
-
-.item_ear{
-    display: flex;
-    width: 500px;
-    height: 50px;
-    outline: 1px solid #b5b5b5;
-    background-color: #fff;
-}
-
-
-
-.item_comp{
-    display: flex;
-    width: 500px;
-    height: 50px;
-    outline: 1px solid #b5b5b5;
-    background-color: #fff;
-}
-
-
-
-.item_color{
-    display: flex;
-    width: 500px;
-    height: 50px;
-    outline: 1px solid #b5b5b5;
-    background-color: #fff;
 }
 
 /* =====show tag===== */
