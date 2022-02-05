@@ -836,7 +836,7 @@ form{
 .goblin02{
     max-width: 30%;
     position: absolute;
-    top: 30%;
+    top: 33%;
     right: 5%;
     transition: .5s;
     opacity: 1;
@@ -845,7 +845,7 @@ form{
 .goblin03{
     max-width: 15%;
     position: absolute;
-    top:15%;
+    top:18%;
     left: 15%;
     transition: .5s;
     opacity: 1;
