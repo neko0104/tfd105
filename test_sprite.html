@@ -221,6 +221,23 @@
             <p>測試一行</p>
         </div>
 
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function () {
+                var brow = $.browser;
+                var bInfo = "";
+                if (brow.msie) { bInfo = "MicrosoftInternetExplorer" brow.version; }
+                if (brow.mozilla) { bInfo = "MozillaFirefox" brow.version; }
+                if (brow.safari) { bInfo = "AppleSafari" brow.version; }
+                if (brow.opera) { bInfo = "Opera" brow.version; }
+                alert(bInfo);
+            });
+
+
+
+        </script>
 </body>
 
 </html>
