@@ -100,7 +100,7 @@ letter-spacing: 0em;
     transition: 1s;
     background-color: #567C92;
     color: #F0D08E;
-} */
+} 
 
 
 
@@ -108,7 +108,7 @@ letter-spacing: 0em;
 
 /*--------------index----------------*/
 
-.concept, .about, .product, .custum, .footer{
+.concept, .about, .product, .custum, .sercle{
     margin: 0 auto;
 }
 
@@ -193,7 +193,6 @@ letter-spacing: 0em;
     width: 100%;
     text-align: center;
     position: relative;
-    margin: 0 auto;
     background-color: #FFF4EA;
 }
 
@@ -359,7 +358,6 @@ letter-spacing: 0em;
 }
 
 .custum{
-    margin: 0 auto;
     background-color: #fff;
     max-width: 100%;
     position: relative;
@@ -426,7 +424,6 @@ letter-spacing: 0em;
 .sercle{
     width: 100%;
     display: flex;
-    margin: 0 auto;
     justify-content: center;
     text-align: center;
     padding-top: 100px;
@@ -776,10 +773,18 @@ form{
 
 .abo_eros p{
     line-height: 4;
+    font-size: 1.5em;
 }
 
 .abo_hat{
     max-width: 40%;
+}
+
+.abo_book{
+    max-width: 15%;
+    position: absolute;
+    right: 12%;
+    bottom: 10%;
 }
 
 .goblin01{
