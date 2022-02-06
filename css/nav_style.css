@@ -263,3 +263,7 @@ footer .sub_nav a:hover{
 .copyright a:hover{
     color: #FFF4EA;
 }
+
+.copyright p{
+    margin:0 10px ;
+}
