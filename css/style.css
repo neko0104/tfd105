@@ -863,6 +863,7 @@ form{
     color: #b5b5b5;
     opacity: 1;
     transition: 1s;
+    font-size: 15px;
 }
 
 .goblin:hover{
