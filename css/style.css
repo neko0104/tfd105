@@ -863,7 +863,7 @@ form{
     color: #b5b5b5;
     opacity: 1;
     transition: 1s;
-    font-size: 15px;
+    
 }
 
 .goblin:hover{
@@ -875,6 +875,7 @@ form{
 .goblin p{
     line-height: 1.6;
     margin-left: 20px;
+    font-size: 15px;
 }
 
 /* ----------------about us end---------------- */
