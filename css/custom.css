@@ -1,0 +1,511 @@
+@import url(reset.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Roboto:wght@100;400;700&display=swap');
+
+/* ----------------------預設----------------------- */
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-weight: 400;
+    color:#333;
+    font-size: 15px;
+    line-height: 18px;
+    background-color: #FFF4EA;
+    text-decoration: none;
+    min-width: 1200px;
+}
+
+/* main{
+} */
+
+h1{
+    display: block;
+    width: 40vw;
+    padding-top:8vw ;
+    padding-left: 13vw;
+    z-index: 0  ;
+}
+
+h2{
+   /* styleName: H2大標; */
+   color: #567C92;
+    font-family: Roboto;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 75px;
+}
+
+h3{
+    /* styleName: H3中標; */
+    color: #567C92;
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+}
+
+p{    /* //styleName: P內文; */
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-size: 15px;
+    line-height: 1.2;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+}
+
+.big_price{
+    /* //styleName: card價錢; */
+    font-family: Amiri;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    
+}
+
+.big_price::before{
+    /* //styleName: 小$; */
+    content: '$';
+    font-family: Amiri;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+
+.a_btn{
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
+    color:#567C92;
+    background-color: #F0D08E;
+    font-weight: 400;
+    line-height: 43px;
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+    width: 186px;
+    height: 43px;
+    margin: 10px 0;
+    transition: 1s;
+}
+
+.a_btn:hover{
+    transition: 1s;
+    background-color: #567C92;
+    color: #F0D08E;
+}
+
+/* 標題 */
+.shop_title{
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop_title h2{
+    color: #567C92;
+    font-family: Roboto;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 75px;
+    margin: 0 2px;
+}
+
+.shop_title span{
+    display: block;
+    background-color: #567C92;
+    width: 100px;
+    height: 1px;
+    margin: 0;
+}
+
+/* 價錢數字 */
+.prd_price{
+    /* //styleName: 商品頁價錢1234 */
+    font-family: Amiri;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 30px;
+    }
+    
+    .prd_price::before{
+        content: '$';
+        font-family: Amiri;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    
+    .oprice{
+        display: inline-block;
+        margin-right: 20px;
+    }
+    
+    .price{
+        display: inline-block;
+    }
+    
+    .prd_stock{
+        height: 30px;
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    .prd_stock p{
+        line-height: 30px;
+        
+    }
+    
+    .prd_stock_count{
+        display: flex;
+        max-width: 180px;
+        align-items: center;
+    }
+    
+    /* 商品頁輸入框 */
+    .prd_nub-input{
+        background-color: transparent;
+        border: 0px solid #333;   
+        text-align: center;
+        flex-grow: 0;
+        flex-basis: 60px;
+        width: 100%;
+    }
+    
+    /* +-按鈕 */
+    
+    .prd_count{
+        background-color: RGBA(255,255,255,.5);
+        border: 1px solid #333;
+        max-width: 30px;
+        min-width: 30px;
+        height: 30px;
+        margin: 0 10px;
+        font-size: 5px;
+        line-height: 26px;
+        
+    }
+    
+    .prd_count:hover{
+        background-color: RGBA(51,51,51,.3);
+    }
+    
+    .prd_count:active{
+        transform: translateY(2px);
+    }
+    
+    /* 商品數量 */
+    .prd_nub{
+        /* //styleName: 商品頁數量1234 */
+        font-family: Amiri;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    
+    .prd-btn{
+        color: #567C92;
+        background-color: #F0D08E;
+        display: inline-block;
+        width: 180px;
+        line-height: 50px;
+        font-size: 18px;
+        vertical-align: middle;
+        text-align: center;
+        transition: .5s;
+    }
+
+    /* ----------------custom------------------ */
+/* =====文字===== */
+.result-p{
+    font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-weight: 400;
+    color: #567C92;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.result-pp{
+    font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-weight: 400;
+    color: #567C92;
+    line-height: 22px;
+    margin: 10px;
+}
+
+.hat-icon{
+    background-image: url(../img/custom/hat_icon.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;
+    width: 18px;
+    height: 14px;
+    
+}
+
+.fa-sync-alt{
+    color: #567C92;
+    font-size: 50px;
+}
+
+.result-p i{
+    margin-left: 10px;
+}
+
+.fa-gift{
+    color: #567C92;
+    font-size: 18px;
+}
+
+/* =====按鈕===== */
+
+.hat_cus-btn,.box_cus-btn{
+    display: inline-block;
+    margin: 3px;
+    border: 1px solid #567C92;
+    border-radius: 3px;
+    line-height: 40px;
+    padding: 0 10px;
+}
+
+.hat_cus-btn:hover,.box_cus-btn:hover{
+    background-color: #F5E4BF;
+}
+
+.cus-on{
+    background-color: #F5E4BF;
+}
+
+.cus-off{
+    background-color: #fff;
+}
+
+.cus-dis{
+    background-color: #b5b5b5;
+    cursor: not-allowed;
+}
+
+.cus-dis:hover{
+    background-color: #b5b5b5;
+}
+
+.hat_cus .a_btn,.box_cus .a_btn{
+    margin: 20px;
+    width: 186px;
+    height: 65px;
+    line-height: 65px;
+}
+
+.hat_cus-fabric{
+    margin: 0 5px;
+    line-height: 0;
+    font-size: 0;
+    
+}
+
+.hat_cus-fabric img{
+    border-radius: 50%;
+    border:2px solid #567C92;
+    background-color: #567C92;
+    line-height: 0;
+}
+
+.hat_cus-fabric:hover img{
+    border: 2px solid #F0D08E;
+}
+
+.fabric-sel{
+    border-radius: 50%;
+    box-shadow: 0 0 0px 4px #F0D08E;
+}
+
+.fabric-dis{
+    border-radius: 50%;
+    background-color: #b5b5b5;
+    opacity: .5;
+}
+
+.fabric-dis img{
+    border:2px solid #b5b5b5;
+    background-color: #b5b5b5;
+}
+
+.fabric-dis:hover img{
+    background-color: #b5b5b5;
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.box_area .cus_again, .hat_area .cus_again{
+    background-color: #FFF;
+    border:1px dotted #b5b5b5;
+}
+
+.box_area .cus_again:hover, .hat_area .cus_again:hover{
+    background-color: #567C92;
+}
+
+/* =====區塊===== */
+
+.hat_area,.box_area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hat_pic,.box_pic{
+    position: relative;
+    width: 600px;
+    line-height: 0;
+}
+
+.hat_pic i,.box_pic i{
+    position: absolute;
+    bottom: 8px;
+    right: 4px;
+}
+
+.hat_pic i:hover,.box_pic i:hover{
+    color: #F0D08E;
+}
+
+.result-pic{
+    width: 200px;
+    margin: 0 10px;
+}
+
+.hat_cus,.box_cus{
+    width: 500px;
+    margin-left: 30px; 
+    padding: 10px;
+    background-color: #fff;
+}
+
+.hat_area ul,.box_area ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background-color: #567C92;
+    margin: 10px;
+}
+
+.span_hr{
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #567C92;
+    margin: 30px 20%;
+}
+
+.hat_result,.box_result{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* box 產出 */
+.re_price .big_price{
+    font-size: 36px;
+    color: #567C92;
+   
+}
+.re_price .big_price::before{
+    font-size: 18px;
+    color: #567C92;
+}
+
+.re_price .result-p{
+    margin: 0;
+}
+
+.re_price{}
+
+
+/* 數量價錢區塊 */
+.re_count{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+/* 普通文字 */
+.re_count .count-t{
+    font-size: 18px;
+    line-height: 36px;
+    color: #567C92;
+}
+
+.re_count .prd_price{
+    color: #567C92;
+}
+
+/* 輸入框 */
+.re_count .prd_nub-input{
+    flex-grow: 0;
+    flex-basis: 60px;
+    width: 100%;
+}
+
+.add_custom_nub{
+    flex-grow: 0;
+    
+}
+
+.re_stock-count{
+    display: flex;
+    align-items: center;
+    max-width: 180px;
+}
+
+.box_result-fbox{
+    display: flex;
+    align-items: center;
+}
+
+.box_result-text{
+    margin-left: 30px;
+    padding-left: 10px;
+    border-left: 1px solid #567C92;
+    border-image: linear-gradient( RGBA(86,124,146,0) 0%,RGBA(86,124,146,0) 10%,RGBA(86,124,146,1) 11%,RGBA(86,124,146,1) 50%,RGBA(86,124,146,1) 90%,RGBA(86,124,146,0) 91%,RGBA(86,124,146,0) 100%) 1 stretch;
+}
+
+.cus_add_cart{
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.cus_add_cart .prd-btn{
+    margin: 20px;
+    width: 290px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 24px;
+}
+
+.cus_add_cart .prd-btn i{
+    font-size: 24px;
+}
+
+.btn_none{
+    display: none;
+}
+
+
+
+/* -----------------------custom end--------------------------- */

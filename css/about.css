@@ -1,0 +1,251 @@
+@import url(reset.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Roboto:wght@100;400;700&display=swap');
+
+ *{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-weight: 400;
+    color:#333;
+    font-size: 15px;
+    line-height: 18px;
+    background-color: #FFF4EA;
+    text-decoration: none;
+    min-width: 1200px;
+}
+
+main{
+}
+
+h1{
+    display: block;
+    width: 40vw;
+    z-index: 0  ;
+}
+
+h2{
+   /* styleName: H2大標; */
+   color: #567C92;
+font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+font-size: 64px;
+font-style: normal;
+font-weight: 400;
+line-height: 75px;
+}
+
+h3{
+    /* styleName: H3中標; */
+    color: #567C92;
+font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: 42px;
+}
+
+p{    /* //styleName: P內文; */
+font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+font-size: 15px;
+line-height: 1.6;
+font-style: normal;
+font-weight: 400;
+letter-spacing: 0em;
+}
+
+.big_price{
+    /* //styleName: card價錢; */
+font-family: Amiri;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+
+}
+
+.big_prices{
+    /* //styleName: 小$; */
+font-family: Amiri;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+}
+
+
+.a_btn{
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
+    color:#567C92;
+    background-color: #F0D08E;
+    font-weight: 400;
+    line-height: 43px;
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+    width: 186px;
+    height: 43px;
+    margin: 10px 0;
+    transition: 1s;
+}
+
+.a_btn:hover{
+    transition: 1s;
+    background-color: #567C92;
+    color: #F0D08E;
+} 
+
+
+
+/*--------------預設結束------------------*/
+
+/* ---------------- about us ---------------- */
+
+.abo_title{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    margin: 50px 0 100px;
+    background-image: url(../img/about.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.abo_title span{
+    display: block;
+    background-color: #567C92;
+    width: 15%;
+    height: 1px;
+    margin-right: 2px;
+}
+
+.abo_area01,.abo_area02,.abo_area03{
+    margin: 50px auto;
+    width: 80%;
+    display: flex;
+}
+
+.abo_area_t{
+    width: 40%;
+    text-align: center;
+    margin: 50px;
+}
+
+.abo_area_t h3{
+    margin: 30px;
+}
+
+.abo_area_t p{
+    text-align: left;
+    margin: 30px;
+}
+
+.abo_area01 img{
+    width: 50%;
+}
+
+.abo_area02 img{
+    width: 50%;
+    order: -1;
+}
+
+.abo_area03 img{
+    width: 50%;
+    float: right;
+}
+
+/* ----------------- */
+.abo_title2{
+    display: flex;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.abo_title2 span{
+    display: block;
+    background-color: #567C92;
+    width: 15%;
+    height: 1px;
+    margin-right: 2px;
+}
+
+.abo_eros{
+    text-align: center;
+    position: relative;
+}
+
+.abo_eros p{
+    line-height: 4;
+    font-size: 1.5em;
+}
+
+.abo_hat{
+    max-width: 40%;
+}
+
+.abo_book{
+    max-width: 15%;
+    position: absolute;
+    right: 12%;
+    bottom: 10%;
+}
+
+.goblin01{
+    max-width: 15%;
+    position: absolute;
+    top: -7%;
+    right:  24%;
+    transition: .5s;
+    opacity: 1;
+}
+
+.goblin02{
+    max-width: 30%;
+    position: absolute;
+    top: 33%;
+    right: 5%;
+    transition: .5s;
+    opacity: 1;
+}
+
+.goblin03{
+    max-width: 15%;
+    position: absolute;
+    top:18%;
+    left: 15%;
+    transition: .5s;
+    opacity: 1;
+}
+
+.goblin01:hover,.goblin02:hover,.goblin03:hover{
+    transition: .5s;
+    opacity: 0;
+}
+
+.goblin{
+    width: 300px;
+    text-align: left;
+    margin: 50px 0;
+    color: #b5b5b5;
+    opacity: 1;
+    transition: 1s;
+    
+}
+
+.goblin:hover{
+    transition: 1s;
+    transform: translateX(-200%) ;
+    opacity: 0;
+}
+
+.goblin p{
+    line-height: 1.6;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+/* ----------------about us end---------------- */
