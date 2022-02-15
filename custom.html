@@ -91,7 +91,7 @@
                     <li class="hat_cus-fabric fabric-dis"><img src="./img/custom/fabric02.jpg" alt=""></li>
                 </ul>
                 <hr>
-                <a href="#" class="a_btn">選好了</a><a href="#" class="a_btn">重來一次</a>
+                <a href="#" class="a_btn">選好了</a><a href="#" class="a_btn cus_again">重來一次</a>
             </div>
             <span class="span_hr"></span>
             <div class="hat_result">
@@ -147,7 +147,7 @@
                     <li class="box_cus-btn cus-dis">紅色</li>
                 </ul>
                 <hr>
-                <a href="#" class="a_btn">選好了</a><a href="#" class="a_btn">重來一次</a>
+                <a href="#" class="a_btn">選好了</a><a href="#" class="a_btn cus_again">重來一次</a>
             </div>
             <span class="span_hr"></span>
         </div>
@@ -176,9 +176,12 @@
                 </div>
                 <div class="box_result-fbox">
                     <div class="re_count">
-                        <span class="count-t">數量</span><button class="prd_count"><i
-                                class="fas fa-minus"></i></button><span class="prd_nub">1</span><button
-                            class="prd_count"><i class="fas fa-plus"></i></button>
+                        <span class="count-t">數量</span>
+                        <div class="re_stock-count">
+                        <button class="prd_count"><i
+                            class="fas fa-minus"></i></button><input type="text" class="prd_nub prd_nub-input" value="1" name="add_custom_nub">
+                            <button class="prd_count"><i class="fas fa-plus"></i></button>
+                        </div>
                     </div>
                     <div class="re_price">
                         <span class="result-p">訂製價格</span><span class="big_price">3200</span>

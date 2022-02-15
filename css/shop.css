@@ -1,6 +1,6 @@
 @import url(reset.css);
 
-@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Roboto:wght@100;400;700&display=swap');
 
 /* ----------------------預設----------------------- */
 *{
@@ -102,7 +102,6 @@ p{    /* //styleName: P內文; */
     color: #F0D08E;
 }
 
-
 /* --------------- shop ------------------ */
 
 
@@ -135,14 +134,15 @@ p{    /* //styleName: P內文; */
 
 .shop_bar{
     background-color: #FFF4EA;
-    width: 1200px;
-    height: 52px;
+    width: 100%;
+    height: 60px;
     margin: 10px auto;
     display: flex;
     justify-content: center;
     position: sticky;
     top:150px;
     z-index: 1; 
+    /* border: 1px solid #333; */
 }
 
 .tag{
@@ -196,6 +196,11 @@ p{    /* //styleName: P內文; */
     outline: 1px solid #b5b5b5;
     background-color: #fff;
     z-index: 1;
+}
+
+.item_btn{
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
+    background-color: transparent;
 }
 
 .tag .item_btn:hover{
@@ -253,7 +258,7 @@ option{
 
 .item_list ul{
     display: flex;
-    width: 1200px;
+    min-width: 1250px;
     flex-wrap: wrap;
     flex-direction: row;
 }
@@ -263,13 +268,14 @@ option{
     height: 370px;
     background-color: #fff;
     outline: 1px solid #b5b5b5;
-    margin: 6px;
+    margin: 10px;
     position: relative;
     overflow: hidden;
+    
 }
 
 .item_list ul li:hover{
-    box-shadow: 0 0 10px #b5b5b5;
+    box-shadow: 0 0 10px 5px #b5b5b5;
 }
 
 /* .item_card{} */
@@ -280,6 +286,15 @@ option{
     height: 160px;
     margin: 20px;
     outline: 1px solid #b5b5b5;
+    overflow: hidden;
+    
+}
+
+.item_list ul li .item_img img{
+    transition: .5s;
+}
+.item_list ul li:hover .item_img img{
+    transform: scale(120%);
 }
 
 .item_info{
@@ -320,26 +335,40 @@ option{
     
 }
 
+/* 品名 */
+.item_info .item_info_prd{
+    font-weight: 700;
+}
+
+.item_list ul li:hover .item_info .item_info_prd{
+    color: #567C92;
+}
+
+/* INFO 文字最後一行 */
 .item_info span:last-child{
     display: block;
     margin-bottom: 20px;
 }
 
+/* 商品前兩行 */
 .item_info span:nth-of-type(1),.item_info span:nth-of-type(2){
     display: inline-block;
     margin-bottom: 10px;
 }
 
 
-
+/* 加入最愛、購物車 */
 .add_like,.add_cart{
     width: 144px;
-    height: 60px;
+    height: var(--add_height);
     background-color: #567C92;
     opacity: .7;
     margin: 0;
     position: absolute;
     transition: .5s;
+
+    --add_height:50px;
+
 }
 
 .add_like:hover,.add_cart:hover{
@@ -359,11 +388,11 @@ option{
 
 .add_like i,main .item_list .add_cart i{
     color:#F0D08E;
-    font-size: 30px;
+    font-size: 24px;
     display: block;
     text-align: center;
     width: 144px;
-    line-height: 60px;
+    line-height:var(--add_height) ;
 }
 
 
@@ -620,10 +649,10 @@ figure{
 }
 
 .prd_stock{
-    display:flex;
     height: 30px;
-    align-items: center;
     margin: 20px 0;
+    display: flex;
+    align-items: center;
 }
 
 .prd_stock p{
@@ -631,14 +660,34 @@ figure{
     
 }
 
+.prd_stock_count{
+    display: flex;
+    max-width: 180px;
+    align-items: center;
+}
+
+/* 商品頁輸入框 */
+.prd_nub-input{
+    background-color: transparent;
+    border: 0px solid #333;   
+    text-align: center;
+    flex-grow: 0;
+    flex-basis: 60px;
+    width: 100%;
+}
+
+/* +-按鈕 */
+
 .prd_count{
     background-color: RGBA(255,255,255,.5);
     border: 1px solid #333;
-    width: 30px;
+    max-width: 30px;
+    min-width: 30px;
     height: 30px;
     margin: 0 10px;
     font-size: 5px;
     line-height: 26px;
+    
 }
 
 .prd_count:hover{
@@ -649,6 +698,7 @@ figure{
     transform: translateY(2px);
 }
 
+/* 商品數量 */
 .prd_nub{
     /* //styleName: 商品頁數量1234 */
     font-family: Amiri;
@@ -682,6 +732,8 @@ section a:nth-of-type(2){
     background-color: #567C92;
     color: #F0D08E;
 }
+
+
 
 /* =====其他推薦===== */
 .you_like{
@@ -870,6 +922,15 @@ section a:nth-of-type(2){
     cursor: not-allowed;
 }
 
+.box_area .cus_again, .hat_area .cus_again{
+    background-color: #FFF;
+    border:1px dotted #b5b5b5;
+}
+
+.box_area .cus_again:hover, .hat_area .cus_again:hover{
+    background-color: #567C92;
+}
+
 /* =====區塊===== */
 
 .hat_area,.box_area{
@@ -935,7 +996,7 @@ hr{
     margin-bottom: 30px;
 }
 
-
+/* box 產出 */
 .re_price .big_price{
     font-size: 36px;
     color: #567C92;
@@ -952,12 +1013,15 @@ hr{
 
 .re_price{}
 
+
+/* 數量價錢區塊 */
 .re_count{
     display: flex;
     align-items: center;
     margin: 10px;
 }
 
+/* 普通文字 */
 .re_count .count-t{
     font-size: 18px;
     line-height: 36px;
@@ -966,6 +1030,24 @@ hr{
 
 .re_count .prd_price{
     color: #567C92;
+}
+
+/* 輸入框 */
+.re_count .prd_nub-input{
+    flex-grow: 0;
+    flex-basis: 60px;
+    width: 100%;
+}
+
+.add_custom_nub{
+    flex-grow: 0;
+    
+}
+
+.re_stock-count{
+    display: flex;
+    align-items: center;
+    max-width: 180px;
 }
 
 .box_result-fbox{
@@ -1002,6 +1084,8 @@ hr{
     display: none;
 }
 
+
+
 /* -----------------------custom end--------------------------- */
 
 /* ------------------------ cart ------------------------- */
@@ -1030,7 +1114,7 @@ h5{
     fill:#b5b5b5;
     stroke: #333;
 }
-/* =====svg====== */
+/* =====svg end====== */
 
 .cart_process{
     margin: 0 auto; 
@@ -1048,7 +1132,7 @@ h5{
         display: block;
         background-color:#333 ;
         width:360px;
-        height: 4px;
+        height: 2px;
         z-index: -1;
     }
 
@@ -1074,12 +1158,12 @@ h5{
 .cart_prd{
     background-color: #fff;
     display: flex;
-    width: 650px;
+    width: 100%;
     margin-bottom:10px; 
 }
 
 .cart_prd_pic{
-    width: 210px;
+ 
     height: 210px;
     margin: 20px;
     display: flex;
@@ -1128,10 +1212,17 @@ h5{
     
 }
 
+.cart_card_price{
+    /* border: 1px solid #333; */
+    flex-grow: 1;
+    text-align: end;
+
+}
+
 /* =====結算===== */
 
 .cart_total{
-    width: 350px;
+    width: 300px;
     background-color: #fff;
     margin: 20px;
     padding: 20px;
@@ -1140,7 +1231,9 @@ h5{
 }
 
 .cart_total p{
+    margin: 0 5px;
     margin-bottom: 20px;
+
 }
 
 .cart_total .prd_price,.cart_total .prd_nub{
