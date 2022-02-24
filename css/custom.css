@@ -16,10 +16,10 @@ body{
     line-height: 18px;
     background-color: #FFF4EA;
     text-decoration: none;
-    min-width: 1200px;
 }
 
 /* main{
+    
 } */
 
 h1{
@@ -225,6 +225,11 @@ p{    /* //styleName: P內文; */
         transition: .5s;
     }
 
+    .prd-btn:hover,.prd-btn:hover{
+        background-color: #567C92;
+        color: #F0D08E;
+    }
+
     /* ----------------custom------------------ */
 /* =====文字===== */
 .result-p{
@@ -299,6 +304,11 @@ p{    /* //styleName: P內文; */
     background-color: #b5b5b5;
 }
 
+.hat_cus_btn,.box_cus_btn{
+    margin: 0 auto;
+    text-align: center;
+}
+
 .hat_cus .a_btn,.box_cus .a_btn{
     margin: 20px;
     width: 186px;
@@ -310,7 +320,6 @@ p{    /* //styleName: P內文; */
     margin: 0 5px;
     line-height: 0;
     font-size: 0;
-    
 }
 
 .hat_cus-fabric img{
@@ -369,7 +378,7 @@ p{    /* //styleName: P內文; */
     line-height: 0;
 }
 
-.hat_pic i,.box_pic i{
+.hat_pic i{
     position: absolute;
     bottom: 8px;
     right: 4px;
@@ -500,10 +509,124 @@ hr{
 
 .cus_add_cart .prd-btn i{
     font-size: 24px;
+    margin-right: 3px;
 }
 
 .btn_none{
     display: none;
+}
+
+
+@media (max-width:1199px) and (min-width:768px) {
+    .shop_title{
+        text-align: center;
+    }
+    .hat_area,.box_area{
+        flex-direction: column;
+        align-items: center;
+    }
+    .hat_pic,.box_pic{
+        max-width: 80%;
+        margin-bottom: 20px ;
+    }
+    .span_hr{
+        max-width: 80%;
+        margin: 30px auto;
+    }
+
+    .hat_result,.box_result{
+        flex-direction: column;
+        align-items: center;
+    }
+    .hat_cus,.box_cus{
+        margin: 0 auto;
+        width: 600px;
+    }
+
+}
+@media (max-width:767.98px){
+    .hat_area,.box_area{
+        flex-direction: column;
+        align-items: center;
+    }
+    .hat_pic,.box_pic{
+        max-width: 80%;
+        margin-bottom: 20px ;
+    }
+    .hat_pic>img,.box_pic>img{
+        max-width: 100%;
+    }
+    .hat_cus,.box_cus{
+        max-width: 80%;
+        margin: 0;
+    }
+
+    .hat_cus_btn,.box_cus_btn{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .hat_cus .a_btn,.box_cus .a_btn{
+        max-width: 80px;
+        max-height: 50px;
+        margin: 10px;
+        line-height: 50px;
+    }
+
+    .span_hr{
+        max-width: 80%;
+        margin: 30px auto;
+    }
+
+    .hat_result,.box_result{
+        flex-direction: column;
+        align-items: center;
+    }
+    .result_pic{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .result-pic{
+        max-width: 40%;
+    }
+    .box_result-text{
+        margin-left: 10px;
+    }
+    .box_result-fbox{
+        align-items: start;
+    }
+    .re_count{
+        flex-direction: column;
+    }
+    .re_price{
+        text-align: center;
+    }
+    .re_price>.result-p{
+        line-height: 60px;
+    }
+    .big_price{
+        line-height: 30px;
+    }
+    .cus_add_cart{
+        text-align: center;;
+    }
+    .cus_add_cart>.prd-btn{
+        margin: 10px;
+    }
+    /* 標題 */
+    .shop_title{
+        text-align: center;
+    }
+    .shop_title span{
+        max-width: 16%;
+    }
+    /* ==== */
+    .fa-sync-alt{
+        font-size: 30px;
+    }
+    .hat_cus-fabric{
+        margin-bottom: 10px;
+    }
 }
 
 

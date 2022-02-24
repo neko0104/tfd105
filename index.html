@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/nav_style.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="./favicon.ico" sizes="32x32">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Animal Hat．官方網站</title>
     <style>
 
@@ -20,23 +21,34 @@
 
         <nav>
             <div class="top_nav">
-                <a href="./index.html"><img src="./img/LOGO-4.svg" alt=""></a>
+                <a href="./index.html"><img src="./img/LOGO-4.svg"></a>
                 <ul>
-                    <li><a href="./index.html" class="top_nav_thispage">首頁<br>Index</a></li>
-                    <li><a href="./about.html">關於我們<br>About us</a></li>
-                    <li><a href="./shop.html">商城<br>Shop</a></li>
-                    <li><a href="./custom.html">客製商品<br>Custom</a></li>
-                    <li><a href="./service.html">售後服務<br>Service</a></li>
-                    <li><a href="./contact.html">聯絡我們<br>Contact</a></li>
-                    <li><a href="./cart.html"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li><a href="#"><i class="fas fa-user-circle"></i></a>
+                    <li class="hburg">
+                        <div>
+                            <div class="bar bar1 transition"></div>
+                            <div class="bar bar2 transition"></div>
+                            <div class="bar bar3 transition"></div>
+                            </div>
+                    </li>
+                    <li class="rwd_nav"><a href="./index.html" class="top_nav_thispage">首頁<br>Index</a></li>
+                    <li class="rwd_nav"><a href="./about.html">關於我們<br>About us</a></li>
+                    <li class="rwd_nav"><a href="./shop.html">商城<br>Shop</a></li>
+                    <li class="rwd_nav"><a href="./custom.html">客製商品<br>Custom</a></li>
+                    <li class="rwd_nav"><a href="./service.html">售後服務<br>Service</a></li>
+                    <li class="rwd_nav"><a href="./contact.html">聯絡我們<br>Contact</a></li>
+                    <li class="rwd_nav"><a href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                    <li class="rwd_nav"><a href="#"><i class="fas fa-user-circle"></i></a>
                         <ol>
                             <li><a href="#">登入/註冊</a></li>
                             <li><a href="#">購買紀錄</a></li>
                             <li><a href="#">會員資料</a></li>
                             <li><a href="#">登出</a></li>
-                        </ol></li>
+                        </ol>
+                    </li>
+                    
                 </ul>
+                
             </div>
         </nav>
     </header>
@@ -176,8 +188,19 @@
 
     </footer>
 
-
-
+    <script>
+    // RWD漢堡
+    var hburg_open = document.getElementsByClassName('rwd_nav');
+    var hburg = document.getElementsByClassName('hburg')[0];
+    document.addEventListener("DOMContentLoaded",function(){
+        hburg.addEventListener("click",function(){
+            this.classList.toggle("active");
+            for(let i=0;i<hburg_open.length;i++){
+                hburg_open[i].classList.toggle("active");
+            }
+    });
+    })
+    </script>
 
 </body>
 

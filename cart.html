@@ -8,11 +8,8 @@
     <link rel="stylesheet" href="css/nav_style.css">
     <link rel="stylesheet" href="css/cart.css">
     <link rel="icon" href="./favicon.ico" sizes="32x32">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>購物車｜Animal Hat．官方網站</title>
-    <style>
-
-    </style>
-
 </head>
 
 <body>
@@ -22,15 +19,22 @@
             <div class="top_nav">
                 <a href="./index.html"><img src="./img/LOGO-4.svg"></a>
                 <ul>
-                    <li><a href="./index.html">首頁<br>Index</a></li>
-                    <li><a href="./about.html">關於我們<br>About us</a></li>
-                    <li><a href="./shop.html">商城<br>Shop</a></li>
-                    <li><a href="./custom.html">客製商品<br>Custom</a></li>
-                    <li><a href="./service.html">售後服務<br>Service</a></li>
-                    <li><a href="./contact.html">聯絡我們<br>Contact</a></li>
-                    <li><a href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <li class="hburg">
+                        <div>
+                            <div class="bar bar1 transition"></div>
+                            <div class="bar bar2 transition"></div>
+                            <div class="bar bar3 transition"></div>
+                            </div>
                     </li>
-                    <li><a href="#"><i class="fas fa-user-circle"></i></a>
+                    <li class="rwd_nav"><a href="./index.html">首頁<br>Index</a></li>
+                    <li class="rwd_nav"><a href="./about.html">關於我們<br>About us</a></li>
+                    <li class="rwd_nav"><a href="./shop.html">商城<br>Shop</a></li>
+                    <li class="rwd_nav"><a href="./custom.html">客製商品<br>Custom</a></li>
+                    <li class="rwd_nav"><a href="./service.html">售後服務<br>Service</a></li>
+                    <li class="rwd_nav"><a href="./contact.html">聯絡我們<br>Contact</a></li>
+                    <li class="rwd_nav"><a href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                    <li class="rwd_nav"><a href="#"><i class="fas fa-user-circle"></i></a>
                         <ol>
                             <li><a href="#">登入/註冊</a></li>
                             <li><a href="#">購買紀錄</a></li>
@@ -38,12 +42,14 @@
                             <li><a href="#">登出</a></li>
                         </ol>
                     </li>
+                    
                 </ul>
+                
             </div>
         </nav>
     </header>
     <!---------------------header結束------------------------>
-    <main>
+    <main class="main">
         <div class="cart_process">
             <ul>
                 <li class="cart_process-point"><svg class="point-on" viewbox="-10 -10 20 20"><circle cx="0" cy="0" r="5"></circle></svg><p>購物車</p></li>
@@ -122,7 +128,7 @@
             <div>
                 <div class="cart_total">
                 <p>購物車內有<span class="prd_nub">6</span>項商品</p>
-                <p>總金額 <span class="prd_price">8790</span> 元</p>
+                <p>總金額 <span class="prd_price">8,790</span> 元</p>
                 <a href="#" class="a_btn"><i class="fas fa-dollar-sign"></i>結　帳</a>
                 <div class="cart_clear"><a href="#" class="cart_clear" >清空購物車</a></div>
                 </div>
@@ -174,7 +180,32 @@
 
 
     </footer>
+    <script>
+        // RWD漢堡
+        var hburg_open = document.getElementsByClassName('rwd_nav');
+        var hburg = document.getElementsByClassName('hburg')[0];
+        document.addEventListener("DOMContentLoaded",function(){
+            hburg.addEventListener("click",function(){
+                this.classList.toggle("active");
+                for(let i=0;i<hburg_open.length;i++){
+                    hburg_open[i].classList.toggle("active");
+                }
+        });
+        })
 
+        // 打開總計
+        var cart_open = document.getElementsByClassName('cart_total')[0];
+        var cart = cart_open.querySelectorAll('p')[0];
+        console.log(cart);
+        console.log(cart_open);
+        document.addEventListener("DOMContentLoaded",function(){
+            cart.addEventListener("click",function(){
+                this.classList.toggle("-open");
+                cart_open.classList.toggle("-open");
+                
+        });
+        });
+    </script>
 </body>
 
 </html>

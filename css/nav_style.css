@@ -11,30 +11,32 @@ header{
 }
 
 nav{
-    /* display: inline-block;
-    text-align: center; */
+    display: inline-block;
     background-color:#FFF4EA ;
 }
 
 .top_nav{
-    width: 90%;
+    width: 100%;
     height: 150px;
     background-color: #FFF4EA;
     margin: 0 auto; 
     /* border: 1px solid #333; */
+    display: flex;
+    align-items: center;
 }
 
 .top_nav ul{
     float: right;
-    width: 750px;
+    width: 100% ;
     display: flex;
     margin-left: auto;
     margin-right: 15px;
+    /* border: 1px solid #333; */
+    order: 2;
    }
 
 .top_nav li{
     flex-grow: 3;
-    padding-top: 55px;
     text-align: center;
     position: relative;
     flex-basis: 80px;
@@ -45,15 +47,28 @@ nav{
 .top_nav li:nth-last-child(-n+2)  {
     flex-grow: 0;
     flex-basis: 60px;
-  
 }
 
 
 .top_nav img{
-    height: 100px;
-    margin: 25px ;
+    width:  267px;
+    margin: 20px ;
     text-align: left;
 }
+
+@media (max-width:999px) and (min-width:768px){
+    .top_nav img{
+        max-width: 110px;
+        margin: 10px;
+    }
+}
+@media (max-width:767.98px){
+    .top_nav img{
+        margin: 7px;
+        max-width: 120px;
+    }
+}
+
 
 /* 車車數字 */
 .top_nav .fa-shopping-cart::after{
@@ -151,7 +166,6 @@ nav{
     line-height: 1.2;
     text-decoration: none;
     color: #333;
-    
 }
 
 .top_nav a:hover{
@@ -171,15 +185,102 @@ nav{
     border-color: transparent transparent #567C92 transparent;
 }
 
+.bar{
+    width: 36px;
+    height: 6px;
+    background: #333;
+    margin: 6px auto;
+    border-radius: 2px;
+}
 
+.hburg{
+    margin-left: 6px;
+    order: 1;
+    display: none;
+}
+
+.hburg:hover{
+    cursor:pointer;
+}
+
+/* RWD */
+@media (max-width:766.98px) {
+    /* ===========漢堡=========== */
+    .transition{
+        transition: .5s;
+    }
+    .hburg{
+        margin:0 auto;
+        order: 1;
+        display: block;
+    }
+
+    .hburg.active{
+        background: #fff;
+    }
+    
+    .hburg.active .bar1{
+        transform: rotate(-45deg) translate(-9px, 7px) ;                 
+    }
+    
+    .hburg.active .bar2{opacity: 0;}
+    
+    .hburg.active .bar3{
+        transform: rotate(45deg) translate(-9px, -8px) ;      
+    } 
+    /* ============漢堡END========== */
+     header,.top_nav{
+        width: calc(100%-70px);
+        height: 70px;
+    }
+    .top_nav>ul{
+        display: block;
+        flex-direction: column;
+        width: 100px;
+        align-items: center;
+        margin-right: 0;
+        background-color: #FFF4EA;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }    
+
+    .rwd_nav{
+        order:5;
+        padding-top:30px;
+        display: none;
+    }
+
+    .top_nav li:nth-last-child(1) {
+        order:2;
+        margin-bottom: 20px;
+    }
+    .top_nav li:nth-last-child(2){
+        order:3;
+        margin-bottom: 20px;
+    }
+    .top_nav li:nth-child(1){
+        padding-top:15px;
+        display: block;
+        background-color: transparent;
+    }
+
+    .rwd_nav.active{
+        display: block;
+    }
+
+    .top_nav ol:hover,.top_nav ol li a,.top_nav ul li:last-child:hover ol,.top_nav ul li:last-child:hover ol li a{
+        display: none;
+    }
+
+}
 /*------------------footer---------------------*/
 
 footer{
     background-color: #567C92;
     color:#F0D08E;
-    height: 400px;
-    width: 100%;
     margin: 0 auto;
+    width: 100%;
 }
 
 footer .f_main{
@@ -201,19 +302,18 @@ footer p{
     line-height: 1.5;
 }
 
-
-
 .f_text  i{
-
     font-size: 50px;
     color: #F0D08E;
     margin: 5px;
 }
+
 .f_text i:hover{
     color: #FFF4EA;
 }
 
 .min_map{
+    max-width: 390px;
     display: block;
     margin: 0 auto;
 }
@@ -231,8 +331,6 @@ footer p{
     padding: 0 20px;
 
 }
-
-
 
 footer a{
     color: #F0D08E;
@@ -254,7 +352,7 @@ footer .sub_nav a:hover{
 
 .copyright span{
     display: block;
-    width: 1200px;
+    width: 100%;
     height: 1px;
     background-color: #F0D08E;
     margin: 5px 0;
@@ -266,4 +364,38 @@ footer .sub_nav a:hover{
 
 .copyright p{
     margin:0 10px ;
+}
+
+
+/* footer RWD */
+@media (max-width:1199.98px) {
+    
+    footer{
+        margin: 0 auto;
+    }
+    footer .f_main{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .f_text,.min_map{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .min_map>img{
+        max-width: 100%;
+    }
+
+    footer .sub_nav{
+        margin: 0 auto;
+    }
+
+    .copyright,.copyright span,.site_l,.copyright p{
+        max-width: 100%;
+    }
+    
+    .copyright,.copyright span{
+        text-align: center;
+    }
 }

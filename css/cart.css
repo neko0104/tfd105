@@ -16,7 +16,6 @@ body{
     line-height: 18px;
     background-color: #FFF4EA;
     text-decoration: none;
-    min-width: 1200px;
 }
 
 /* main{
@@ -171,8 +170,8 @@ line-height: 30px;
 
 /* ------------------------ cart ------------------------- */
 
-main{
-    width: 1200px;
+.main{
+    width: 1000px;
     margin: 0 auto;
 }
 
@@ -184,6 +183,7 @@ h5{
     text-align: left;
     margin-bottom: 20px;
 }
+
 
 /* =====svg===== */
 .cart_process svg{
@@ -214,7 +214,7 @@ h5{
 .cart_process ul:after{
         content: '';
         position: absolute;
-        top:35%;
+        top:35px;
         display: block;
         background-color:#333 ;
         width:360px;
@@ -249,7 +249,7 @@ h5{
 }
 
 .cart_prd_pic{
- 
+    max-width: 210px;
     height: 210px;
     margin: 20px;
     display: flex;
@@ -259,7 +259,8 @@ h5{
 }
 
 .cart_prd_pic img{
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .cart_prd_info{
@@ -285,6 +286,10 @@ h5{
 
 .cart_prd_info h5{
     width: calc( 100% - 50px );
+}
+
+.cart_prd_info a{
+    color: #333;
 }
 
 .cart_prd_text{
@@ -339,6 +344,151 @@ h5{
     font-size: 12px;
     text-align: center;
     display: none;
+}
+
+
+/* ================RWD================= */
+@media (max-width:999px) and (min-width:768px) {
+    .main{
+        width: 100vw;
+    }
+    .cart_process ul{
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .cart{
+        flex-direction: column;
+    }
+    .cart_list{
+        width: 90%;
+        padding: 10px;
+        margin: 0 auto;
+    }
+    .cart_prd{
+        max-width: 90%;
+        margin: 10px auto;
+    }
+
+    /* 結算 */
+    .cart_total{
+        min-width: 100%;
+        max-height: 200px;
+        margin: 0;
+        position: fixed;
+        top:100%;
+        transition: .5s;
+    }
+
+    .cart_total.-open{
+        top:calc(100% - 200px);
+    }
+
+    .cart_total>.a_btn{
+        position: relative;
+    }
+
+    .cart_total>p:first-child:before{
+    content: '結帳';
+    line-height: 50px;
+    text-align: center;
+    display: block;
+    border-radius: 50% 50% 0 0 ;
+    background-color: #FFF;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 2%;
+    top:-35px;
+    cursor: pointer;
+    }
+}
+
+
+@media (max-width:767.98px){
+    .main{
+        width: 100%;
+    }
+    .cart_process ul{
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .cart_process ul:after{
+        width:75%;
+        max-width: 360px;
+    }
+
+    .cart{
+        flex-direction: column;
+    }
+    .cart_list{
+        width: 90%;
+        padding: 10px;
+        margin: 0 auto;
+    }
+    /* ========商品card======= */
+    .cart_prd{
+        width: 90%;
+        margin: 10px auto;
+        flex-direction: column;
+        position: relative;
+    }
+    .cart_prd_pic{
+        display: block;
+        max-height: 100px;
+        max-width: 100%;
+        margin: 20px auto 15px;
+    }
+    .cart_prd_info{
+    /* border: 1px solid #333; */
+    width: 90%;
+    margin: 0 20px;
+    position: static;
+    }
+    .cart_prd_info{
+        display: block;
+    }
+    .cart_prd_info .fa-times{
+        right: 5px;
+        top:2px;
+    }
+    .cart_prd_info h5{
+        font-size: 20px;
+        width: 100%;
+    }
+
+    /* ==========商品card end============ */
+    /* 結算 */
+    .cart_total{
+        min-width: 100%;
+        max-height: 200px;
+        margin: 0;
+        position: fixed;
+        top:100%;
+        transition: .5s;
+    }
+
+    .cart_total.-open{
+        top:calc(100% - 200px);
+    }
+
+    .cart_total>.a_btn{
+        position: relative;
+    }
+
+    .cart_total>p:first-child:before{
+    content: '結帳';
+    line-height: 50px;
+    text-align: center;
+    display: block;
+    border-radius: 50% 50% 0 0 ;
+    background-color: #FFF;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 2%;
+    top:-35px;
+    cursor: pointer;
+    }
 }
 
 

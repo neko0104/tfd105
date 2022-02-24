@@ -15,7 +15,7 @@ body{
     line-height: 18px;
     background-color: #FFF4EA;
     text-decoration: none;
-    min-width: 1200px;
+   
 }
 
 main{
@@ -110,7 +110,7 @@ letter-spacing: 0em;
     }
 
     100%{
-        background-size: 100%;
+        background-size: 110%;
         opacity: 1;
     }
 }
@@ -222,11 +222,12 @@ letter-spacing: 0em;
 }
 
 .about{
-    height: 500px;
+    padding-bottom: 50px;
     width: 100%;
     text-align: center;
     position: relative;
     background-color: #FFF4EA;
+    overflow: hidden;
 }
 
 .about img{
@@ -295,7 +296,7 @@ letter-spacing: 0em;
    }
 
 .product .pd_title{
-    padding: 50px 0;
+    padding-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -315,7 +316,7 @@ letter-spacing: 0em;
 
 .product .pd_area{
     width: 1200px;
-    margin: 20px auto;
+    margin: 20px auto 0;
     display: flex;
     flex-direction: column;
 }
@@ -368,7 +369,6 @@ letter-spacing: 0em;
 
 .fprint{
     width: 300px;
-    height: 150px;
     position: absolute;
     bottom: -100px;
     right: 50px;
@@ -414,7 +414,6 @@ letter-spacing: 0em;
 
 .custum .cus_area{
     width: 1200px;
-    height: 700px;
     margin: 0 auto;
     display: flex;
     
@@ -436,13 +435,14 @@ letter-spacing: 0em;
 
 .custum .cus_cl>img{
     width: 100%;
-    margin-top: 30px;
+    max-width: 300px;
+    margin: 30px 0;
     z-index: 2;
 }
 
 .cus_cr{
     background-image: url(../img/custom_img.jpg);
-    height: 690px;
+    background-repeat: no-repeat;
     width: 880px;
     z-index: 1;
 }
@@ -493,6 +493,228 @@ letter-spacing: 0em;
 
 .sercle p{
     margin: 20px;
+}
+
+@media (max-width:1199px) and (min-width:768px){
+    .top_banner{
+        background-image: url(../img/Top_banner2_sb.jpg);
+        background-position: top 20% left 50%;
+    }
+    .slogan{
+        margin-left:5%;
+    }
+
+    .concept::before{
+        background-image: url(../img/concept_bg.jpg),linear-gradient(#fff 0%,#FFF 100%);
+        background-position: top 200px left 0;
+        background-size: 100%,100%;
+    }
+
+    .about .ab_title{
+        top:-12px;
+    }
+    .about .ab_text{
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 30px;
+        padding-top: 30px;
+    }
+    .about .ab_text h2{
+        margin: 20px auto 30px;
+    }
+    
+    .product{
+        height: auto;
+    }
+    .product .pd_area{
+        max-width: 100%;
+    }
+    .product ul{
+        width: 700px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .product ul li{
+        margin: 20px;
+    }
+    .fprint{
+        width: 200px;
+    }
+    .custum .cus_area{
+        width: 100%;
+        max-height: auto;
+        /* border: 1px solid red; */
+    }
+    .cus_cl p{
+        font-size: 18px;
+    }
+    .cus_cr{
+        width: 70%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+    .custum .cus_cl>img{
+        margin-bottom: 80px;
+    }
+    .custum>img:last-child{
+        transform: scale(1,2) translateY(-20%);
+        /* border: 1px solid #333; */
+    }
+    .sercle{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+
+    h2{
+        font-size: 40px;
+    }
+    h3{
+        font-size: 26px;
+    }
+}
+@media (max-width:767.98px){
+    .top_banner{
+        background-image: url(../img/Top_banner2_sb.jpg);
+        background-position: top 20% left 50%;
+    }
+    .slogan{
+        margin-left:10%;
+        font-size: 15px;
+        min-width: 50px;
+    }
+
+    .concept::before{
+        background-image: url(../img/concept_bg.jpg),linear-gradient(#fff 0%,#FFF 100%);
+        background-position: top 200px left 0;
+        background-size: 150%,100%;
+    }
+    .concept .right{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .concept .right img{
+        max-width: 30%;
+        
+    }
+
+    .about .ab_title{
+        transform: rotate(0deg) translate(0);
+    }
+    .about .ab_text{
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 30px;
+        padding-top: 30px;
+    }
+    .about .ab_text h2{
+        margin: 20px auto 30px;
+    }
+    .about img{
+        max-width: 80%;
+    }
+
+    /* EROS */
+    .about .ab_text span{
+        font-size: 46px;
+    }
+    .about p{
+        max-width: 80%;
+    }
+    
+    .product{
+        height: auto;
+    }
+    .product .pd_area{
+        max-width: 100%;
+    }
+    .product ul{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .product ul li{
+        margin: 20px;
+    }
+    .fprint{
+        width: 200px;
+        display: none;
+    }
+    .cus_title{
+        transform: translateX(-15%);
+    }
+    .custum .cus_area{
+        width: 100%;
+        max-height: auto;
+        border: 1px solid red;
+        flex-direction: column;
+    }
+    .cus_cl{
+        margin: 0 auto 30PX;
+    }
+    .cus_cl p{
+        font-size: 18px;
+    }
+    
+    .cus_cr{
+        width: 80%;
+        height: 250px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        margin: 0 auto;
+        order:-1;
+        /* border: 1px solid green; */
+    }
+    .custum .cus_cl>img{
+        margin-bottom: 80px;
+        display: none;
+    }
+    .custum>img:last-child{
+        transform: scale(1,2) translateY(-20%);
+        border: 1px solid #333;
+        display: none;
+    }
+    .sercle{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .sercle .sercle_service,.sercle .sercle_clear{
+        width: 90%;
+        height: auto;
+        background-size: 100%;
+        padding: 100px 0;
+        /* border: 1px solid blue; */
+    }
+    .sercle .sercle_service img,.sercle .sercle_clear img{
+        max-width: 70%;
+    }
+    .sercle h3{
+        margin: 5px;
+        line-height: 1.2;
+        /* border: 1px solid blue; */
+    }
+    
+    .sercle p{
+        margin: 5px;
+        line-height: 1.2; 
+        /* border: 1px solid blue; */
+    }
+    .sercle a{
+        width: 100px;
+        margin: 5px;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 18px;
+    }
 }
 
 /* --------------index end--------------- */
