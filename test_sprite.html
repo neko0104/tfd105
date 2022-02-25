@@ -99,86 +99,18 @@
 </head>
 
 <body>
-    <header>
-
-        <nav>
-            <div class="top_nav">
-                <a href="./index.html"><img src="./img/LOGO-4.svg" alt=""></a>
-                <ul>
-                    <li><a href="./index.html" class="top_nav_thispage">首頁<br>Index</a></li>
-                    <li><a href="./about.html">關於我們<br>About us</a></li>
-                    <li><a href="./shop.html">商城<br>Shop</a></li>
-                    <li><a href="./custom.html">客製商品<br>Custom</a></li>
-                    <li><a href="./service.html">售後服務<br>Service</a></li>
-                    <li><a href="./contact.html">聯絡我們<br>Contact</a></li>
-                    <li><a href="./cart.html"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li><a href="#"><i class="fas fa-user-circle"></i></a>
-                        <ol>
-                            <li><a href="#">登入/註冊</a></li>
-                            <li><a href="#">購買紀錄</a></li>
-                            <li><a href="#">會員資料</a></li>
-                            <li><a href="#">登出</a></li>
-                        </ol>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <!---------------------header結束--------------------------->
-
-
-
-    <main>
-        <div class="prd_stock">
-            <p>數量</p>
-                <div class="prd_stock_count">
-                <button class="prd_count"><i class="fas fa-minus"></i></button><input type="text" class="prd_nub prd_nub-input" value="1" name="add_prd_nub">
-                <button class="prd_count"><i class="fas fa-plus"></i></button>
-                </div>
-        </div>
-
-
-        <br>
-        <div class="top_banner">
-            <p class="slogan">我的天呀，你知道嗎？上一個偷襲美國的傢伙變成二次元起源地。<br>
-                那座土地上的居民們很可憐，受基因突變所苦<br>
-                小男孩長出了貓耳，小女孩長出了JJ，光聽就可怕<br>
-            </p>
-        </div>
-        <div class="concept-aa concept">
-            <div class="right">
-                <h3>設計概念Conpet</h3>
-                <p>沖杯熱可可，窩在溫暖的房間裡<br>看著在暖爐中搖曳的光影<br>昏昏欲睡...<br>夢見自己是一隻毛茸茸的生物，在雪地中盡情玩耍</p>
-                <img src="./img/cap.png" alt="">
-            </div>
-        </div>
-
-        <div class="about">
-            <div class="ab_title">
-                <span></span>
-                <h2>關於</h2>
-                <h3>about</h3>
-            </div>
-            <div class="ab_text">
-                <img src="./img/LOGO-4.svg" alt="">
-                <h2>X</h2>
-                <span>ErosStudio</span>
-            </div>
-            <p>我們與腦洞大開的小精靈們密切合作中<br>在小精靈巧手與愉快的歌聲編織下<br>難道帽子就只能適用於保暖，千編一律又毫無變化的存在嗎？<br>不！我們要打破這個現況！<br>帽子不僅僅是一頂帽子，那是讓你成為全場矚目焦點的魔法！
-            </p>
-
-        </div>
+    
         <div class="aaa">
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
+            <p>測試一行<span>aaa</span></p>
+            <p>測試2行<span>aaa</span></p>
+            <p>測試3一行<span>aaa</span></p>
+            <p>測試4一行<span>aaa</span></p>
+            <p>測試5一行<span>aaa</span></p>
+            <p>測試6一行<span>aaa</span></p>
+            <p>測試7一行<span>aaa</span></p>
+            <p>測試8一行<span>aaa</span></p>
+            <p>測試9一行<span>aaa</span></p>
+            <p>測試10一行<span>aaa</span></p>
             <p>測試一行</p>
             <p>測試一行</p>
             <p>測試一行</p>
@@ -232,19 +164,53 @@
         </div>
 
 
-        <script src="https://code.jquery.com/jquery-3.6.0.js"
-            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script>
-            $(document).ready(function () {
-                var brow = $.browser;
-                var bInfo = "";
-                if (brow.msie) { bInfo = "MicrosoftInternetExplorer", brow.version; }
-                if (brow.mozilla) { bInfo = "MozillaFirefox", brow.version; }
-                if (brow.safari) { bInfo = "AppleSafari", brow.version; }
-                if (brow.opera) { bInfo = "Opera", brow.version; }
-                alert(bInfo);
-            });
 
+            var p = document.getElementsByTagName("p");
+            var j = 2;
+            
+            console.log("元"+p);
+
+            var p_a = p[j];
+            var p_b = p[j + 1];
+
+            console.log(p_a);
+            console.log(p_b);
+
+            var test1 = document.getElementsByTagName("p")[j+1];
+            console.log( test1);
+
+            var test2 = test1.previousElementSibling;
+
+            console.log( test2);
+
+            // p_a.innerHTML = `<div>${test2}</div>`;
+
+
+            
+            // var numbers = [45, 4, 9, 16, 25];
+            // numbers.forEach(function(value, index){ // 參數若沒有用到，可以省略不寫
+            // console.log(value);
+            // });
+
+
+            // let a = [1,2,3,4,5];
+            // let b = 0;
+            // a.forEach(item => {
+            //     b = b + item;
+            // });
+            // console.log(b); //
+
+            // let a = [1,2,3,4,5];
+            // a.forEach((item, index, arr) => {
+            //     arr[index] = item * 10;
+            // });
+            // console.log(a); //
+
+            // let c = [{name:"ccc",star:"3"}]
+            // let b = [1,2,3,4,5,6,7,8];
+            // b.fill(c,3,5);
+            // console.log(b); //
 
 
         </script>
