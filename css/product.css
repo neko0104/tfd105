@@ -518,7 +518,7 @@ section a:nth-of-type(2){
     .prd-btn{
         padding: 5px;
         font-size: 15px;
-        line-height: 1.5;
+        line-height: 3;
     }
     .prd-btn:last-child{
         line-height: 3;
@@ -544,6 +544,7 @@ section a:nth-of-type(2){
         max-width: 100%;
     }
 }
+
 
 /* --------------product end--------------- */
 

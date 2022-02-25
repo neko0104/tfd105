@@ -288,6 +288,10 @@ nav{
         display: none;
     }
 
+    .top_nav .cart_count{
+        right: 20px;
+        bottom: -4px;
+    }
 }
 /*------------------footer---------------------*/
 

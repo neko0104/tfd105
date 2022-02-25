@@ -127,8 +127,8 @@
             </div>
             <div>
                 <div class="cart_total">
-                <p>購物車內有<span class="prd_nub">6</span>項商品</p>
-                <p>總金額 <span class="prd_price">8,790</span> 元</p>
+                <p>購物車內有<span class="prd_nub">0</span>項商品</p>
+                <p>總金額 <span class="prd_price">0</span> 元</p>
                 <a href="#" class="a_btn"><i class="fas fa-dollar-sign"></i>結　帳</a>
                 <div class="cart_clear"><a href="#" class="cart_clear" >清空購物車</a></div>
                 </div>
@@ -180,24 +180,14 @@
 
 
     </footer>
+    <script src="./js/shopping.js"></script>
     <script>
-        // RWD漢堡
-        var hburg_open = document.getElementsByClassName('rwd_nav');
-        var hburg = document.getElementsByClassName('hburg')[0];
-        document.addEventListener("DOMContentLoaded",function(){
-            hburg.addEventListener("click",function(){
-                this.classList.toggle("active");
-                for(let i=0;i<hburg_open.length;i++){
-                    hburg_open[i].classList.toggle("active");
-                }
-        });
-        })
 
         // 打開總計
         var cart_open = document.getElementsByClassName('cart_total')[0];
         var cart = cart_open.querySelectorAll('p')[0];
-        console.log(cart);
-        console.log(cart_open);
+        // console.log(cart);
+        // console.log(cart_open);
         document.addEventListener("DOMContentLoaded",function(){
             cart.addEventListener("click",function(){
                 this.classList.toggle("-open");
