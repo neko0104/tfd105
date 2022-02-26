@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/splide.min.css">
     <link rel="stylesheet" href="css/nav_style.css">
     <link rel="stylesheet" href="css/product.css">
     <link rel="icon" href="./favicon.ico" sizes="32x32">
@@ -59,22 +60,35 @@
         </div>
         <div class="prd_wrapper">
             <figure>
-                <div class="prd_pic">
-                    <div class="prd_mpic"><img src="./img/product/sheep_01.jpg" alt=""></div>
-                    <div class="prd_otpic">
-                        <div class="prd_la"><i class="fas fa-angle-left"></i></div>
-                        <ul class="scro2">
-                            <li><img src="./img/product/sheep_02.jpg" alt=""></li>
-                            <li><img src="./img/product/sheep_02.jpg" alt=""></li>
-                            <li><img src="./img/product/mafura02_purple_1000_01.jpg" alt=""></li>
-                            <li><img src="./img/product/sheep_02.jpg" alt=""></li>
-                            <li><img src="./img/product/sheep_02.jpg" alt=""></li>
-                            <li><img src="./img/product/sheep_02.jpg" alt=""></li>
-                            <li><img src="./img/product/sheep_02.jpg" alt=""></li>
-                        </ul>
-                        <div class="prd_ra"><i class="fas fa-angle-right"></i></div>
+                <div id="splide1">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide"><img src="./img/product/sheep_01.jpg" alt=""></li>
+                        <li class="splide__slide"><img src="./img/product/sheep_02.jpg" alt=""></li>
+                        <li class="splide__slide"><img src="./img/product/sima_01.jpg" alt=""></li>
+                        <li class="splide__slide"><img src="./img/product/sima_02.jpg" alt=""></li>
+                  </ul>
                     </div>
-            </div>
+                  </div>
+                  <div style="height: 5px;"></div>
+                  <div id="thumbnail-slider1" class="splide">
+                    <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev white_arrow_l"><i class="fas fa-angle-left"></i>
+                        </button>
+                        <button class="splide__arrow splide__arrow--next white_arrow_r"><i class="fas fa-angle-right"></i>
+                        </button>
+                      </div>
+                    <div class="splide__track">
+                        
+                        <ul class="splide__list under">
+                            <li class="splide__slide"><img src="./img/product/sheep_01.jpg" alt=""></li>
+                            <li class="splide__slide"><img src="./img/product/sheep_02.jpg" alt=""></li>
+                            <li class="splide__slide"><img src="./img/product/sima_01.jpg" alt=""></li>
+                            <li class="splide__slide"><img src="./img/product/sima_02.jpg" alt=""></li>
+                          </ul>
+                          
+                    </div>
+                  </div>
             </figure>
             <div class="prd_info">
                 <article>
@@ -111,17 +125,23 @@
         <aside>
             <div class="you_like">
                 <h3>你可能也會喜歡</h3>
-                <div class="other_prd">
-                    <div class="other_la"><i class="fas fa-angle-left"></i></div>
-                    <ul class="scro2">
-                        <li><a href="#"><img src="./img/product/sima_01.jpg" alt=""></a></li>
-                        <li><a href="#"><img src="./img/product/mafura01_red_1000_01.jpg" alt=""></a></li>
-                        <li><a href="#"><img src="./img/product/mafura02_purple_1000_01.jpg" alt=""></a></li>
-                        <li><a href="#"><img src="./img/product/mafura01_red_1000_01.jpg" alt=""></a></li>
-                        <li><a href="#"><img src="./img/product/mafura02_purple_1000_01.jpg" alt=""></a></li>
-                    </ul>
-                    <div class="other_ra"><i class="fas fa-angle-right"></i></div>
-                </div>
+                <div id="thumbnail-slider3" class="splide ulike">
+                    <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev ulike_arrow_l"><i class="fas fa-angle-left"></i>
+                        </button>
+                        <button class="splide__arrow splide__arrow--next ulike_arrow_r"><i class="fas fa-angle-right"></i>
+                        </button>
+                      </div>
+                    <div class="splide__track">
+                          <ul class="splide__list">
+                            <li class="splide__slide"><a href="#"><img src="./img/product/sima_01.jpg" alt=""></a></li>
+                            <li class="splide__slide"><a href="#"><img src="./img/product/mafura01_red_1000_01.jpg" alt=""></a></li>
+                            <li class="splide__slide"><a href="#"><img src="./img/product/mafura02_purple_1000_01.jpg" alt=""></a></li>
+                            <li class="splide__slide"><a href="#"><img src="./img/product/mafura01_red_1000_01.jpg" alt=""></a></li>
+                            <li class="splide__slide"><a href="#"><img src="./img/product/mafura02_purple_1000_01.jpg" alt=""></a></li>
+                          </ul>
+                    </div>
+                  </div>
             </div>
         </aside>
     </main>
@@ -172,9 +192,51 @@
 
 
     </footer>
+
+    <script src="./js/splide.min.js"></script>
     <script src="./js/shopping.js"></script>
     <script>
+document.addEventListener( 'DOMContentLoaded', function () {
+  var main_1 = new Splide( '#splide1', {
+    type      : 'fade',
+    rewind    : true,
+    pagination: false,
+    arrows    : false,
+    // fixedHeight: 500,
+    padding:{bottom: 10},
+  } );
 
+  var thumbnails_1 = new Splide( '#thumbnail-slider1', {
+    fixedWidth  : 100,
+    fixedHeight : 60,
+    gap         : 5,
+    rewind      : true,
+    pagination  : false,
+    cover       : true,
+    isNavigation: true,
+    // arrows    : false,
+    padding: { left: 25, right: 25},
+    breakpoints : {
+      600: {
+        fixedWidth : 60,
+        fixedHeight: 44,
+      },
+    },
+  } );
+
+  main_1.sync( thumbnails_1 );
+  main_1.mount();
+  thumbnails_1.mount();
+} );
+
+new Splide( '#thumbnail-slider3', {
+        autoWidth:true,
+		gap       : 10,
+		rewind    : true,
+		pagination: false,
+        // padding:{left:'20%', right:'20%' },
+
+          } ).mount();
 
 
     </script>

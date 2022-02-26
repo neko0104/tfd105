@@ -458,6 +458,74 @@ section a:nth-of-type(2){
     max-height: 100%;
 }
 
+/* =============== Splide ================== */
+/* figure .splide__slide img{
+    border: 1px solid #b5b5b5;
+} */
+
+figure .splide__slide {
+    opacity: 0.5;
+    }
+
+    .splide__slide.is-active {
+    opacity: 1;
+    border: 1px solid #b5b5b5 !important; 
+    }
+
+    .splide__slide img {
+    width: 100%;
+    height: auto;
+    }
+
+    .white_arrow_r{
+        height: 100%;
+        border-radius:0;
+        right: 0;
+        background: #fff;
+    }
+
+    .white_arrow_l{
+        height: 100%;
+        border-radius:0;
+        left: 0;
+        background: #fff;
+    }
+
+    .ulike_arrow_r{
+        right: -9%;
+        color: #567C92;
+        background-color: #F0D08E;
+        width: 70px;
+        height: 70px;
+        font-size: 36px;
+    }
+
+    .ulike_arrow_l{
+        left: -9%;
+        color: #567C92;
+        background-color: #F0D08E;
+        width: 70px;
+        height: 70px;
+        font-size: 36px;
+    }
+
+    .ulike li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #b5b5b5;
+        width: 300px;
+    }
+
+    .ulike{
+        height: 300px;
+        margin: 0 auto;
+        max-width: 1000px;
+
+    }
+
+/* ================================= */
+
 @media (max-width:1199px) and (min-width:768px) {
     main{
         max-width: 100%;
@@ -489,6 +557,24 @@ section a:nth-of-type(2){
     .other_prd ul{
         max-width: 80%;
        
+    }
+    /* =============== Splide ================== */
+    .ulike_arrow_r{
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .ulike_arrow_l{
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .ulike{
+        height: 300px;
+        margin: 0 auto;
+        max-width: 80%;
     }
 }
 @media (max-width:767.98px){
@@ -542,6 +628,24 @@ section a:nth-of-type(2){
     }
     .you_like i{
         max-width: 100%;
+    }
+    /* =============== Splide ================== */
+    .ulike_arrow_r{
+        background-color: transparent;
+        max-width: 20px;
+
+    }
+
+    .ulike_arrow_l{
+        background-color: transparent;
+        max-width: 20px;
+
+    }
+
+    .ulike{
+        height: 300px;
+        margin: 0 auto;
+        max-width: 80%;
     }
 }
 
