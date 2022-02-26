@@ -385,6 +385,10 @@ footer .sub_nav a:hover{
     margin:0 10px ;
 }
 
+.copyright:nth-child(2){
+    padding-bottom: 20px;
+
+}
 
 /* footer RWD */
 @media (max-width:1199.98px) {
