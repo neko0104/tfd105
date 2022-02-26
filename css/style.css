@@ -383,6 +383,7 @@ letter-spacing: 0em;
     margin: 5px;
     border: 0;
     border-radius: 50%;
+    display: none;
 }
 
 .dot_btn_b{
@@ -643,13 +644,14 @@ letter-spacing: 0em;
         width: 200px;
         display: none;
     }
-    .cus_title{
+    .custum .cus_title{
         transform: translateX(-15%);
+        padding-bottom: 0;
+ 
     }
     .custum .cus_area{
         width: 100%;
         max-height: auto;
-        border: 1px solid red;
         flex-direction: column;
     }
     .cus_cl{
@@ -662,6 +664,7 @@ letter-spacing: 0em;
     .cus_cr{
         width: 80%;
         height: 250px;
+        background-image: url(../img/custom_img_sp.jpg);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center bottom;
@@ -700,7 +703,7 @@ letter-spacing: 0em;
     }
     
     .sercle p{
-        margin: 5px;
+        margin: 5px 20px;
         line-height: 1.2; 
         /* border: 1px solid blue; */
     }
