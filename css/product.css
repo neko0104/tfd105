@@ -1,0 +1,654 @@
+@import url(reset.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Roboto:wght@100;400;700&display=swap');
+
+/* ----------------------預設----------------------- */
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-weight: 400;
+    color:#333;
+    font-size: 15px;
+    line-height: 18px;
+    background-color: #FFF4EA;
+    text-decoration: none;
+    
+}
+/* main{
+} */
+
+h1{
+    display: block;
+    width: 40vw;
+    padding-top:8vw ;
+    padding-left: 13vw;
+    z-index: 0  ;
+}
+
+h2{
+   /* styleName: H2大標; */
+   color: #567C92;
+    font-family: Roboto;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 75px;
+}
+
+h3{
+    /* styleName: H3中標; */
+    color: #567C92;
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+}
+
+p{    /* //styleName: P內文; */
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-size: 15px;
+    line-height: 1.2;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+}
+
+.big_price{
+    /* //styleName: card價錢; */
+    font-family: Amiri;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    
+}
+
+.big_price::before{
+    /* //styleName: 小$; */
+    content: '$';
+    font-family: Amiri;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+
+.a_btn{
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
+    color:#567C92;
+    background-color: #F0D08E;
+    font-weight: 400;
+    line-height: 43px;
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+    width: 186px;
+    height: 43px;
+    margin: 10px 0;
+    transition: 1s;
+}
+
+.a_btn:hover{
+    transition: 1s;
+    background-color: #567C92;
+    color: #F0D08E;
+}
+/* ----------------------預設end--------------------- */
+
+
+/* scrollbar */
+    /* width */
+    .scro::-webkit-scrollbar {
+        width: 5px;
+      }
+      
+      /* Track */
+      .scro::-webkit-scrollbar-track {
+        background: RGBA(255,255,255,.5); 
+      }
+       
+      /* Handle */
+      .scro::-webkit-scrollbar-thumb {
+        background: #b5b5b5; 
+        border-radius: 5px;
+      }
+      
+      /* Handle on hover */
+      .scro::-webkit-scrollbar-thumb:hover {
+        background: RGBA(51,51,51,.5); 
+      }
+ /* scrollbar end */
+
+ /* scrollbar */
+    /* width */
+    .scro2::-webkit-scrollbar {
+        height: 5px;
+      }
+      
+      /* Track */
+      .scro2::-webkit-scrollbar-track {
+        background: RGBA(255,255,255,.5); 
+      }
+       
+      /* Handle */
+      .scro2::-webkit-scrollbar-thumb {
+        background: #b5b5b5; 
+        border-radius: 5px;
+      }
+      
+      /* Handle on hover */
+      .scro2::-webkit-scrollbar-thumb:hover {
+        background: RGBA(51,51,51,.5); 
+      }
+ /* scrollbar end */
+
+/* -----------------product---------------- */
+
+.bread p{
+    color: #b5b5b5;
+}
+
+.bread a{
+    color: #b5b5b5;
+}
+
+h4{
+    font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 42px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.prd_price{
+/* //styleName: 商品頁價錢1234 */
+font-family: Amiri;
+font-size: 36px;
+font-weight: 400;
+line-height: 30px;
+}
+
+.prd_price::before{
+    content: '$';
+    font-family: Amiri;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+
+
+.prd_del{
+    opacity: .5;
+}
+
+.del{
+    position: relative;
+}
+
+.del:after{
+    content: '';
+    display: block;
+    background-color: #333;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top:50%;
+    right: 0;
+}
+/* ===== 商品top ===== */
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bread{
+    margin: 20px;
+}
+
+.prd_wrapper{
+    display: flex;
+    margin: 0 auto;
+}
+
+/* ===== 圖片區 ===== */
+figure{
+    width: 40%;
+    margin: 0 50px;
+}
+
+.prd_pic{
+    /* border: 1px solid red; */
+    width: 100%;
+}
+
+.prd_pic img{
+    border: 1px solid #b5b5b5;
+    max-width: 100%;
+    max-height: 100%;
+}
+.prd_mpic{
+    width: 100%;
+}
+
+.prd_la,.prd_ra{
+    background-color: RGBA(255,255,255,0);
+    width: 20px;
+}
+
+.prd_la:hover,.prd_ra:hover{
+    background-color: RGBA(255,255,255,.4);
+}
+
+.prd_pic i{
+    display: block;
+    width: 20px;
+    line-height: 80px;
+    text-align: center;
+}
+
+.prd_otpic{
+    display: flex;
+    margin: 3px 0;
+}
+
+.prd_pic ul{
+    display: flex;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.prd_otpic li{
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 2px;
+    flex-shrink: 0;
+}
+
+
+
+/* ===== 商品文字區 ===== */
+.prd_info{
+    width: 50%;
+    /* border: 1px solid blue; */
+    margin-right: 50px;
+}
+
+.prd__p{
+    height: 165px;
+    margin: 10px 0 20px;
+    overflow: auto;
+}
+    
+.oprice{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.price{
+    display: inline-block;
+}
+
+.prd_stock{
+    height: 30px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.prd_stock p{
+    line-height: 30px;
+    
+}
+
+.prd_stock_count{
+    display: flex;
+    max-width: 180px;
+    align-items: center;
+}
+
+/* 商品頁輸入框 */
+.prd_nub-input{
+    background-color: transparent;
+    border: 0px solid #333;   
+    text-align: center;
+    flex-grow: 0;
+    flex-basis: 60px;
+    width: 100%;
+}
+
+/* +-按鈕 */
+
+.prd_count{
+    background-color: RGBA(255,255,255,.5);
+    border: 1px solid #333;
+    max-width: 30px;
+    min-width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    font-size: 5px;
+    line-height: 26px;
+    
+}
+
+.prd_count:hover{
+    background-color: RGBA(51,51,51,.3);
+}
+
+.prd_count:active{
+    transform: translateY(2px);
+}
+
+/* 商品數量 */
+.prd_nub{
+    /* //styleName: 商品頁數量1234 */
+    font-family: Amiri;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.prd_info-btn{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prd-btn{
+    color: #567C92;
+    background-color: #F0D08E;
+    display: inline-block;
+    width: 180px;
+    line-height: 50px;
+    font-size: 18px;
+    vertical-align: middle;
+    text-align: center;
+    transition: .5s;
+}
+
+section a:nth-of-type(2){
+    margin: 0 10px;
+}
+.prd-btn i{
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.prd-btn:hover,.prd-btn:hover{
+    transition: .5s;
+    background-color: #567C92;
+    color: #F0D08E;
+}
+
+
+
+/* =====其他推薦===== */
+.you_like{
+    margin: 50px auto;
+}
+
+.you_like h3{
+    margin-left: 20px;
+}
+
+.other_prd{
+    display: flex;
+    align-items: center;
+}
+
+.other_la,.other_ra{
+    background-color: #F0D08E;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.other_la:hover,.other_ra:hover{
+    background-color: #567C92;
+}
+
+.you_like i{
+    display: block;
+    width: 70px;
+    line-height: 72px;
+    font-size: 36px;
+    color: #567C92;
+    text-align: center;
+}
+
+.other_la:hover i,.other_ra:hover i{
+    color: #F0D08E;
+}
+
+.other_prd ul{
+    display: flex;
+    max-width: 1000px;
+    margin: 10px;
+    overflow: auto;
+}
+
+.other_prd ul li{
+    width: 290px;
+    height: 290px;
+    margin: 0 5px;
+    border: 1px solid #b5b5b5;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.other_prd a{
+    line-height: 0;
+}
+
+.other_prd img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* =============== Splide ================== */
+/* figure .splide__slide img{
+    border: 1px solid #b5b5b5;
+} */
+
+figure .splide__slide {
+    opacity: 0.5;
+    }
+
+    .splide__slide.is-active {
+    opacity: 1;
+    border: 1px solid #b5b5b5 !important; 
+    }
+
+    .splide__slide img {
+    width: 100%;
+    height: auto;
+    }
+
+    .white_arrow_r{
+        height: 100%;
+        border-radius:0;
+        right: 0;
+        background: #fff;
+    }
+
+    .white_arrow_l{
+        height: 100%;
+        border-radius:0;
+        left: 0;
+        background: #fff;
+    }
+
+    .ulike_arrow_r{
+        right: -9%;
+        color: #567C92;
+        background-color: #F0D08E;
+        width: 70px;
+        height: 70px;
+        font-size: 36px;
+    }
+
+    .ulike_arrow_l{
+        left: -9%;
+        color: #567C92;
+        background-color: #F0D08E;
+        width: 70px;
+        height: 70px;
+        font-size: 36px;
+    }
+
+    .ulike li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #b5b5b5;
+        width: 300px;
+    }
+
+    .ulike{
+        height: 300px;
+        margin: 0 auto;
+        max-width: 1000px;
+
+    }
+
+/* ================================= */
+
+@media (max-width:1199px) and (min-width:768px) {
+    main{
+        max-width: 100%;
+    }
+    .prd_wrapper{
+        max-width: 90%;
+        flex-direction: column;
+        align-items: center;
+        /* border: 1px solid #333; */
+    }
+    figure{
+        width: 80%;
+        /* border: 1px solid #333; */
+    }
+    .prd_info{
+        width: 80%;
+        margin:10px  0;
+        /* border: 1px solid #333; */
+    }
+
+    .prd_info-btn{
+        text-align: center;
+        /* border: 1px solid #333; */
+    }
+
+    .you_like{
+        max-width: 100%;
+    }
+    .other_prd ul{
+        max-width: 80%;
+       
+    }
+    /* =============== Splide ================== */
+    .ulike_arrow_r{
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .ulike_arrow_l{
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .ulike{
+        height: 300px;
+        margin: 0 auto;
+        max-width: 80%;
+    }
+}
+@media (max-width:767.98px){
+    main{
+        max-width: 100%;
+    }
+    .prd_wrapper{
+        max-width: 90%;
+        flex-direction: column;
+        align-items: center;
+        /* border: 1px solid #333; */
+    }
+    figure{
+        width: 80%;
+        /* border: 1px solid #333; */
+    }
+    .prd_info{
+        width: 80%;
+        margin:10px  0;
+        /* border: 1px solid #333; */
+    }
+
+    .prd_info-btn{
+        text-align: center;
+        /* border: 1px solid #333; */
+    }
+    .prd-btn{
+        padding: 5px;
+        font-size: 15px;
+        line-height: 3;
+    }
+    .prd-btn:last-child{
+        line-height: 3;
+    }
+
+    h3{
+        font-size: 24px;
+    }
+    h4{
+        font-size: 24px;
+    }
+    .you_like{
+        max-width: 100%;
+    }
+    .other_prd ul{
+        max-width: 80%;
+    }
+    .other_la,.other_ra{
+        background-color: transparent;
+        max-width: 20px;
+    }
+    .you_like i{
+        max-width: 100%;
+    }
+    /* =============== Splide ================== */
+    .ulike_arrow_r{
+        background-color: transparent;
+        max-width: 20px;
+
+    }
+
+    .ulike_arrow_l{
+        background-color: transparent;
+        max-width: 20px;
+
+    }
+
+    .ulike{
+        height: 300px;
+        margin: 0 auto;
+        max-width: 80%;
+    }
+}
+
+
+/* --------------product end--------------- */
+

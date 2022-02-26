@@ -6,13 +6,10 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/nav_style.css">
-    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/cart.css">
     <link rel="icon" href="./favicon.ico" sizes="32x32">
-    <title>Animal Hat．官方網站</title>
-    <style>
-
-    </style>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>購物車｜Animal Hat．官方網站</title>
 </head>
 
 <body>
@@ -22,15 +19,22 @@
             <div class="top_nav">
                 <a href="./index.html"><img src="./img/LOGO-4.svg"></a>
                 <ul>
-                    <li><a href="./index.html">首頁<br>Index</a></li>
-                    <li><a href="./about.html">關於我們<br>About us</a></li>
-                    <li><a href="./shop.html">商城<br>Shop</a></li>
-                    <li><a href="./custom.html">客製商品<br>Custom</a></li>
-                    <li><a href="./service.html">售後服務<br>Service</a></li>
-                    <li><a href="./contact.html">聯絡我們<br>Contact</a></li>
-                    <li><a href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <li class="hburg">
+                        <div>
+                            <div class="bar bar1 transition"></div>
+                            <div class="bar bar2 transition"></div>
+                            <div class="bar bar3 transition"></div>
+                            </div>
                     </li>
-                    <li><a href="#"><i class="fas fa-user-circle"></i></a>
+                    <li class="rwd_nav"><a href="./index.html">首頁<br>Index</a></li>
+                    <li class="rwd_nav"><a href="./about.html">關於我們<br>About us</a></li>
+                    <li class="rwd_nav"><a href="./shop.html">商城<br>Shop</a></li>
+                    <li class="rwd_nav"><a href="./custom.html">客製商品<br>Custom</a></li>
+                    <li class="rwd_nav"><a href="./service.html">售後服務<br>Service</a></li>
+                    <li class="rwd_nav"><a href="./contact.html">聯絡我們<br>Contact</a></li>
+                    <li class="rwd_nav"><a href="./cart.html"><i class="fas fa-shopping-cart"></i><span class="cart_count">0</span></a>
+                    </li>
+                    <li class="rwd_nav"><a href="#"><i class="fas fa-user-circle"></i></a>
                         <ol>
                             <li><a href="#">登入/註冊</a></li>
                             <li><a href="#">購買紀錄</a></li>
@@ -38,12 +42,14 @@
                             <li><a href="#">登出</a></li>
                         </ol>
                     </li>
+                    
                 </ul>
+                
             </div>
         </nav>
     </header>
     <!---------------------header結束------------------------>
-    <main>
+    <main class="main">
         <div class="cart_process">
             <ul>
                 <li class="cart_process-point"><svg class="point-on" viewbox="-10 -10 20 20"><circle cx="0" cy="0" r="5"></circle></svg><p>購物車</p></li>
@@ -55,10 +61,33 @@
         <div class="cart">
             <div class="cart_list">
                 <div class="cart_prd">
-                    <div class="cart_prd_pic"><img src="./img/product/sheep_01.jpg" alt=""></div>
+                    <div class="cart_prd_pic"><a href="./product.html"><img src="./img/product/sheep_01.jpg" alt=""></a></div>
                     <div class="cart_prd_info">
                         <a href="#"><i class="fas fa-times"></i></a>
-                        <h5>商品名稱</h5>
+                        <h5><a href="./product.html">商品名稱</a></h5>
+                        <div class="cart_prd_text">
+                            <p>耳朵的樣式：貓耳<br>
+                                帽子的顏色：杏仁色<br>
+                                帽子的裝飾：蝴蝶結<br>
+                                裝飾布料：布料名稱A</p>
+                        </div>
+                        
+                            <div class="cart_prd_count">
+                                <span class="count-t">數量</span><button class="prd_count"><i class="fas fa-minus"></i></button><input type="text" class="prd_nub prd_nub-input" value="1" name="add_prd_nub">
+                                <button class="prd_count"><i class="fas fa-plus"></i></button>
+                                
+                                <div class="cart_card_price">
+                                    價錢<span class="prd_price">123</span>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </div>
+                <div class="cart_prd">
+                    <div class="cart_prd_pic"><a href="./product.html"><img src="./img/product/mafura01_red_1000_01.jpg" alt=""></a></div>
+                    <div class="cart_prd_info">
+                        <a href="#"><i class="fas fa-times"></i></a>
+                        <h5><a href="./product.html">商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</a></h5>
                         <div class="cart_prd_text">
                             <p>耳朵的樣式：貓耳<br>
                                 帽子的顏色：杏仁色<br>
@@ -66,15 +95,19 @@
                                 裝飾布料：布料名稱A</p>
                         </div>
                         <div class="cart_prd_count">
-                            <span class="count-t">數量</span><button class="prd_count"><i class="fas fa-minus"></i></button><span class="prd_nub">2</span><button class="prd_count"><i class="fas fa-plus"></i></button>
+                            <span class="count-t">數量</span><button class="prd_count"><i class="fas fa-minus"></i></button><input type="text" class="prd_nub prd_nub-input" value="1" name="add_prd_nub">
+                            <button class="prd_count"><i class="fas fa-plus"></i></button>
+                            <div class="cart_card_price">
+                                價錢<span class="prd_price">123</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="cart_prd">
-                    <div class="cart_prd_pic"><img src="./img/product/mafura01_red_1000_01.jpg" alt=""></div>
+                    <div class="cart_prd_pic"><a href="./product.html"><img src="./img/product/mafura02_purple_1000_01.jpg" alt=""></a></div>
                     <div class="cart_prd_info">
                         <a href="#"><i class="fas fa-times"></i></a>
-                        <h5>商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱</h5>
+                        <h5><a href="./product.html">商品名稱</a></h5>
                         <div class="cart_prd_text">
                             <p>耳朵的樣式：貓耳<br>
                                 帽子的顏色：杏仁色<br>
@@ -82,31 +115,20 @@
                                 裝飾布料：布料名稱A</p>
                         </div>
                         <div class="cart_prd_count">
-                            <span class="count-t">數量</span><button class="prd_count"><i class="fas fa-minus"></i></button><span class="prd_nub">2</span><button class="prd_count"><i class="fas fa-plus"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart_prd">
-                    <div class="cart_prd_pic"><img src="./img/product/mafura02_purple_1000_01.jpg" alt=""></div>
-                    <div class="cart_prd_info">
-                        <a href="#"><i class="fas fa-times"></i></a>
-                        <h5>商品名稱</h5>
-                        <div class="cart_prd_text">
-                            <p>耳朵的樣式：貓耳<br>
-                                帽子的顏色：杏仁色<br>
-                                帽子的裝飾：蝴蝶結<br>
-                                裝飾布料：布料名稱A</p>
-                        </div>
-                        <div class="cart_prd_count">
-                            <span class="count-t">數量</span><button class="prd_count"><i class="fas fa-minus"></i></button><span class="prd_nub">2</span><button class="prd_count"><i class="fas fa-plus"></i></button>
+                            <span class="count-t">數量</span><button class="prd_count"><i class="fas fa-minus"></i></button><input type="text" class="prd_nub prd_nub-input" value="1" name="add_prd_nub">
+                            <button class="prd_count"><i class="fas fa-plus"></i></button>
+                            
+                            <div class="cart_card_price">
+                                價錢<span class="prd_price">123</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div>
                 <div class="cart_total">
-                <p>購物車內有<span class="prd_nub">6</span>項商品</p>
-                <p>總金額 </p><span class="prd_price">87908790879087908790</span><p> 元</p>
+                <p>購物車內有<span class="prd_nub">0</span>項商品</p>
+                <p>總金額 <span class="prd_price">0</span> 元</p>
                 <a href="#" class="a_btn"><i class="fas fa-dollar-sign"></i>結　帳</a>
                 <div class="cart_clear"><a href="#" class="cart_clear" >清空購物車</a></div>
                 </div>
@@ -158,7 +180,22 @@
 
 
     </footer>
+    <script src="./js/shopping.js"></script>
+    <script>
 
+        // 打開總計
+        var cart_open = document.getElementsByClassName('cart_total')[0];
+        var cart = cart_open.querySelectorAll('p')[0];
+        // console.log(cart);
+        // console.log(cart_open);
+        document.addEventListener("DOMContentLoaded",function(){
+            cart.addEventListener("click",function(){
+                this.classList.toggle("-open");
+                cart_open.classList.toggle("-open");
+                
+        });
+        });
+    </script>
 </body>
 
 </html>

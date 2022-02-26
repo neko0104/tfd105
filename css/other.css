@@ -1,0 +1,456 @@
+@import url(reset.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Roboto:wght@100;400;700&display=swap');
+
+ *{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-weight: 400;
+    color:#333;
+    font-size: 15px;
+    line-height: 18px;
+    background-color: #FFF4EA;
+    text-decoration: none;
+    
+}
+
+main{
+}
+
+h1{
+    display: block;
+    width: 40vw;
+    z-index: 0  ;
+}
+
+h2{
+   /* styleName: H2大標; */
+   color: #567C92;
+font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+font-size: 64px;
+font-style: normal;
+font-weight: 400;
+line-height: 75px;
+}
+
+h3{
+    /* styleName: H3中標; */
+    color: #567C92;
+font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: 42px;
+}
+
+p{    /* //styleName: P內文; */
+font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+font-size: 15px;
+line-height: 1.6;
+font-style: normal;
+font-weight: 400;
+letter-spacing: 0em;
+}
+
+.big_price{
+    /* //styleName: card價錢; */
+font-family: Amiri;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+
+}
+
+.big_prices{
+    /* //styleName: 小$; */
+font-family: Amiri;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+}
+
+
+.a_btn{
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
+    color:#567C92;
+    background-color: #F0D08E;
+    font-weight: 400;
+    line-height: 43px;
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+    width: 186px;
+    height: 43px;
+    margin: 10px 0;
+    transition: 1s;
+}
+
+.a_btn:hover{
+    transition: 1s;
+    background-color: #567C92;
+    color: #F0D08E;
+} 
+
+
+
+/*--------------預設結束------------------*/
+
+/* --------------copyright--------------- */
+.this_site{
+    width: 800px;
+    margin: 0 auto;
+    /* border: 1px solid #333; */
+}
+
+.this_site .main{
+    margin-bottom: 100px;
+    /* border: 1px solid #333; */
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    /* border: 1px solid #333; */
+}
+
+.title span{
+    display: block;
+    background-color: #567C92;
+    width: 100px;
+    height: 1px;
+    margin: 0 2px;
+}
+
+
+.site1{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.site_l{
+    /* width: 400px; */
+    }
+
+.site_r{
+    display: block;
+    margin: 10px 0;
+}
+
+.site1 iframe{
+    max-width: 340px;
+    transform: scale(.9);
+}
+
+.site{
+    margin: 20px;
+}
+
+@media (max-width:767.98px){
+    .this_site,.site,.site_r,.site_l h3{
+        max-width: 100%;
+        text-align: center;
+    }
+    .site_l{
+        margin: 0 auto;
+    }
+}
+
+/* --------------copyright end--------------- */
+
+/* ----------------contact------------------ */
+
+.contact{
+    display: flex;
+    justify-content: center;
+}
+
+.con_form{
+    width: 50%;
+    /* border:1px solid #567C92; */
+}
+
+.con_form_title{
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.con_form_title>div{
+    flex-grow: 2;
+    text-align: right;
+}
+
+.con_form_title span{
+    display: inline-block;
+    background-color: #567C92;
+    height: 1px;
+    min-width: 100px;
+    width: 75%;
+    margin-right: 2px;
+}
+
+.con_form_title h3{
+    flex-grow: 0;
+    flex-basis: 450px;
+}
+
+.con_form p{
+    font-size: 18px;
+}
+
+/* =====表單===== */
+
+form{
+    float: right;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+.name,.email,.phone_number,.issue{
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-weight: 400;
+    height: 40px;
+    width: 500px;
+    border: 1px solid #567C92;
+    background-color: #FFF4EA;
+    font-size: 15px;
+    padding: 2px 5px;
+    margin-top: 3px;
+    margin-bottom: 20px;
+    outline: 0;
+}
+
+.comments{
+    width: 500px;
+    max-width: 500px;
+    min-height: 100px;
+    border: 1px solid #567C92;
+    background-color: #FFF4EA;
+    font-size: 15px;
+    padding: 2px 5px;
+    margin-top: 3px;
+    margin-bottom: 20px;
+    outline: 0;
+    resize: none;
+    line-height: 1.6;
+}
+
+.submit{
+    width: 500px;
+    height: 40px;
+    font-size: 18px;
+    color: #F0D08E;
+    border: 1px solid #567C92;
+    background-color: #567C92;
+    outline: 0;
+}
+
+.submit:hover{
+    background-color:#F0D08E;
+    color:#567C92;
+}
+
+.submit:active{
+    box-shadow: inset 2px 2px 1px RGBA(51,51,51,.5);
+}
+
+/* =====表單end===== */
+
+.map{
+    width: 50%;
+    margin-left: 50px;
+}
+
+.map_title{
+    display: flex;
+    align-items: center;
+    margin: 30px 0 30px 0;
+}
+
+.map h3{
+    text-align: right;
+    flex-basis: 285px;
+}
+
+.map_title>div{
+    flex-grow: 1;
+}
+
+.map_title span{
+    display: inline-block;
+    background-color: #567C92;
+    height: 1px;
+    min-width: 100px;
+    width: 80%;
+}
+
+.map iframe{
+    width: 500px;
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+.map p{
+    display: block;
+    margin-bottom: 15px;
+    width: 500px;
+    line-height: 1.8;
+}
+
+.map i{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+@media (max-width:999px) and (min-width:768px) {
+    .contact{
+        flex-direction: column;
+    }
+    .con_form{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .con_form_title span{
+        display: none;
+    }
+    form{
+        margin-bottom: 100px;
+    }
+    .map{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    .map_title{
+        display: block;
+        min-height: 44px;
+        margin: 0 auto;
+        
+    }
+    .map h3{
+        text-align: center;
+    }
+    .map_title span{
+       display: none;
+    }
+
+}
+@media (max-width:767.98px){
+    .contact{
+        flex-direction: column;
+    }
+    .con_form{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .con_form_title{
+        text-align: center;
+    }
+    .con_form_title span{
+        display: none;
+        
+    }
+    form{
+        float: none;
+        margin-right: 0;
+        margin-bottom: 100px;
+    }
+    .map{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    .map_title{
+        display: block;
+        min-height: 44px;
+        margin: 0 auto;
+        
+    }
+    .map h3{
+        text-align: center;
+    }
+    .map_title span{
+       display: none;
+    }
+    iframe,.map p{
+        max-width: 90%;
+    }
+    .name,.email,.phone_number,.issue,.comments,.submit{
+        max-width: 100%;
+    }
+}
+
+
+
+
+/* ----------------contact end------------------ */
+
+/* ----------------service---------------- */
+
+.ser_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ser_title span{
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: #567C92;
+    margin: 50px 2px;
+}
+
+.service{
+    margin: 50px auto;
+    width: 800px;
+    list-style: decimal;
+
+}
+
+.ser-ol{
+    list-style:lower-alpha;
+    margin-left: 30px;
+}
+
+.service>li{
+    line-height: 1.8;
+    margin: 10px;
+}
+@media (max-width:999px) and (min-width:768px) {
+    .service{
+        max-width: 90%;
+    }
+}
+@media (max-width:767.98px){
+    .service{
+        max-width: 90%;
+    }
+    .ser_title h2 {
+        font-size: 36px;
+    }
+    .ser_title h3{
+        font-size: 26px;
+    }
+}
+
+/* ----------------service end---------------- */
+

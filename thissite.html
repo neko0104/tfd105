@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/nav_style.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/other.css">
     <link rel="icon" href="./favicon.ico" sizes="32x32">
-    <title>Animal Hat．官方網站</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>參考網站｜Animal Hat．官方網站</title>
     <style>
 
     </style>
@@ -22,15 +23,22 @@
             <div class="top_nav">
                 <a href="./index.html"><img src="./img/LOGO-4.svg"></a>
                 <ul>
-                    <li><a href="./index.html">首頁<br>Index</a></li>
-                    <li><a href="./about.html">關於我們<br>About us</a></li>
-                    <li><a href="./shop.html">商城<br>Shop</a></li>
-                    <li><a href="./custom.html">客製商品<br>Custom</a></li>
-                    <li><a href="./service.html">售後服務<br>Service</a></li>
-                    <li><a href="./contact.html">聯絡我們<br>Contact</a></li>
-                    <li><a href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <li class="hburg">
+                        <div>
+                            <div class="bar bar1 transition"></div>
+                            <div class="bar bar2 transition"></div>
+                            <div class="bar bar3 transition"></div>
+                            </div>
                     </li>
-                    <li><a href="#"><i class="fas fa-user-circle"></i></a>
+                    <li class="rwd_nav"><a href="./index.html">首頁<br>Index</a></li>
+                    <li class="rwd_nav"><a href="./about.html" class="top_nav_thispage">關於我們<br>About us</a></li>
+                    <li class="rwd_nav"><a href="./shop.html">商城<br>Shop</a></li>
+                    <li class="rwd_nav"><a href="./custom.html">客製商品<br>Custom</a></li>
+                    <li class="rwd_nav"><a href="./service.html">售後服務<br>Service</a></li>
+                    <li class="rwd_nav"><a href="./contact.html">聯絡我們<br>Contact</a></li>
+                    <li class="rwd_nav"><a href="./cart.html"><i class="fas fa-shopping-cart"></i><span class="cart_count">0</span></a>
+                    </li>
+                    <li class="rwd_nav"><a href="#"><i class="fas fa-user-circle"></i></a>
                         <ol>
                             <li><a href="#">登入/註冊</a></li>
                             <li><a href="#">購買紀錄</a></li>
@@ -38,7 +46,9 @@
                             <li><a href="#">登出</a></li>
                         </ol>
                     </li>
+                    
                 </ul>
+                
             </div>
         </nav>
     </header>
@@ -151,6 +161,12 @@
 
     </footer>
 
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./js/shopping.js"></script>
+    <script>
+
+    </script>
 </body>
 
 </html>

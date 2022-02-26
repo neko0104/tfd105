@@ -6,12 +6,10 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/nav_style.css">
-    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/custom.css">
     <link rel="icon" href="./favicon.ico" sizes="32x32">
-    <title>Animal Hat．官方網站</title>
-    <style>
-
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>客製商品｜Animal Hat．官方網站</title>
 
 </head>
 
@@ -22,15 +20,22 @@
             <div class="top_nav">
                 <a href="./index.html"><img src="./img/LOGO-4.svg"></a>
                 <ul>
-                    <li><a href="./index.html">首頁<br>Index</a></li>
-                    <li><a href="./about.html">關於我們<br>About us</a></li>
-                    <li><a href="./shop.html">商城<br>Shop</a></li>
-                    <li><a href="./custom.html" class="top_nav_thispage">客製商品<br>Custom</a></li>
-                    <li><a href="./service.html">售後服務<br>Service</a></li>
-                    <li><a href="./contact.html">聯絡我們<br>Contact</a></li>
-                    <li><a href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <li class="hburg">
+                        <div>
+                            <div class="bar bar1 transition"></div>
+                            <div class="bar bar2 transition"></div>
+                            <div class="bar bar3 transition"></div>
+                        </div>
                     </li>
-                    <li><a href="#"><i class="fas fa-user-circle"></i></a>
+                    <li class="rwd_nav"><a href="./index.html">首頁<br>Index</a></li>
+                    <li class="rwd_nav"><a href="./about.html">關於我們<br>About us</a></li>
+                    <li class="rwd_nav"><a href="./shop.html">商城<br>Shop</a></li>
+                    <li class="rwd_nav"><a href="./custom.html" class="top_nav_thispage">客製商品<br>Custom</a></li>
+                    <li class="rwd_nav"><a href="./service.html">售後服務<br>Service</a></li>
+                    <li class="rwd_nav"><a href="./contact.html">聯絡我們<br>Contact</a></li>
+                    <li class="rwd_nav"><a href="./cart.html"><i class="fas fa-shopping-cart"></i><span class="cart_count">0</span></a>
+                    </li>
+                    <li class="rwd_nav"><a href="#"><i class="fas fa-user-circle"></i></a>
                         <ol>
                             <li><a href="#">登入/註冊</a></li>
                             <li><a href="#">購買紀錄</a></li>
@@ -38,7 +43,9 @@
                             <li><a href="#">登出</a></li>
                         </ol>
                     </li>
+
                 </ul>
+
             </div>
         </nav>
     </header>
@@ -57,7 +64,7 @@
         <div class="hat_area">
 
             <div class="hat_pic">
-                <i class="fas fa-sync-alt"></i>
+                <a href="#"><i class="fas fa-sync-alt"></i></a>
                 <img src="./img/custom/custom_600_a4.jpg" alt="">
             </div>
             <div class="hat_cus">
@@ -91,16 +98,18 @@
                     <li class="hat_cus-fabric fabric-dis"><img src="./img/custom/fabric02.jpg" alt=""></li>
                 </ul>
                 <hr>
-                <a href="#" class="a_btn">選好了</a><a href="#" class="a_btn">重來一次</a>
+                <div class="hat_cus_btn">
+                <a href="#" class="a_btn">選好了</a><a href="#" class="a_btn cus_again">重來一次</a>
+                </div>
             </div>
             <span class="span_hr"></span>
             <div class="hat_result">
                 <div class="result_pic">
-                <img src="./img/custom/custom_600_a4.jpg" alt="" class="result-pic">
-                <img src="./img/custom/custom_600_b4.jpg" alt="" class="result-pic">
-            </div>
+                    <img src="./img/custom/custom_600_a4.jpg" alt="" class="result-pic">
+                    <img src="./img/custom/custom_600_b4.jpg" alt="" class="result-pic">
+                </div>
                 <div class="hat_result-text">
-                    <p class="result-p">轉屬於你的帽子<i class="fas hat-icon"></i></p>
+                    <p class="result-p">專屬於你的帽子<i class="fas hat-icon"></i></p>
                     <p class="result-pp">耳朵的樣式：貓耳<br>
                         帽子的顏色：杏仁色<br>
                         帽子的裝飾：蝴蝶結<br>
@@ -116,7 +125,7 @@
         <div class="box_area">
 
             <div class="box_pic">
-                <i class="fas fa-sync-alt"></i>
+
                 <img src="./img/custom/custom_600_bag0.jpg" alt="">
             </div>
             <div class="box_cus">
@@ -147,7 +156,9 @@
                     <li class="box_cus-btn cus-dis">紅色</li>
                 </ul>
                 <hr>
-                <a href="#" class="a_btn">選好了</a><a href="#" class="a_btn">重來一次</a>
+                <div class="box_cus_btn">
+                <a href="#" class="a_btn">選好了</a><a href="#" class="a_btn cus_again">重來一次</a>
+                </div>
             </div>
             <span class="span_hr"></span>
         </div>
@@ -160,7 +171,7 @@
             <div>
                 <div class="box_result-fbox">
                     <div class="hat_result-text">
-                        <p class="result-p">轉屬於你的帽子<i class="fas hat-icon"></i></p>
+                        <p class="result-p">專屬於你的帽子<i class="fas hat-icon"></i></p>
                         <p class="result-pp">耳朵的樣式：貓耳<br>
                             帽子的顏色：杏仁色<br>
                             帽子的裝飾：蝴蝶結<br>
@@ -176,18 +187,23 @@
                 </div>
                 <div class="box_result-fbox">
                     <div class="re_count">
-                        <span class="count-t">數量</span><button class="prd_count"><i
-                                class="fas fa-minus"></i></button><span class="prd_nub">1</span><button
-                            class="prd_count"><i class="fas fa-plus"></i></button>
+                        <span class="count-t">數量</span>
+                        <div class="re_stock-count">
+                            <button class="prd_count"><i class="fas fa-minus"></i></button><input type="text"
+                                class="prd_nub prd_nub-input" value="1" name="add_custom_nub">
+                            <button class="prd_count"><i class="fas fa-plus"></i></button>
+                        </div>
                     </div>
                     <div class="re_price">
-                        <span class="result-p">訂製價格</span><span class="big_price">3200</span>
+                        <span class="result-p">訂製價格</span><span class="big_price">3,200</span>
                     </div>
                 </div>
             </div>
         </div>
         <div class="cus_add_cart">
-            <a href="#" class="prd-btn"><i class="fas fa-shopping-cart"></i>放入購物車</a><a href="#" class="prd-btn btn_none"><i class="fas fa-undo-alt"></i>再訂製一頂</a><a href="./cart.html" class="prd-btn"><i class="fas fa-dollar-sign"></i>直接購買</a>
+            <a href="#" class="prd-btn"><i class="fas fa-shopping-cart"></i>放入購物車</a><a href="#"
+                class="prd-btn btn_none"><i class="fas fa-undo-alt"></i>再訂製一頂</a><a href="./cart.html"
+                class="prd-btn"><i class="fas fa-dollar-sign"></i>直接購買</a>
         </div>
         </div>
     </main>
@@ -236,7 +252,10 @@
 
 
     </footer>
+    <script src="./js/shopping.js"></script>
+    <script>
 
+    </script>
 </body>
 
 </html>

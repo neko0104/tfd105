@@ -1,0 +1,501 @@
+@import url(reset.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Roboto:wght@100;400;700&display=swap');
+
+/* ----------------------預設----------------------- */
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-weight: 400;
+    color:#333;
+    font-size: 15px;
+    line-height: 18px;
+    background-color: #FFF4EA;
+    text-decoration: none;
+}
+
+/* main{
+} */
+
+h1{
+    display: block;
+    width: 40vw;
+    padding-top:8vw ;
+    padding-left: 13vw;
+    z-index: 0  ;
+}
+
+h2{
+   /* styleName: H2大標; */
+   color: #567C92;
+    font-family: Roboto;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 75px;
+}
+
+h3{
+    /* styleName: H3中標; */
+    color: #567C92;
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+}
+
+p{    /* //styleName: P內文; */
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-size: 15px;
+    line-height: 1.2;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+}
+
+.big_price{
+    /* //styleName: card價錢; */
+    font-family: Amiri;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    
+}
+
+.big_price::before{
+    /* //styleName: 小$; */
+    content: '$';
+    font-family: Amiri;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+
+.a_btn{
+    font-family: Roboto,Arial,'微軟正黑體','Heiti TC';
+    color:#567C92;
+    background-color: #F0D08E;
+    font-weight: 400;
+    line-height: 43px;
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+    width: 186px;
+    height: 43px;
+    margin: 10px 0;
+    transition: 1s;
+}
+
+.a_btn:hover{
+    transition: 1s;
+    background-color: #567C92;
+    color: #F0D08E;
+}
+
+/* 商品頁輸入框 */
+.prd_nub-input{
+    background-color: transparent;
+    border: 0px solid #333;   
+    text-align: center;
+    flex-grow: 0;
+    flex-basis: 60px;
+    width: 100%;
+}
+
+/* +-按鈕 */
+
+.prd_count{
+    background-color: RGBA(255,255,255,.5);
+    border: 1px solid #333;
+    max-width: 30px;
+    min-width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    font-size: 5px;
+    line-height: 26px;
+    
+}
+
+.prd_count:hover{
+    background-color: RGBA(51,51,51,.3);
+}
+
+.prd_count:active{
+    transform: translateY(2px);
+}
+
+/* 商品數量 */
+.prd_nub{
+    /* //styleName: 商品頁數量1234 */
+    font-family: Amiri;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+h4{
+    font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 42px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.prd_price{
+/* //styleName: 商品頁價錢1234 */
+font-family: Amiri;
+font-size: 36px;
+font-weight: 400;
+line-height: 30px;
+}
+
+.prd_price::before{
+    content: '$';
+    font-family: Amiri;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+
+/* ------------------------ cart ------------------------- */
+
+.main{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+h5{
+    font-family:Roboto,Arial,'微軟正黑體','Heiti TC';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+
+/* =====svg===== */
+.cart_process svg{
+    width: 30px;
+
+}
+
+.point-on circle{
+    fill:#F0D08E;
+    stroke: #333;
+}
+
+.point-off circle{
+    fill:#b5b5b5;
+    stroke: #333;
+}
+/* =====svg end====== */
+
+.cart_process{
+    margin: 0 auto; 
+}
+
+.cart_process ul{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.cart_process ul:after{
+        content: '';
+        position: absolute;
+        top:35px;
+        display: block;
+        background-color:#333 ;
+        width:360px;
+        height: 2px;
+        z-index: -1;
+    }
+
+.cart_process-point{
+    width: 80px;
+    margin: 20px;
+    text-align: center;
+}
+
+/* =====商品清單===== */
+
+.cart{
+    display: flex;
+    justify-content: center;
+}
+
+.cart_list{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.cart_prd{
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    margin-bottom:10px; 
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.fade_out{
+    opacity: 0;
+}
+
+.cart_prd_pic{
+    max-width: 210px;
+    height: 210px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #b5b5b5;
+    flex-basis: 210px;
+}
+
+.cart_prd_pic img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.cart_prd_info{
+    /* border: 1px solid #000; */
+    margin: 20px 20px 20px 0;
+    width: calc(100% - 250px );
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.cart_prd_info .fa-times{
+    position: absolute;
+    font-size: 35px;
+    color: #333;
+    right: 0;
+    top:-4px;
+}
+
+.fa-times:hover{
+    color: #567C92;
+}
+
+.cart_prd_info h5{
+    width: calc( 100% - 50px );
+}
+
+.cart_prd_info a{
+    color: #333;
+}
+
+.cart_prd_text{
+    flex-grow: 1;
+}
+
+.cart_prd_count{
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    
+}
+
+.cart_card_price{
+    /* border: 1px solid #333; */
+    flex-grow: 1;
+    text-align: end;
+
+}
+
+/* =====結算===== */
+
+.cart_total{
+    width: 300px;
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    position: sticky;
+    top:150px
+}
+
+.cart_total p{
+    margin: 0 5px;
+    margin-bottom: 20px;
+
+}
+
+.cart_total .prd_price,.cart_total .prd_nub{
+    word-wrap: break-word;
+}
+
+.cart_total i{
+    margin-right: 10px;
+}
+
+.cart_total .a_btn{
+    width: 100%;
+}
+
+.cart_clear{
+    color: #b5b5b5;
+    font-size: 12px;
+    text-align: center;
+    display: none;
+}
+
+
+/* ================RWD================= */
+@media (max-width:999px) and (min-width:768px) {
+    .main{
+        width: 100vw;
+    }
+    .cart_process ul{
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .cart{
+        flex-direction: column;
+    }
+    .cart_list{
+        width: 90%;
+        padding: 10px;
+        margin: 0 auto;
+    }
+    .cart_prd{
+        max-width: 90%;
+        margin: 10px auto;
+    }
+
+    /* 結算 */
+    .cart_total{
+        min-width: 100%;
+        max-height: 200px;
+        margin: 0;
+        position: fixed;
+        top:100%;
+        transition: .5s;
+    }
+
+    .cart_total.-open{
+        top:calc(100% - 200px);
+    }
+
+    .cart_total>.a_btn{
+        position: relative;
+    }
+
+    .cart_total>p:first-child:before{
+    content: '結帳';
+    line-height: 50px;
+    text-align: center;
+    display: block;
+    border-radius: 50% 50% 0 0 ;
+    background-color: #FFF;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 2%;
+    top:-35px;
+    cursor: pointer;
+    }
+}
+
+
+@media (max-width:767.98px){
+    .main{
+        width: 100%;
+    }
+    .cart_process ul{
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .cart_process ul:after{
+        width:75%;
+        max-width: 360px;
+    }
+
+    .cart{
+        flex-direction: column;
+    }
+    .cart_list{
+        width: 90%;
+        padding: 10px;
+        margin: 0 auto;
+    }
+    /* ========商品card======= */
+    .cart_prd{
+        width: 90%;
+        margin: 10px auto;
+        flex-direction: column;
+        position: relative;
+    }
+    .cart_prd_pic{
+        display: block;
+        max-height: 100px;
+        max-width: 100%;
+        margin: 20px auto 15px;
+    }
+    .cart_prd_info{
+    /* border: 1px solid #333; */
+    width: 90%;
+    margin: 0 20px;
+    position: static;
+    }
+    .cart_prd_info{
+        display: block;
+    }
+    .cart_prd_info .fa-times{
+        right: 5px;
+        top:2px;
+    }
+    .cart_prd_info h5{
+        font-size: 20px;
+        width: 100%;
+    }
+
+    /* ==========商品card end============ */
+    /* 結算 */
+    .cart_total{
+        min-width: 100%;
+        max-height: 200px;
+        margin: 0;
+        position: fixed;
+        top:100%;
+        transition: .5s;
+    }
+
+    .cart_total.-open{
+        top:calc(100% - 200px);
+    }
+
+    .cart_total>.a_btn{
+        position: relative;
+    }
+
+    .cart_total>p:first-child:before{
+    content: '結帳';
+    line-height: 50px;
+    text-align: center;
+    display: block;
+    border-radius: 50% 50% 0 0 ;
+    background-color: #FFF;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 2%;
+    top:-35px;
+    cursor: pointer;
+    }
+}
+
+
+/* ---------------------- cart end ----------------------- */

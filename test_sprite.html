@@ -1,75 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/nav_style.css">
     <link rel="stylesheet" href="./css/shop.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>test</title>
     <style>
+        .footprint {
 
-.footprint{
-    
-    width: 300px;
-    height: 150px;
-    background-image: url(./img/footprint.png);
+            width: 300px;
+            height: 150px;
+            background-image: url(./img/footprint.png);
 
-    animation: footprint 5s steps(6) infinite;
-}
+            animation: footprint 5s steps(6) infinite;
+        }
 
-@keyframes footprint{
-    0%{background-position: 0 0;}
+        @keyframes footprint {
+            0% {
+                background-position: 0 0;
+            }
 
-    100%{background-position: 0 -900px;}
-}
+            100% {
+                background-position: 0 -900px;
+            }
+        }
 
-.cat{
-    width: 250px;
-    height: 200px;
-    background-image: url(./img/cat.png);
+        .cat {
+            width: 250px;
+            height: 200px;
+            background-image: url(./img/cat.png);
 
-    animation: cat 3s steps(3) infinite;
-}
+            animation: cat 3s steps(3) infinite;
+        }
 
-@keyframes cat {
-    0% {background-position: 0 0;}
-    50%{background-position: 0 -600px;}
-    100% {background-position: 0 0;}
-    
-}
+        @keyframes cat {
+            0% {
+                background-position: 0 0;
+            }
 
-.a_btn{
+            50% {
+                background-position: 0 -600px;
+            }
 
-}
+            100% {
+                background-position: 0 0;
+            }
 
-.test_dis{
-    cursor: not-allowed;
-}
+        }
 
-.box_cus-btn:active{
-    transform: translateY(4px);
-}
+        .a_btn {}
 
+        .test_dis {
+            cursor: not-allowed;
+        }
+
+        .box_cus-btn:active {
+            transform: translateY(4px);
+        }
+
+
+        .aaa {
+            display: flex;
+            height: 2000px;
+            width: 800px;
+            font-size: 30px;
+            font-family: serif;
+            flex-direction: column;
+        }
+
+        .concept-aa:before {
+            content: ' ';
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url(./img/concept_bg650.jpg);
+            background-position: center left;
+            background-repeat: no-repeat;
+        }
+
+        .concept-aa {
+            max-width: 100%;
+            height: 650px;
+            background-image: url(./img/concept_bg.jpg);
+            background-repeat: no-repeat;
+            background-position: left 0px;
+            background-color: #fff;
+            background-attachment: fixed;
+            position: relative;
+        }
     </style>
 </head>
+
 <body>
-    <div class="footprint">
     
-    </div>
-    <br>
-    <br>
-    <div class="cat">
-    
-    </div>
+        <div class="aaa">
+            <p>測試一行<span>aaa</span></p>
+            <p>測試2行<span>aaa</span></p>
+            <p>測試3一行<span>aaa</span></p>
+            <p>測試4一行<span>aaa</span></p>
+            <p>測試5一行<span>aaa</span></p>
+            <p>測試6一行<span>aaa</span></p>
+            <p>測試7一行<span>aaa</span></p>
+            <p>測試8一行<span>aaa</span></p>
+            <p>測試9一行<span>aaa</span></p>
+            <p>測試10一行<span>aaa</span></p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+            <p>測試一行</p>
+        </div>
 
-    <a href="" class="a_btn test_dis">AAAA</a>
 
-    <ul>
-    <li class="box_cus-btn prd_nub">AAA</li>
-    </ul>
+        <script>
+
+            var p = document.getElementsByTagName("p");
+            var j = 2;
+            
+            console.log("元"+p);
+
+            var p_a = p[j];
+            var p_b = p[j + 1];
+
+            console.log(p_a);
+            console.log(p_b);
+
+            var test1 = document.getElementsByTagName("p")[j+1];
+            console.log( test1);
+
+            var test2 = test1.previousElementSibling;
+
+            console.log( test2);
+
+            // p_a.innerHTML = `<div>${test2}</div>`;
 
 
-    
+            
+            // var numbers = [45, 4, 9, 16, 25];
+            // numbers.forEach(function(value, index){ // 參數若沒有用到，可以省略不寫
+            // console.log(value);
+            // });
+
+
+            // let a = [1,2,3,4,5];
+            // let b = 0;
+            // a.forEach(item => {
+            //     b = b + item;
+            // });
+            // console.log(b); //
+
+            // let a = [1,2,3,4,5];
+            // a.forEach((item, index, arr) => {
+            //     arr[index] = item * 10;
+            // });
+            // console.log(a); //
+
+            // let c = [{name:"ccc",star:"3"}]
+            // let b = [1,2,3,4,5,6,7,8];
+            // b.fill(c,3,5);
+            // console.log(b); //
+
+
+        </script>
 </body>
+
 </html>

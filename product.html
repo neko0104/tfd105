@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/splide.min.css">
     <link rel="stylesheet" href="css/nav_style.css">
-    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/product.css">
     <link rel="icon" href="./favicon.ico" sizes="32x32">
-    <title>Animal Hat．官方網站</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>垂耳羊咩咩報童帽（淺藍）｜Animal Hat．官方網站</title>
     <style>
 
     </style>
@@ -22,21 +24,32 @@
             <div class="top_nav">
                 <a href="./index.html"><img src="./img/LOGO-4.svg"></a>
                 <ul>
-                    <li><a href="./index.html">首頁<br>Index</a></li>
-                    <li><a href="./about.html">關於我們<br>About us</a></li>
-                    <li><a href="./shop.html" class="top_nav_thispage">商城<br>Shop</a></li>
-                    <li><a href="./custom.html">客製商品<br>Custom</a></li>
-                    <li><a href="./service.html">售後服務<br>Service</a></li>
-                    <li><a href="./contact.html">聯絡我們<br>Contact</a></li>
-                    <li><a href="./cart.html"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li><a href="#"><i class="fas fa-user-circle"></i></a>
+                    <li class="hburg">
+                        <div>
+                            <div class="bar bar1 transition"></div>
+                            <div class="bar bar2 transition"></div>
+                            <div class="bar bar3 transition"></div>
+                        </div>
+                    </li>
+                    <li class="rwd_nav"><a href="./index.html">首頁<br>Index</a></li>
+                    <li class="rwd_nav"><a href="./about.html">關於我們<br>About us</a></li>
+                    <li class="rwd_nav"><a href="./shop.html" class="top_nav_thispage">商城<br>Shop</a></li>
+                    <li class="rwd_nav"><a href="./custom.html">客製商品<br>Custom</a></li>
+                    <li class="rwd_nav"><a href="./service.html">售後服務<br>Service</a></li>
+                    <li class="rwd_nav"><a href="./contact.html">聯絡我們<br>Contact</a></li>
+                    <li class="rwd_nav"><a href="./cart.html"><i class="fas fa-shopping-cart"></i><span class="cart_count">0</span></a>
+                    </li>
+                    <li class="rwd_nav"><a href="#"><i class="fas fa-user-circle"></i></a>
                         <ol>
                             <li><a href="#">登入/註冊</a></li>
                             <li><a href="#">購買紀錄</a></li>
                             <li><a href="#">會員資料</a></li>
                             <li><a href="#">登出</a></li>
-                        </ol></li>
+                        </ol>
+                    </li>
+
                 </ul>
+
             </div>
         </nav>
     </header>
@@ -47,27 +60,40 @@
         </div>
         <div class="prd_wrapper">
             <figure>
-                <div class="prd_pic">
-                    <div class="prd_mpic"><img src="./img/product/sheep_01.jpg" alt=""></div>
-                    <div class="prd_otpic">
-                        <div class="prd_la"><i class="fas fa-angle-left"></i></div>
-                        <ul class="scro2">
-                            <li><img src="./img/product/sheep_02.jpg" alt=""></li>
-                            <li><img src="./img/product/sheep_02.jpg" alt=""></li>
-                            <li><img src="./img/product/mafura02_purple_1000_01.jpg" alt=""></li>
-                            <li><img src="./img/product/sheep_02.jpg" alt=""></li>
-                            <li><img src="./img/product/sheep_02.jpg" alt=""></li>
-                            <li><img src="./img/product/sheep_02.jpg" alt=""></li>
-                            <li><img src="./img/product/sheep_02.jpg" alt=""></li>
-                        </ul>
-                        <div class="prd_ra"><i class="fas fa-angle-right"></i></div>
+                <div id="splide1">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide"><img src="./img/product/sheep_01.jpg" alt=""></li>
+                        <li class="splide__slide"><img src="./img/product/sheep_02.jpg" alt=""></li>
+                        <li class="splide__slide"><img src="./img/product/sima_01.jpg" alt=""></li>
+                        <li class="splide__slide"><img src="./img/product/sima_02.jpg" alt=""></li>
+                  </ul>
                     </div>
-            </div>
+                  </div>
+                  <div style="height: 5px;"></div>
+                  <div id="thumbnail-slider1" class="splide">
+                    <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev white_arrow_l"><i class="fas fa-angle-left"></i>
+                        </button>
+                        <button class="splide__arrow splide__arrow--next white_arrow_r"><i class="fas fa-angle-right"></i>
+                        </button>
+                      </div>
+                    <div class="splide__track">
+                        
+                        <ul class="splide__list under">
+                            <li class="splide__slide"><img src="./img/product/sheep_01.jpg" alt=""></li>
+                            <li class="splide__slide"><img src="./img/product/sheep_02.jpg" alt=""></li>
+                            <li class="splide__slide"><img src="./img/product/sima_01.jpg" alt=""></li>
+                            <li class="splide__slide"><img src="./img/product/sima_02.jpg" alt=""></li>
+                          </ul>
+                          
+                    </div>
+                  </div>
             </figure>
             <div class="prd_info">
                 <article>
                     <section>
-                    <h4>垂耳羊咩咩報童帽（淺藍）</h4>
+                    <h4 prd_id="p0001">垂耳羊咩咩報童帽（淺藍）</h4>
                     <div class="prd__p scro"><p>
                         商品介紹內文 狐狸帽帽ˋ很可愛唷！<br>
                         用的顏色非常的秋天 (練笑威....<br>
@@ -81,10 +107,16 @@
                     <div class="price"><span>折後</span><span class="prd_price">2688</span>
                     </div>
                     <div class="prd_stock">
-                        <p>數量</p><button class="prd_count"><i class="fas fa-minus"></i></button><span class="prd_nub">1</span><button class="prd_count"><i class="fas fa-plus"></i></button>
+                        <p>數量</p>
+                            <div class="prd_stock_count">
+                            <button class="prd_count"><i class="fas fa-minus"></i></button><input type="text" class="prd_nub prd_nub-input" value="1" name="add_prd_nub">
+                            <button class="prd_count"><i class="fas fa-plus"></i></button>
+                            </div>
                     </div>
+                    <div class="prd_info-btn">
                     <a href="#" class="prd-btn"><i class="fas fa-shopping-cart"></i>放入購物車</a><a href="./cart.html" class="prd-btn"><i class="fas fa-dollar-sign"></i>直接購買</a><a href="#" class="prd-btn"><i class="fas fa-heart"></i>收　藏</a>
-                    </section>
+                    </div>
+                </section>
                 </article>
             </div>
 
@@ -92,18 +124,24 @@
 
         <aside>
             <div class="you_like">
-                <h3>您可能也會喜歡</h3>
-                <div class="other_prd">
-                    <div class="other_la"><i class="fas fa-angle-left"></i></div>
-                    <ul class="scro2">
-                        <li><a href="#"><img src="./img/product/sima_01.jpg" alt=""></a></li>
-                        <li><a href="#"><img src="./img/product/mafura01_red_1000_01.jpg" alt=""></a></li>
-                        <li><a href="#"><img src="./img/product/mafura02_purple_1000_01.jpg" alt=""></a></li>
-                        <li><a href="#"><img src="./img/product/mafura01_red_1000_01.jpg" alt=""></a></li>
-                        <li><a href="#"><img src="./img/product/mafura02_purple_1000_01.jpg" alt=""></a></li>
-                    </ul>
-                    <div class="other_ra"><i class="fas fa-angle-right"></i></div>
-                </div>
+                <h3>你可能也會喜歡</h3>
+                <div id="thumbnail-slider3" class="splide ulike">
+                    <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev ulike_arrow_l"><i class="fas fa-angle-left"></i>
+                        </button>
+                        <button class="splide__arrow splide__arrow--next ulike_arrow_r"><i class="fas fa-angle-right"></i>
+                        </button>
+                      </div>
+                    <div class="splide__track">
+                          <ul class="splide__list">
+                            <li class="splide__slide"><a href="#"><img src="./img/product/sima_01.jpg" alt=""></a></li>
+                            <li class="splide__slide"><a href="#"><img src="./img/product/mafura01_red_1000_01.jpg" alt=""></a></li>
+                            <li class="splide__slide"><a href="#"><img src="./img/product/mafura02_purple_1000_01.jpg" alt=""></a></li>
+                            <li class="splide__slide"><a href="#"><img src="./img/product/mafura01_red_1000_01.jpg" alt=""></a></li>
+                            <li class="splide__slide"><a href="#"><img src="./img/product/mafura02_purple_1000_01.jpg" alt=""></a></li>
+                          </ul>
+                    </div>
+                  </div>
             </div>
         </aside>
     </main>
@@ -155,6 +193,53 @@
 
     </footer>
 
+    <script src="./js/splide.min.js"></script>
+    <script src="./js/shopping.js"></script>
+    <script>
+document.addEventListener( 'DOMContentLoaded', function () {
+  var main_1 = new Splide( '#splide1', {
+    type      : 'fade',
+    rewind    : true,
+    pagination: false,
+    arrows    : false,
+    // fixedHeight: 500,
+    padding:{bottom: 10},
+  } );
+
+  var thumbnails_1 = new Splide( '#thumbnail-slider1', {
+    fixedWidth  : 100,
+    fixedHeight : 60,
+    gap         : 5,
+    rewind      : true,
+    pagination  : false,
+    cover       : true,
+    isNavigation: true,
+    // arrows    : false,
+    padding: { left: 25, right: 25},
+    breakpoints : {
+      600: {
+        fixedWidth : 60,
+        fixedHeight: 44,
+      },
+    },
+  } );
+
+  main_1.sync( thumbnails_1 );
+  main_1.mount();
+  thumbnails_1.mount();
+} );
+
+new Splide( '#thumbnail-slider3', {
+        autoWidth:true,
+		gap       : 10,
+		rewind    : true,
+		pagination: false,
+        // padding:{left:'20%', right:'20%' },
+
+          } ).mount();
+
+
+    </script>
 </body>
 
 </html>

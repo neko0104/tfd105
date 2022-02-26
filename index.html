@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/nav_style.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="./favicon.ico" sizes="32x32">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Animal Hat．官方網站</title>
     <style>
 
@@ -15,28 +16,39 @@
 
 </head>
 
-<body>
+<body> 
     <header>
 
         <nav>
             <div class="top_nav">
                 <a href="./index.html"><img src="./img/LOGO-4.svg"></a>
                 <ul>
-                    <li><a href="./index.html" class="top_nav_thispage">首頁<br>Index</a></li>
-                    <li><a href="./about.html">關於我們<br>About us</a></li>
-                    <li><a href="./shop.html">商城<br>Shop</a></li>
-                    <li><a href="./custom.html">客製商品<br>Custom</a></li>
-                    <li><a href="./service.html">售後服務<br>Service</a></li>
-                    <li><a href="./contact.html">聯絡我們<br>Contact</a></li>
-                    <li><a href="./cart.html"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li><a href="#"><i class="fas fa-user-circle"></i></a>
+                    <li class="hburg">
+                        <div>
+                            <div class="bar bar1 transition"></div>
+                            <div class="bar bar2 transition"></div>
+                            <div class="bar bar3 transition"></div>
+                            </div>
+                    </li>
+                    <li class="rwd_nav"><a href="./index.html" class="top_nav_thispage">首頁<br>Index</a></li>
+                    <li class="rwd_nav"><a href="./about.html">關於我們<br>About us</a></li>
+                    <li class="rwd_nav"><a href="./shop.html">商城<br>Shop</a></li>
+                    <li class="rwd_nav"><a href="./custom.html">客製商品<br>Custom</a></li>
+                    <li class="rwd_nav"><a href="./service.html">售後服務<br>Service</a></li>
+                    <li class="rwd_nav"><a href="./contact.html">聯絡我們<br>Contact</a></li>
+                    <li class="rwd_nav"><a href="./cart.html"><i class="fas fa-shopping-cart"></i><span class="cart_count">0</span></a>
+                    </li>
+                    <li class="rwd_nav"><a href="#"><i class="fas fa-user-circle"></i></a>
                         <ol>
                             <li><a href="#">登入/註冊</a></li>
                             <li><a href="#">購買紀錄</a></li>
                             <li><a href="#">會員資料</a></li>
                             <li><a href="#">登出</a></li>
-                        </ol></li>
+                        </ol>
+                    </li>
+                    
                 </ul>
+                
             </div>
         </nav>
     </header>
@@ -46,9 +58,10 @@
 
     <main>
         <div class="top_banner">
-            <p class="slogan">我的天呀，你知道嗎？上一個偷襲美國的傢伙變成二次元起源地。<br>
-                那座土地上的居民們很可憐，受基因突變所苦<br>
-                小男孩長出了貓耳，小女孩長出了JJ，光聽就可怕<br>
+            <p class="slogan">我的天呀，你知道嗎？上一個偷襲美國的傢伙。
+                他們居民們很可憐，受基因突變所苦。
+                小男孩長出了貓耳，小女孩長出了＊＊<br>
+                成為了二次元發源地               
                 </p>
         </div>
         <div class="concept">
@@ -175,8 +188,10 @@
 
     </footer>
 
+    <script src="./js/shopping.js"></script>
+    <script>
 
-
+    </script>
 
 </body>
 
