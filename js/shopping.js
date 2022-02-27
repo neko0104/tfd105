@@ -43,8 +43,8 @@ function get_takes(){
     if(carts != null){
       for(let i=0 ; i < carts.length ; i++){
         let list_html = `
-        <div class="cart_prd" prd_id="${carts[i].prd_id}">
-        <div class="cart_prd_pic"><a href="./product.html"><img src="./img/product/sheep_01.jpg" alt=""></a></div>
+        <div class="cart_prd" prd_id="${carts[i].prd_id}" prd_index="${i}">
+        <div class="cart_prd_pic"><a href="./product.html"><img src="./img/product/${carts[i].prd_id}_01.jpg" alt=""></a></div>
         <div class="cart_prd_info">
             <a href="#"><i class="fas fa-times"></i></a>
             <h5><a href="./product.html">${carts[i].prd_name}</a></h5>
@@ -57,7 +57,7 @@ function get_takes(){
                     <button class="prd_count"><i class="fas fa-plus"></i></button>
                     
                     <div class="cart_card_price">
-                        價錢<span class="prd_price">${ carts[i].prd_count * carts[i].prd_price}</span>
+                        價錢<span class="prd_price">${carts[i].prd_price}</span>
                     </div>
                 </div>
             
@@ -83,8 +83,12 @@ if(add_cart_btn != null){
         var count_nub = document.getElementsByClassName("prd_nub")[0];
         switch(count_nub.value){
             case "0":
-            alert("商品數量不可以為0");
-            break;
+                alert("商品數量不可以為0");
+                break;
+
+            case "":
+                alert("請填寫商品數量");
+                break;
 
             default:
                 let prd_name = document.getElementsByTagName("h4")[0];
@@ -131,20 +135,20 @@ if(add_cart_btn != null){
 // 商品頁數量調整
 
 var count_el = document.getElementsByClassName("prd_stock_count")[0];
-if(count_el !== null){
+if(count_el !== undefined){
     // console.log(count_el);
-var count_nub = document.getElementsByClassName("prd_nub")[0];
+    var count_nub = document.getElementsByClassName("prd_nub")[0];
     // console.log(count_nub.value);
     count_nub.addEventListener("keyup", function(k){
         var str = (k.target.value).replace(/\D/g, "");
         k.target.value = str;
     })
-var count_plus = document.getElementsByClassName("prd_count")[1];
-count_plus.addEventListener("click", function(){
+    var count_plus = document.getElementsByClassName("prd_count")[1];
+    count_plus.addEventListener("click", function(){
     count_nub.value++;
-})
+    })
 
-var count_minus = document.getElementsByClassName("prd_count")[0];  
+    var count_minus = document.getElementsByClassName("prd_count")[0];  
     count_minus.addEventListener("click", function(){
         if(count_nub.value > 1){
             count_nub.value--;
@@ -187,43 +191,128 @@ var count_minus = document.getElementsByClassName("prd_count")[0];
                   }, 800);
                   cart_count_renew();
                 }
-            });
 
             //修改數量
-            let cart_prd_count = document.getElementsByClassName("cart_prd_count");
+            // let cart_prd_count = document.getElementsByClassName("cart_prd_count");
             // console.log( cart_prd_count);
-            
 
+                //按下+號
+                if(e.target.querySelector(".fa-plus") || e.target.classList.contains("fa-plus")){
+                    // console.log("+")
+                    if(e.target.parentElement.classList == "prd_count"){
+                        let prd_countel = e.target.closest(".cart_prd_count");
+                        prd_countel = prd_countel.querySelector("input");
+                        // console.log(prd_count)
+                        prd_countel.value++;
+
+                        let prd_index = e.target.closest(".cart_prd").getAttribute("prd_index");
+                        // console.log(prd_index);
+                        //更新購物車
+                        let carts = JSON.parse(localStorage.getItem("carts"));
+                        // console.log(carts);
+                        carts[prd_index].prd_count = prd_countel.value;
+                        // console.log(carts[prd_index]);
+                        localStorage.setItem("carts", JSON.stringify(carts));
+                        
+                    }else{
+                        let prd_countel = e.target.parentElement.closest(".cart_prd_count");
+                        // console.log(prd_count);
+                        prd_countel = prd_countel.querySelector("input");
+                        prd_countel.value++;
+                        //更新購物車
+                        let prd_index = e.target.closest(".cart_prd").getAttribute("prd_index");
+                        let carts = JSON.parse(localStorage.getItem("carts"));
+                        carts[prd_index].prd_count = prd_countel.value;
+                        localStorage.setItem("carts", JSON.stringify(carts));
+                    }
+                    cart_total_renew();
+                 }
+
+                 // 按下-號
+                if(e.target.querySelector(".fa-minus") || e.target.classList.contains("fa-minus")){
+                    console.log("-")
+                    if(e.target.parentElement.classList == "prd_count"){
+                        let prd_countel = e.target.closest(".cart_prd_count");
+                        prd_countel = prd_countel.querySelector("input");
+                        if(prd_countel.value > 1){
+                            prd_countel.value--;
+                        }
+                        let prd_index = e.target.closest(".cart_prd").getAttribute("prd_index");
+                        let carts = JSON.parse(localStorage.getItem("carts"));
+                        carts[prd_index].prd_count = prd_countel.value;
+                        localStorage.setItem("carts", JSON.stringify(carts));
+                    }else{
+                        let prd_countel = e.target.parentElement.closest(".cart_prd_count");
+                        prd_countel = prd_countel.querySelector("input");
+                        if(prd_countel.value > 1){
+                            prd_countel.value--;
+                        }
+                        let prd_index = e.target.closest(".cart_prd").getAttribute("prd_index");
+                        let carts = JSON.parse(localStorage.getItem("carts"));
+                        carts[prd_index].prd_count = prd_countel.value;
+                        localStorage.setItem("carts", JSON.stringify(carts));
+                    }
+                    cart_total_renew();
+                }                 
+            });
 
             // 購物車總結品項、金額
             if(cart_count_el.length == 0){
+                let cart_total = document.getElementsByClassName("cart_total")[0];
+                // console.log(cart_total);
+                cart_total.style.display = "none";
+                let cart_list_el = document.getElementsByClassName("cart_list")[0];
+                console.log(cart_list_el);
+                cart_list_el.innerHTML =`<div style="text-align: center; margin: 50px 20px;">
+                <p style="font-size: 24px; line-height: 1.5;">Sorry！購物車裡面沒有商品<br>將在<span id="time"></span>秒後刷新頁面...</p></div>`;
+                time_to_shop();              
             }else{
-                let cart_total_el = document.getElementsByClassName("cart_total")[0]
-                let cart_total_price = cart_total_el.firstElementChild.nextElementSibling.firstElementChild;
-                // console.log(cart_total_price);
-                let task = JSON.parse(localStorage.getItem("carts"));
-                let local_total_price = 0;
-                for(let i=0; i < task.length; i++){
-                    // console.log("商品數量" + task[i].prd_count + ";商品價錢" + task[i].prd_price + ";商品金額" + (task[i].prd_count *task[i].prd_price))
-                    local_total_price += (parseInt( task[i].prd_price) * parseInt( task[i].prd_count));
-                }
-                // console.log(local_total_price);
-                cart_total_price.innerText = local_total_price;
-
-                // 購物車總結品項
-                let cart_total_count = cart_total_el.firstElementChild.firstElementChild;
-                // console.log(cart_total_count.innerText);
-                let local_total_count = 0;
-                for(let i=0; i < task.length; i++){
-                    local_total_count += parseInt(task[i].prd_count);
-                }
-                // console.log(local_total_count);
-                cart_total_count.innerText = local_total_count;
+                cart_total_renew();
             }
 
             
         }
     });
+
+
+function cart_total_renew(){
+
+        let cart_total_el = document.getElementsByClassName("cart_total")[0]
+        let cart_total_price = cart_total_el.firstElementChild.nextElementSibling.firstElementChild;
+        // console.log(cart_total_price);
+        let task = JSON.parse(localStorage.getItem("carts"));
+        let local_total_price = 0;
+        for(let i=0; i < task.length; i++){
+            // console.log("商品數量" + task[i].prd_count + ";商品價錢" + task[i].prd_price + ";商品金額" + (task[i].prd_count *task[i].prd_price))
+            local_total_price += (parseInt( task[i].prd_price) * parseInt( task[i].prd_count));
+        }
+        // console.log(local_total_price);
+        cart_total_price.innerText = local_total_price;
+
+        // 購物車總結品項
+        let cart_total_count = cart_total_el.firstElementChild.firstElementChild;
+        // console.log(cart_total_count.innerText);
+        let local_total_count = 0;
+        for(let i=0; i < task.length; i++){
+            local_total_count += parseInt(task[i].prd_count);
+        }
+        // console.log(local_total_count);
+        cart_total_count.innerText = local_total_count;
+}
+
+
+//購物車沒商品的倒數
+let s=5;
+function time_to_shop(){
+    let time = document.getElementById("time");
+    if(s == 0){ location.href = "./shop.html";   }
+    time.innerText = s;
+    setTimeout(time_to_shop,1000)
+    s--;
+}
+
+
+
 
 
 
