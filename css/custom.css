@@ -281,6 +281,8 @@ p{    /* //styleName: P內文; */
     border-radius: 3px;
     line-height: 40px;
     padding: 0 10px;
+    font-size: 15px;
+    background-color: #fff;
 }
 
 .hat_cus-btn:hover,.box_cus-btn:hover{
@@ -291,9 +293,6 @@ p{    /* //styleName: P內文; */
     background-color: #F5E4BF;
 }
 
-.cus-off{
-    background-color: #fff;
-}
 
 .cus-dis{
     background-color: #b5b5b5;
@@ -425,6 +424,15 @@ hr{
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+    z-index: -1;
+    transition: 2s;
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.re_on{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* box 產出 */
@@ -472,7 +480,6 @@ hr{
 
 .add_custom_nub{
     flex-grow: 0;
-    
 }
 
 .re_stock-count{
