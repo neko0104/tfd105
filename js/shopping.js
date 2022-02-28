@@ -1,4 +1,13 @@
-        // RWD漢堡
+// loading
+document.addEventListener("DOMContentLoaded", function(){
+    let load_block = document.getElementById("loading");
+    setTimeout(function(){
+        load_block.remove();
+        console.log("qq")
+    },4000);
+});
+
+// RWD漢堡
         var hburg_open = document.getElementsByClassName('rwd_nav');
         var hburg = document.getElementsByClassName('hburg')[0];
         document.addEventListener("DOMContentLoaded", function () {
@@ -9,6 +18,63 @@
                 }
             });
         })
+
+// 滑動特效
+/*
+function slip1(){
+    let t1 =  document.getElementsByClassName("js_opac");  
+    for(let i = 0; i < t1.length ; i++){
+        let js_on_area = this.scrollY - t1[i].offsetTop;
+        if(js_on_area < 150 && js_on_area > -600){
+        t1[i].classList.add("js_on");
+        }
+    }
+}
+*/
+    // 從右滑到左
+        function slip2(){
+            let t2 = document.getElementById("t2");
+            console.log(t2.offsetTop)
+            
+            
+                let js_on_area = this.scrollY - t2.offsetTop;
+                if(js_on_area > 300 || js_on_area < -300){
+                    t2.classList.remove("js_on");
+                }
+                else{
+                    t2.classList.add("js_on");         
+                }
+                // 往下由另一方
+                if(js_on_area > 300){
+                    t2.classList.add("js_ll");
+                }else{
+                    t2.classList.remove("js_ll");
+                }
+            
+        }
+
+        function slip3(){
+            let t3 = document.getElementsByClassName("js_opac");
+            // console.log(t3.offsetTop)
+            
+            for(let i = 0; i < t3.length ; i++){
+                let js_on_area = this.scrollY - t3[i].offsetTop;
+                if(js_on_area > 150 || js_on_area < -600){
+                    t3[i].classList.remove("js_on");
+                    
+                }else{
+                    t3[i].classList.add("js_on");
+                }   
+            }
+        }
+        
+        window.addEventListener("scroll", slip3);
+        
+        window.addEventListener("scroll", slip2 );
+        // window.addEventListener("scroll", slip1);
+
+
+
 
 
 // 檢查購物車資料是否存在
@@ -182,12 +248,12 @@ if(count_el !== undefined){
                  let updata = carts;
                  updata.splice(cart_prd_index,1);
                   localStorage.setItem("carts", JSON.stringify(updata));
+                  cart_count_renew();
+                  cart_total_renew();
                   cart_prd.classList.add("fade_out");
                   setTimeout(function(){
                       cart_prd.remove();
                   }, 800);
-                  cart_count_renew();
-                  cart_total_renew();
                   if(localStorage.carts == "[]"){
                     time_to_shop();
                   }

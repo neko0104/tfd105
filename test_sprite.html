@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/nav_style.css">
-    <link rel="stylesheet" href="./css/shop.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
     <title>test</title>
     <style>
+        .js_rr{
+            transition: 2s;
+            transform: translateX(120%);
+        }
+
         .footprint {
 
             width: 300px;
@@ -65,8 +70,9 @@
 
         .aaa {
             display: flex;
-            height: 2000px;
-            width: 800px;
+            overflow: hidden;
+            /* height: 2000px; */
+            /* width: 800px; */
             font-size: 30px;
             font-family: serif;
             flex-direction: column;
@@ -95,99 +101,373 @@
             background-attachment: fixed;
             position: relative;
         }
+
+        .bb{
+            width: 800px;
+            margin: 0 auto;
+            border: 1px solid #333;
+        }
+        .a800{
+            width: 800px;
+
+        }
+
+        li{
+            /* width: 500px; */
+            /* height: 300px; */
+            /* background-color: RGBA(50,230,230,.5); */
+            text-align: center;
+        }
+
+        .splide__slide img {
+        width: 100%;
+        height: auto;
+        }
+
+        .splide__slide a img {
+        width: 100%;
+        height: auto;
+        }
+
+        .splide__slide {
+        opacity: 0.3;
+        }
+
+        .splide__slide.is-active {
+        opacity: 1;
+        }
+
+        .white_arrow_r{
+            height: 100%;
+            border-radius:0;
+            right: 0;
+            background: #fff;
+        }
+
+        .white_arrow_l{
+            height: 100%;
+            border-radius:0;
+            left: 0;
+            background: #fff;
+        }
+
+        .under{
+            margin-left: 25px;
+            margin-right: 25px;
+           
+        }
+
+        .ulike_arrow_r{
+            right: 20px;
+            background: #fff;
+            color: #567C92;
+            background-color: #F0D08E;
+            width: 70px;
+            height: 70px;
+            font-size: 36px;
+        }
+
+        .ulike_arrow_l{
+            left: 20px;
+            background: #fff;
+            color: #567C92;
+            background-color: #F0D08E;
+            width: 70px;
+            height: 70px;
+            font-size: 36px;
+        }
+
+        .ulike li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #b5b5b5;
+        }
+
+
+        #loading{
+            width: 100%;
+            height: 100%;
+            background-color: RGBA(51,51,51,.5);
+            text-align: center;
+            position: fixed;
+            z-index: 99;
+            
+        }
+        #loading img{
+            max-width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
     </style>
+    <link rel="stylesheet" href="./css/splide.min.css">
+    <link rel="stylesheet" href="./css/nav_style.css">
+    <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
     
+
+
+
         <div class="aaa">
+            <div class="a800">
+                <div class="splide">
+                    <div class="splide__track">
+                          <ul class="splide__list">
+                              <li class="splide__slide"><img src="./img/aboutus_01.jpg"></li>
+                              <li class="splide__slide"><img src="./img/aboutus_02.jpg"></li>
+                              <li class="splide__slide"><img src="./img/aboutus_03.jpg"></li>
+
+                          </ul>
+                    </div>
+
+                </div>
+                <div id="thumbnail-slider" class="splide">
+                    <div class="splide__track">
+                          <ul class="splide__list">
+                              <li class="splide__slide">
+                                  <img src="./img/aboutus_01.jpg">
+                              </li>
+                              <li class="splide__slide">
+                                  <img src="./img/aboutus_02.jpg">
+                              </li>
+                              <li class="splide__slide">
+                                  <img src="./img/aboutus_03.jpg">
+                              </li>
+                          </ul>
+                    </div>
+                  </div>
+            </div>
+
             <p>測試一行<span>aaa</span></p>
-            <p>測試2行<span>aaa</span></p>
-            <p>測試3一行<span>aaa</span></p>
-            <p>測試4一行<span>aaa</span></p>
-            <p>測試5一行<span>aaa</span></p>
-            <p>測試6一行<span>aaa</span></p>
-            <p>測試7一行<span>aaa</span></p>
-            <p>測試8一行<span>aaa</span></p>
-            <p>測試9一行<span>aaa</span></p>
-            <p>測試10一行<span>aaa</span></p>
+
+            <!-- <figure style="margin:0 auto;">
+                <div class="prd_pic">
+
+                     <div class="prd_mpic splide__track">
+                        <ul class="splide__list" style="width: 400px; height: 400px; flex-shrink: 1; overflow: hidden; align-items: center;">
+                        <li class="splide__slide" style="flex-basis: 400px;"><img src="./img/product/p0001_01.jpg" alt=""></li>
+                        <li class="splide__slide" style="flex-basis: 400px;"><img src="./img/product/p0001_02.jpg" alt=""></li>
+                        <li class="splide__slide" style="flex-basis: 400px;"><img src="./img/product/p0003_01.jpg" alt=""></li>
+                        <li class="splide__slide" style="flex-basis: 400px;"><img src="./img/product/p0003_02.jpg" alt=""></li>
+                        </ul>
+                    
+                     </div>
+
+                    <div class="prd_otpic">
+                        <div class="prd_la"><i class="fas fa-angle-left"></i></div>
+                        <ul class="scro2">
+                            <li class="splide__slide"><img src="./img/product/p0001_01.jpg" alt=""></li>
+                            <li class="splide__slide"><img src="./img/product/p0001_02.jpg" alt=""></li>
+                            <li class="splide__slide"><img src="./img/product/p0003_01.jpg" alt=""></li>
+                            <li class="splide__slide"><img src="./img/product/p0003_02.jpg" alt=""></li>
+                        </ul>
+                        <div class="prd_ra"><i class="fas fa-angle-right"></i></div>
+                    </div>
+            </div>
+            </figure> -->
+
+            <div class="bb js_opac js_l">
+
+                <div id="splide1">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide"><img src="./img/product/p0001_01.jpg" alt=""></li>
+                        <li class="splide__slide"><img src="./img/product/p0001_02.jpg" alt=""></li>
+                        <li class="splide__slide"><img src="./img/product/p0003_01.jpg" alt=""></li>
+                        <li class="splide__slide"><img src="./img/product/p0003_02.jpg" alt=""></li>
+                  </ul>
+                    </div>
+                  </div>
+                  <div id="thumbnail-slider1" class="splide">
+                    <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev white_arrow_l"><i class="fas fa-angle-left"></i>
+                        </button>
+                        <button class="splide__arrow splide__arrow--next white_arrow_r"><i class="fas fa-angle-right"></i>
+                        </button>
+                      </div>
+                    <div class="splide__track">
+                        
+                        <ul class="splide__list under">
+                            <li class="splide__slide"><img src="./img/product/p0001_01.jpg" alt=""></li>
+                            <li class="splide__slide"><img src="./img/product/p0001_02.jpg" alt=""></li>
+                            <li class="splide__slide"><img src="./img/product/p0003_01.jpg" alt=""></li>
+                            <li class="splide__slide"><img src="./img/product/p0003_02.jpg" alt=""></li>
+                          </ul>
+                          
+                    </div>
+                  </div>
+
+            </div>
+
             <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
-            <p>測試一行</p>
+        
+            <div class="bb js_opac js_rr"  id="t3">
+                <div id="thumbnail-slider3" class="splide ulike">
+                    <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev ulike_arrow_l"><i class="fas fa-angle-left"></i>
+                        </button>
+                        <button class="splide__arrow splide__arrow--next ulike_arrow_r"><i class="fas fa-angle-right"></i>
+                        </button>
+                    </div>
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide"><a href="#"><img src="./img/product/p0003_01.jpg" alt=""></a></li>
+                            <li class="splide__slide"><a href="#"><img src="./img/product/p0002_01.jpg" alt=""></a></li>
+                            <li class="splide__slide"><a href="#"><img src="./img/product/mafura02_purple_1000_01.jpg" alt=""></a></li>
+                            <li class="splide__slide"><a href="#"><img src="./img/product/p0002_01.jpg" alt=""></a></li>
+                            <li class="splide__slide"><a href="#"><img src="./img/product/mafura02_purple_1000_01.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+
+                
+
+
+                
+                
         </div>
 
+        <div class="bb js_opac js_rr"  id="t4">
+                    
+            <ul class="">
+                <li class=""><a href="#"><img src="./img/product/p0003_01.jpg" alt=""></a></li>
+                <li class=""><a href="#"><img src="./img/product/p0002_01.jpg" alt=""></a></li>
+                <li class=""><a href="#"><img src="./img/product/mafura02_purple_1000_01.jpg" alt=""></a></li>
+                <li class=""><a href="#"><img src="./img/product/p0002_01.jpg" alt=""></a></li>
+                <li class=""><a href="#"><img src="./img/product/mafura02_purple_1000_01.jpg" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
 
+
+
+        </div>
+        <p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p>
+        <p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p>
+        <p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p>
+        <p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p>
+        <p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p>
+        <p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p><p>測試一行</p>
+
+        <script src="./js/sq.js"></script>
+        <script src="./js/splide.min.js"></script>
         <script>
 
-            var p = document.getElementsByTagName("p");
-            var j = 2;
+            // new Splide( '.splide' ).mount();
+
+            var main       =
+            new Splide( '.splide', {
+            type   : 'loop',
+            perPage: 1,
+            arrows: false,
+            // autoplay: true,
+            resetProgress: true,
+            rewind    : true,
+            pagination: false,
+
+            } );
             
-            console.log("元"+p);
+            var thumbnails =
+            new Splide( '#thumbnail-slider', {
+            fixedWidth : 100,
+            fixedHeight: 60,
+            gap        : 10,
+            rewind     : true,
+            pagination : false,
+            cover      : true,
+            isNavigation: true,
+            focus      : 'center',
+            breakpoints: {
+                600: {
+                fixedWidth : 60,
+                fixedHeight: 44,
+                },
+            },
+            } );
 
-            var p_a = p[j];
-            var p_b = p[j + 1];
-
-            console.log(p_a);
-            console.log(p_b);
-
-            var test1 = document.getElementsByTagName("p")[j+1];
-            console.log( test1);
-
-            var test2 = test1.previousElementSibling;
-
-            console.log( test2);
-
-            // p_a.innerHTML = `<div>${test2}</div>`;
 
 
-            
+
+            main.sync( thumbnails );
+            main.mount();
+            thumbnails.mount();
+
+
+
+// =========================================
+
+document.addEventListener( 'DOMContentLoaded', function () {
+  var main_1 = new Splide( '#splide1', {
+    type      : 'fade',
+    rewind    : true,
+    pagination: false,
+    arrows    : false,
+    fixedHeight: 500,
+  } );
+
+  var thumbnails_1 = new Splide( '#thumbnail-slider1', {
+    fixedWidth  : 100,
+    fixedHeight : 60,
+    gap         : 5,
+    rewind      : true,
+    pagination  : false,
+    cover       : true,
+    isNavigation: true,
+    // arrows    : false,
+    padding: { left: 25, right: 25},
+    breakpoints : {
+      600: {
+        fixedWidth : 60,
+        fixedHeight: 44,
+      },
+    },
+  } );
+
+  main_1.sync( thumbnails_1 );
+  main_1.mount();
+  thumbnails_1.mount();
+} );
+
+
+// =========================================================
+
+new Splide( '#thumbnail-slider3', {
+        fixedWidth: 100,
+		gap       : 10,
+		rewind    : true,
+		pagination: false,
+        padding:{left:'20%', right:'20%' },
+
+          } ).mount();
+
+
+
+            /*
+            const splide = new Splide( '.splide' );
+
+            splide.on( 'pagination:mounted', function ( data ) {
+            // ULエレメントにクラスを追加することができます
+            data.list.classList.add( 'splide__pagination--custom' );
+
+
+            // `items`は、すべてのLI要素とボタン要素を保持しています
+            data.items.forEach( function ( item ) {
+                item.button.textContent = String( item.page + 1 );
+            } );
+            } );
+
+            splide.mount();
+            */
+
+
+  
             // var numbers = [45, 4, 9, 16, 25];
             // numbers.forEach(function(value, index){ // 參數若沒有用到，可以省略不寫
             // console.log(value);
