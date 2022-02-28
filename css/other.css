@@ -212,6 +212,12 @@ letter-spacing: 0em;
 
 /* =====表單===== */
 
+.-on{
+    box-shadow: 0 0 5px #b5b5b5;
+    transform: scale(1.01);
+    transform-origin: center center;
+  }
+
 form{
     float: right;
     margin-right: 50px;

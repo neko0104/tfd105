@@ -155,6 +155,33 @@
     </footer>
     <script src="./js/shopping.js"></script>
     <script>
+    var input_ = document.getElementsByTagName("input");
+    var t_ = document.getElementsByTagName("textarea")[0];
+    
+    //找出第一個task_name
+
+    for(let i = 0; i < input_.length ; i++){
+        input_[i].addEventListener("focus", function(){
+        // console.log("focus");
+        console.log(this)
+        this.classList.add("-on");
+        //從  找closest父元素              增加class -on
+        });      //輸入指標出現
+
+        input_[i].addEventListener("blur" , function(){
+        // console.log("blur");
+        this.classList.remove("-on");
+        });
+        //                                  移除 -on
+        
+    }    //輸入指標消失
+    
+    t_.addEventListener("focus", function(){
+        this.classList.add("-on");
+        });
+    t_.addEventListener("blur" , function(){
+    this.classList.remove("-on");
+    });
 
     </script>
 </body>

@@ -1,10 +1,13 @@
 // loading
 document.addEventListener("DOMContentLoaded", function(){
     let load_block = document.getElementById("loading");
-    setTimeout(function(){
-        load_block.remove();
-        console.log("qq")
-    },4000);
+    if(load_block != null){
+            setTimeout(function(){
+            load_block.remove();
+            // console.log("qq")
+        },4000);
+    }
+    
 });
 
 // RWD漢堡
@@ -20,22 +23,23 @@ document.addEventListener("DOMContentLoaded", function(){
         })
 
 // 滑動特效
-/*
+
 function slip1(){
-    let t1 =  document.getElementsByClassName("js_opac");  
+    let t1 =  document.getElementsByClassName("js_opacc");  
     for(let i = 0; i < t1.length ; i++){
         let js_on_area = this.scrollY - t1[i].offsetTop;
-        if(js_on_area < 150 && js_on_area > -600){
+        if( js_on_area > -500){
         t1[i].classList.add("js_on");
+        console.log(js_on_area);
         }
     }
 }
-*/
+
     // 從右滑到左
         function slip2(){
             let t2 = document.getElementById("t2");
-            console.log(t2.offsetTop)
-            
+            // console.log(t2.offsetTop)
+            if(t2 != null){
             
                 let js_on_area = this.scrollY - t2.offsetTop;
                 if(js_on_area > 300 || js_on_area < -300){
@@ -50,28 +54,29 @@ function slip1(){
                 }else{
                     t2.classList.remove("js_ll");
                 }
-            
+            }
         }
 
         function slip3(){
             let t3 = document.getElementsByClassName("js_opac");
             // console.log(t3.offsetTop)
-            
-            for(let i = 0; i < t3.length ; i++){
+            if(t3 != null){
+              for(let i = 0; i < t3.length ; i++){
                 let js_on_area = this.scrollY - t3[i].offsetTop;
-                if(js_on_area > 150 || js_on_area < -600){
+                if(js_on_area > 200 || js_on_area < -600){
                     t3[i].classList.remove("js_on");
                     
                 }else{
                     t3[i].classList.add("js_on");
                 }   
-            }
+              }
+             }
         }
         
         window.addEventListener("scroll", slip3);
         
         window.addEventListener("scroll", slip2 );
-        // window.addEventListener("scroll", slip1);
+        window.addEventListener("scroll", slip1);
 
 
 
@@ -264,7 +269,7 @@ if(count_el !== undefined){
             // console.log( cart_prd_count);
 
                 //按下+號
-                if(e.target.querySelector(".fa-plus") || e.target.classList.contains("fa-plus")){
+                if( (e.target.querySelector(".fa-plus") && e.target.closest(".cart_prd_count"))|| e.target.classList.contains("fa-plus")){
                     // console.log("+")
                     if(e.target.parentElement.classList == "prd_count"){
                         let prd_countel = e.target.closest(".cart_prd_count");
@@ -283,7 +288,8 @@ if(count_el !== undefined){
                         
                     }else{
                         let prd_countel = e.target.parentElement.closest(".cart_prd_count");
-                        // console.log(prd_count);
+                        console.log(prd_countel);
+                        console.log(e.target);
                         prd_countel = prd_countel.querySelector("input");
                         prd_countel.value++;
                         //更新購物車
@@ -296,7 +302,7 @@ if(count_el !== undefined){
                 }
 
                  // 按下-號
-                if(e.target.querySelector(".fa-minus") || e.target.classList.contains("fa-minus")){
+                if((e.target.querySelector(".fa-minus")  && e.target.closest(".cart_prd_count") )|| e.target.classList.contains("fa-minus")){
                     // console.log("-");
                     if(e.target.parentElement.classList == "prd_count"){
                         let prd_countel = e.target.closest(".cart_prd_count");
@@ -321,6 +327,22 @@ if(count_el !== undefined){
                     }
                     cart_total_renew();
                 }                 
+
+                var count_nub = document.getElementsByClassName("prd_nub")[0];
+                // console.log(count_nub.value);
+                count_nub.addEventListener("keyup", function(k){
+                    var str = (k.target.value).replace(/\D/g, "");
+                    k.target.value = str;
+                })
+                count_nub.addEventListener("change" , function(){
+                    let prd_index = e.target.closest(".cart_prd").getAttribute("prd_index");
+                    let carts = JSON.parse(localStorage.getItem("carts"));
+                    carts[prd_index].prd_count = count_nub.value;
+                    localStorage.setItem("carts", JSON.stringify(carts));
+                    cart_total_renew();
+                });
+                
+
             });
 
             // 購物車總結品項、金額
