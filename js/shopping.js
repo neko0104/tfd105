@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(){
             setTimeout(function(){
             load_block.remove();
             // console.log("qq")
-        },4000);
+        },100);
     }
     
 });
@@ -23,14 +23,14 @@ document.addEventListener("DOMContentLoaded", function(){
         })
 
 // 滑動特效
-
+//出現後不移動
 function slip1(){
     let t1 =  document.getElementsByClassName("js_opacc");  
     for(let i = 0; i < t1.length ; i++){
         let js_on_area = this.scrollY - t1[i].offsetTop;
         if( js_on_area > -500){
         t1[i].classList.add("js_on");
-        console.log(js_on_area);
+        // console.log(js_on_area);
         }
     }
 }
@@ -50,15 +50,17 @@ function slip1(){
                 }
                 // 往下由另一方
                 if(js_on_area > 300){
-                    t2.classList.add("js_ll");
+                    t2.classList.add("js_rr");
                 }else{
-                    t2.classList.remove("js_ll");
+                    t2.classList.remove("js_rr");
                 }
             }
         }
 
+        //1.接近時出現  2一開始出現，離開時消失
         function slip3(){
             let t3 = document.getElementsByClassName("js_opac");
+            let t4 = document.getElementsByClassName("js_opac4");
             // console.log(t3.offsetTop)
             if(t3 != null){
               for(let i = 0; i < t3.length ; i++){
@@ -70,11 +72,21 @@ function slip1(){
                     t3[i].classList.add("js_on");
                 }   
               }
-             }
+            }
+
+            if(t4 != null){
+                for(let i = 0; i < t4.length ; i++){
+                    let js_on_area = this.scrollY - t4[i].offsetTop;
+                    if(js_on_area > 200 ){
+                        t4[i].classList.remove("js_on");
+                    }else{
+                        t4[i].classList.add("js_on");
+                    }
+                }
+            }
         }
         
         window.addEventListener("scroll", slip3);
-        
         window.addEventListener("scroll", slip2 );
         window.addEventListener("scroll", slip1);
 
@@ -500,6 +512,8 @@ if(count_el !== undefined){
 
                 }
 
+
+                
                 
             });
 

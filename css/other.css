@@ -419,7 +419,7 @@ form{
 
 .ser_title span{
     display: block;
-    width: 100px;
+    max-width: 100px;
     height: 1px;
     background-color: #567C92;
     margin: 50px 2px;
@@ -455,6 +455,10 @@ form{
     }
     .ser_title h3{
         font-size: 26px;
+    }
+    .ser_title span{
+        max-width: 100px;
+        min-width: 20px;
     }
 }
 
