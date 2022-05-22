@@ -30,7 +30,6 @@ function slip1(){
         let js_on_area = this.scrollY - t1[i].offsetTop;
         if( js_on_area > -500){
         t1[i].classList.add("js_on");
-        // console.log(js_on_area);
         }
     }
 }
@@ -98,7 +97,7 @@ function slip1(){
 document.addEventListener("DOMContentLoaded", function(){
     if(localStorage.carts == null){
         localStorage.carts = '[]';
-        console.log("[[[]]]]");
+        // console.log("[[[]]]]");
     }
 });
 
@@ -415,15 +414,69 @@ if(count_el !== undefined){
                 // console.log(e.target.tagName);
 
                 // btn按鈕
-                if(e.target.classList == "hat_cus-btn" || e.target.classList == "box_cus-btn"){
-                    e.target.classList.toggle("cus-on");
+                if( e.target.classList == "hat_cus-btn" || e.target.classList == "box_cus-btn" ){
+                    let ul_target = e.target.parentElement.querySelectorAll("button");
+                    let box_cus = e.target.closest("div");
+                    //緞帶選項打開時運作
+                    if(e.target.parentElement.previousElementSibling.innerText == "4.選擇緞帶"){
+                        // console.log("緞帶");
+                        if(box_cus.querySelectorAll("ul")[2].lastElementChild.classList.contains("cus-on")){
+                            // console.log("有");
+                            for(const el of ul_target){
+                                el.classList.remove("cus-on");
+                            }
+                            e.target.classList.add("cus-on");
+                            // console.log(e.target);
+                        }
+
+                    //判斷有無緞帶並關閉緞帶選項
+                    }else if(e.target.innerText == "無緞帶"){
+                        let ribon = box_cus.querySelectorAll("ul")[3];
+                        for(const el of ul_target){
+                            el.classList.remove("cus-on");
+                        }
+                        e.target.classList.add("cus-on");
+                        
+                        for(const el of ribon.querySelectorAll("button")){
+                            el.classList.remove("cus-on");
+                            el.classList.add("cus-dis")
+                        }
+
+                    //有緞帶 打開緞帶選項
+                    }else if(e.target.innerText == "有緞帶"){
+                        let ribon = box_cus.querySelectorAll("ul")[3];
+                        for(const el of ul_target){
+                            el.classList.remove("cus-on");
+                        }
+                        e.target.classList.add("cus-on");
+                        
+                        for(const el of ribon.querySelectorAll("button")){
+                            el.classList.remove("cus-dis")
+
+                        }
+
+                    
+                    //判斷為普通的按鈕時
+                    }else{
+                        for(const el of ul_target){
+                            el.classList.remove("cus-on");
+                        }
+                        e.target.classList.add("cus-on");
+                        // console.log(e.target);
+                    }
+                    
+                    
                 }
                 let ff = e.target.parentElement;
                 // console.log(ff)
 
                 //布料按鈕
                 if(ff.classList == "hat_cus-fabric"){
-                    e.target.classList.toggle("fabric-sel");
+                    let ul_target_img = ff.parentElement.querySelectorAll("img");
+                    for(const el of ul_target_img){
+                        el.classList.remove("fabric-sel");
+                    }
+                    e.target.classList.add("fabric-sel");
                 }
 
                 //選好了OR重來一次
@@ -454,8 +507,9 @@ if(count_el !== undefined){
                             hat_btn[i].classList.remove("cus-on");
                         }
                         let feb = document.getElementsByClassName("hat_cus-fabric");
-                        for(let i = 0; i < hat_btn.length; i++){
-                            feb[i].classList.remove("fabric-sel");
+                        for(let i = 0; i < hat_btn.length-1; i++){
+                            console.log(i);
+                            feb[i].firstChild.classList.remove("fabric-sel");
                         }
 
                         //盒子選好了
