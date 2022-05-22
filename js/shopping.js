@@ -118,7 +118,7 @@ function cart_count_renew (){
 cart_count_renew();
 
 
-// 讀入localS購物車
+// 購物車頁讀入localS購物車
 function get_takes(){
     let carts = JSON.parse(localStorage.getItem("carts"));
     // console.log(tasks);
@@ -258,7 +258,7 @@ if(count_el !== undefined){
                 // console.log(e);
                 e.preventDefault();
                 // console.log(e.target.parentElement.parentElement.parentElement);
-                 let cart_prd = e.target.parentElement.parentElement.parentElement;
+                 let cart_prd = e.target.closest(".cart_prd");
                  let cart_prd_index = cart_prd.getAttribute("prd_index");
                  let carts = JSON.parse(localStorage.getItem("carts"));
                  let updata = carts;
