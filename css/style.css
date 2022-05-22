@@ -443,11 +443,22 @@ letter-spacing: 0em;
     z-index: 1;
 }
 
+@keyframes waveAction01 {
+    0% {
+      transform: translate3d(0,0,0);
+    }
+    100% {
+        transform: translate3d(100vw,0,0);
+    }
+  }
+
 .custum>img:last-child{
-    width: 100%;
+    width: 220%;
     position: absolute;
-    left: 0;
+    left: -110%;
     bottom: -80px;
+    animation: waveAction01 5s cubic-bezier(.55,.5,.45,.5) infinite alternate;
+    z-index: -3;
 }
 
 .product .pd_title h2{
