@@ -424,19 +424,19 @@ footer .sub_nav a:hover{
 }
 
 /* ================ for js ================= */
-.loading
+/* .loading
 
 .js_opac{
     
-}
+} */
 
 .js_rr{
-    transition: 2s;
+    transition: 1s;
     transform: translateX(110%);
     opacity: 0;
 }
 .js_ll{
-    transition: 2s;
+    transition: 1s;
     transform: translateX(-110%);
     opacity: 0;
 }

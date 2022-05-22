@@ -104,22 +104,17 @@ letter-spacing: 0em;
 
 /*--------------預設結束------------------*/
 /* ---------------animetion keyframes--------------- */
-@keyframes big{
+@keyframes top_banner{
     0%{
-        background-size:150%;
         opacity: .5;
     }
 
     100%{
-        background-size: 110%;
         opacity: 1;
     }
 }
 
-@keyframes dog{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
+
 
 @keyframes big-x{
     0%{}
@@ -144,7 +139,7 @@ letter-spacing: 0em;
     background-repeat: no-repeat;
     position: relative;
     text-align: center;
-    animation: big 3s linear backwards;
+    animation: top_banner .8s linear backwards;
     opacity: 1;
 }
 
@@ -201,7 +196,6 @@ letter-spacing: 0em;
             background-repeat: no-repeat;
             background-size: auto;
             opacity: 1;
-            animation: dog 3s 3s linear backwards;
 }
 
 .concept .right{
