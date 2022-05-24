@@ -13,14 +13,17 @@ document.addEventListener("DOMContentLoaded", function(){
 // RWD漢堡
         var hburg_open = document.getElementsByClassName('rwd_nav');
         var hburg = document.getElementsByClassName('hburg')[0];
+        var nav_bg = document.querySelector("#nav_bg");
         document.addEventListener("DOMContentLoaded", function () {
             hburg.addEventListener("click", function () {
                 this.classList.toggle("active");
+                nav_bg.classList.toggle("active");
                 for (let i = 0; i < hburg_open.length; i++) {
                     hburg_open[i].classList.toggle("active");
                 }
             });
         })
+
 
 // 滑動特效
 //出現後不移動
